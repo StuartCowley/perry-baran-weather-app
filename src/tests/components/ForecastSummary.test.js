@@ -22,7 +22,9 @@ describe("ForecastSummary", () => {
 
   describe("props", () => {
     it("renders correct values for props", () => {
-      const { getByText, getByTestId } = render(<ForecastSummary forecast={validProps} />);
+      const { getByText, getByTestId } = render(
+        <ForecastSummary forecast={validProps} />
+      );
 
       expect(getByText(validProps.date.toString())).toHaveAttribute(
         "class",
