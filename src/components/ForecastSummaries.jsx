@@ -4,12 +4,18 @@ import PropTypes from "prop-types";
 import ForecastSummary from "./ForecastSummary";
 
 function ForecastSummaries(props) {
-  const { forecasts } = props;
+  const { forecasts, handleSetForecast } = props;
 
   return (
     <div className="forecast-summaries">
       {forecasts.map((forecast) => {
-        return <ForecastSummary forecast={forecast} key={forecast.date} />;
+        return (
+          <ForecastSummary
+            forecast={forecast}
+            handleSetForecast={handleSetForecast}
+            key={forecast.date}
+          />
+        );
       })}
     </div>
   );
@@ -26,6 +32,7 @@ ForecastSummaries.propTypes = {
       }),
     })
   ).isRequired,
+  handleSetForecast: PropTypes.func.isRequired,
 };
 
 export default ForecastSummaries;
