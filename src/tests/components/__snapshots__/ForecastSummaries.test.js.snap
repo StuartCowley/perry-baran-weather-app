@@ -12,13 +12,16 @@ exports[`ForecastSummaries snapshot renders correctlty 1`] = `
       <div
         class="forecast-summary__date"
       >
-        123
+        Fri Jan 02 1970
       </div>
       <div
         class="forecast-summary__icon"
         data-testid="forecast-icon"
       >
-        Icon1
+        <i
+          class="wi wi-day-sunny"
+          name="owm"
+        />
       </div>
       <div
         class="forecast-summary__temperature"
@@ -38,13 +41,16 @@ exports[`ForecastSummaries snapshot renders correctlty 1`] = `
       <div
         class="forecast-summary__date"
       >
-        456
+        Sat Jan 03 1970
       </div>
       <div
         class="forecast-summary__icon"
         data-testid="forecast-icon"
       >
-        Icon2
+        <i
+          class="wi wi-day-thunderstorm"
+          name="owm"
+        />
       </div>
       <div
         class="forecast-summary__temperature"

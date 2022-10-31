@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/App.css";
 import PropTypes from "prop-types";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
@@ -9,7 +10,7 @@ function App(props) {
   } = props;
 
   return (
-    <div className="App">
+    <div className="weather-app">
       <LocationDetails location={location} />
       <ForecastSummaries forecasts={forecasts} />
     </div>

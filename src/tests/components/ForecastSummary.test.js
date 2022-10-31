@@ -7,7 +7,7 @@ describe("ForecastSummary", () => {
     forecast: {
       date: 12345,
       description: "Test description",
-      icon: "testIcon",
+      icon: "800",
       temperature: {
         max: 20,
       },
@@ -31,10 +31,9 @@ describe("ForecastSummary", () => {
         <ForecastSummary forecast={validProps.forecast} key={validProps.key} />
       );
 
-      expect(getByText(validProps.forecast.date.toString())).toHaveAttribute(
-        "class",
-        "forecast-summary__date"
-      );
+      expect(
+        getByText(new Date(validProps.forecast.date).toDateString())
+      ).toHaveAttribute("class", "forecast-summary__date");
       expect(getByText(validProps.forecast.description)).toHaveAttribute(
         "class",
         "forecast-summary__description"

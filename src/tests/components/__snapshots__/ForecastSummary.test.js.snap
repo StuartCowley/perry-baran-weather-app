@@ -9,13 +9,16 @@ exports[`ForecastSummary snapshot renders corretly 1`] = `
     <div
       class="forecast-summary__date"
     >
-      12345
+      Thu Jan 01 1970
     </div>
     <div
       class="forecast-summary__icon"
       data-testid="forecast-icon"
     >
-      testIcon
+      <i
+        class="wi wi-day-sunny"
+        name="owm"
+      />
     </div>
     <div
       class="forecast-summary__temperature"
