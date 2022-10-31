@@ -4,7 +4,7 @@ import App from "../components/App";
 import forecast from "../data/forecast.json";
 
 test("renders learn react link", () => {
-  render(<App location={forecast.location} />);
+  render(<App data={forecast} />);
   const h1Element = screen.getByText(/Manchester, UK/i);
   expect(h1Element).toBeInTheDocument();
 });
