@@ -33,10 +33,14 @@ describe("ForecastSummaries", () => {
   });
 
   describe("list", () => {
-    const { getAllByTestId } = render(
-      <ForecastSummaries forecasts={validProps} />
-    );
+    it("renders correct values for props", () => {
+      const { getAllByTestId } = render(
+        <ForecastSummaries forecasts={validProps} />
+      );
 
-    expect(getAllByTestId("forecast-summary")).toHaveLength(validProps.length);
+      expect(getAllByTestId("forecast-summary")).toHaveLength(
+        validProps.length
+      );
+    });
   });
 });
