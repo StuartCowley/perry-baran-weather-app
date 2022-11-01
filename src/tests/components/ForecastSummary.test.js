@@ -7,7 +7,7 @@ describe("ForecastSummary", () => {
     forecast: {
       date: 12345,
       description: "Test description",
-      icon: "800",
+      icon: 800,
       temperature: {
         max: 20,
       },

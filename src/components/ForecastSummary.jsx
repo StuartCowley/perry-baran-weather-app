@@ -16,7 +16,7 @@ function ForecastSummary({ forecast, handleForecastSelect }) {
     <div className="forecast-summary" data-testid="forecast-summary">
       <div className="forecast-summary__date">{formattedDate}</div>
       <div className="forecast-summary__icon" data-testid="forecast-icon">
-        <WeatherIcon name="owm" iconId={icon} />
+        <WeatherIcon name="owm" iconId={icon.toString()} />
       </div>
       <div className="forecast-summary__temperature">{maxTemp}&deg;C</div>
       <div className="forecast-summary__description">{description}</div>
@@ -31,7 +31,7 @@ ForecastSummary.propTypes = {
   forecast: PropTypes.shape({
     date: PropTypes.number,
     description: PropTypes.string,
-    icon: PropTypes.string,
+    icon: PropTypes.number,
     temperature: PropTypes.shape({
       max: PropTypes.number,
     }),

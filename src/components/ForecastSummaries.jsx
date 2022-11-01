@@ -26,7 +26,7 @@ ForecastSummaries.propTypes = {
     PropTypes.shape({
       date: PropTypes.number,
       description: PropTypes.string,
-      icon: PropTypes.string,
+      icon: PropTypes.number,
       temperature: PropTypes.shape({
         max: PropTypes.number,
       }),

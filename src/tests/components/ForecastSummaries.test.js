@@ -8,7 +8,7 @@ describe("ForecastSummaries", () => {
       {
         date: 111111111,
         description: "Desc 1",
-        icon: "800",
+        icon: 800,
         temperature: {
           max: 1,
         },
@@ -16,7 +16,7 @@ describe("ForecastSummaries", () => {
       {
         date: 222222222,
         description: "Desc 2",
-        icon: "211",
+        icon: 211,
         temperature: {
           max: 2,
         },
