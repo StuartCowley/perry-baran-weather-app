@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import ForecastSummary from "./ForecastSummary";
 
 function ForecastSummaries(props) {
-  const { forecasts, handleSetForecast } = props;
+  const { forecasts, handleForecastSelect } = props;
 
   return (
     <div className="forecast-summaries">
@@ -12,7 +12,7 @@ function ForecastSummaries(props) {
         return (
           <ForecastSummary
             forecast={forecast}
-            handleSetForecast={handleSetForecast}
+            handleForecastSelect={handleForecastSelect}
             key={forecast.date}
           />
         );
@@ -32,7 +32,7 @@ ForecastSummaries.propTypes = {
       }),
     })
   ).isRequired,
-  handleSetForecast: PropTypes.func.isRequired,
+  handleForecastSelect: PropTypes.func.isRequired,
 };
 
 export default ForecastSummaries;

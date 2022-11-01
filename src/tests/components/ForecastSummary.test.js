@@ -13,12 +13,17 @@ describe("ForecastSummary", () => {
       },
     },
     key: 0,
+    handleForecastSelect: () => {},
   };
 
   describe("snapshot", () => {
     it("renders corretly", () => {
       const { asFragment } = render(
-        <ForecastSummary forecast={validProps.forecast} key={validProps.key} />
+        <ForecastSummary
+          forecast={validProps.forecast}
+          handleForecastSelect={validProps.handleForecastSelect}
+          key={validProps.key}
+        />
       );
 
       expect(asFragment()).toMatchSnapshot();
@@ -28,7 +33,11 @@ describe("ForecastSummary", () => {
   describe("props", () => {
     it("renders correct values for props", () => {
       const { getByText, getByTestId } = render(
-        <ForecastSummary forecast={validProps.forecast} key={validProps.key} />
+        <ForecastSummary
+          forecast={validProps.forecast}
+          handleForecastSelect={validProps.handleForecastSelect}
+          key={validProps.key}
+        />
       );
 
       expect(

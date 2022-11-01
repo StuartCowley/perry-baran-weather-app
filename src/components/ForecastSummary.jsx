@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import WeatherIcon from "react-icons-weather";
 
-function ForecastSummary({ forecast, handleSetForecast }) {
+function ForecastSummary({ forecast, handleForecastSelect }) {
   const {
     date,
     description,
@@ -20,7 +20,7 @@ function ForecastSummary({ forecast, handleSetForecast }) {
       </div>
       <div className="forecast-summary__temperature">{maxTemp}&deg;C</div>
       <div className="forecast-summary__description">{description}</div>
-      <button type="button" onClick={() => handleSetForecast(date)}>
+      <button type="button" onClick={() => handleForecastSelect(date)}>
         More Details
       </button>
     </div>
@@ -36,7 +36,7 @@ ForecastSummary.propTypes = {
       max: PropTypes.number,
     }),
   }).isRequired,
-  handleSetForecast: PropTypes.func.isRequired,
+  handleForecastSelect: PropTypes.func.isRequired,
 };
 
 export default ForecastSummary;

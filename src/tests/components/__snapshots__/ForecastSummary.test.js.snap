@@ -30,6 +30,11 @@ exports[`ForecastSummary snapshot renders corretly 1`] = `
     >
       Test description
     </div>
+    <button
+      type="button"
+    >
+      More Details
+    </button>
   </div>
 </DocumentFragment>
 `;

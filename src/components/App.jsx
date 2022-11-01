@@ -14,7 +14,7 @@ function App(props) {
     (forecast) => forecast.date === selectedDate
   );
 
-  const handleSetForecast = (date) => {
+  const handleForecaseSelect = (date) => {
     setSelectedDate(date);
   };
 
@@ -23,7 +23,7 @@ function App(props) {
       <LocationDetails location={location} />
       <ForecastSummaries
         forecasts={forecasts}
-        handleSetForecast={handleSetForecast}
+        handleForecastSelect={handleForecaseSelect}
       />
       <ForecastDetails forecast={selectedForecast} />
     </div>

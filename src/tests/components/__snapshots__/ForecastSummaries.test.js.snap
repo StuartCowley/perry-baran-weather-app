@@ -33,6 +33,11 @@ exports[`ForecastSummaries snapshot renders correctlty 1`] = `
       >
         Desc 1
       </div>
+      <button
+        type="button"
+      >
+        More Details
+      </button>
     </div>
     <div
       class="forecast-summary"
@@ -62,6 +67,11 @@ exports[`ForecastSummaries snapshot renders correctlty 1`] = `
       >
         Desc 2
       </div>
+      <button
+        type="button"
+      >
+        More Details
+      </button>
     </div>
   </div>
 </DocumentFragment>
