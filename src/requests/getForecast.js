@@ -1,7 +1,10 @@
 import axios from "axios";
 
-const getForecast = async (setForecastData, setSelectedDate) => {
-  const endpoint = "https://mcr-codes-weather-app.herokuapp.com/forecast";
+const getForecast = async (setForecastData, setSelectedDate, city) => {
+  let endpoint = `https://mcr-codes-weather-app.herokuapp.com/forecast`;
+  if (city) {
+    endpoint += `?city=${city}`;
+  }
   const response = await axios.get(endpoint);
 
   setForecastData(response.data);
