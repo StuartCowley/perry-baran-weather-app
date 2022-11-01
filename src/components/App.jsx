@@ -8,10 +8,11 @@ import SearchForm from "./SearchForm";
 
 function App() {
   const [{ forecasts, location }, setForecastData] = useState({
-    location: {},
     forecasts: [],
+    location: {},
   });
   const [selectedDate, setSelectedDate] = useState(0);
+  const [errMessage, setErrMessage] = useState("");
 
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
@@ -22,7 +23,7 @@ function App() {
   };
 
   const handleCitySearch = (city) => {
-    getForecast(setForecastData, setSelectedDate, city);
+    getForecast(setForecastData, setSelectedDate, city, setErrMessage);
   };
 
   useEffect(() => {
@@ -31,13 +32,17 @@ function App() {
 
   return (
     <div className="weather-app">
-      <LocationDetails location={location} />
+      <LocationDetails location={location} errMessage={errMessage} />
       <SearchForm handleSearch={handleCitySearch} />
-      <ForecastSummaries
-        forecasts={forecasts}
-        handleForecastSelect={handleForecaseSelect}
-      />
-      {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
+      {!errMessage && (
+        <>
+          <ForecastSummaries
+            forecasts={forecasts}
+            handleForecastSelect={handleForecaseSelect}
+          />
+          {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
+        </>
+      )}
     </div>
   );
 }
