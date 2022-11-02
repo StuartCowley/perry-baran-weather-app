@@ -33,6 +33,8 @@
       {
         "extensions": [".js", ".jsx"]
       }
-    ]
+    ],
+    "prettier/prettier": "warn",
+    "no-unused-vars":"warn"
   }
 }

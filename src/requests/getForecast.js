@@ -1,23 +1,50 @@
 import axios from "axios";
 
 const getForecast = async (
-  setForecastData,
+  setLocation,
+  setForecasts,
   setSelectedDate,
-  city,
-  setErrMessage
+  setErrMessage,
+  location,
+  units = "metric"
 ) => {
-  let endpoint = `https://mcr-codes-weather-app.herokuapp.com/forecast`;
-  if (city) {
-    endpoint += `?city=${city}`;
-  }
+  const endpoint = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=${units}&APPID=d1cad75804f6bd996f5d83905ac66876`;
   try {
     const response = await axios.get(endpoint);
+    const {
+      data: {
+        city: { name, country },
+        list,
+      },
+    } = response;
 
-    setForecastData(response.data);
-    setSelectedDate(response.data.forecasts[0].date);
+    // seperates forecasts by day
+    const forecasts = [];
+    let daysForecasts = [];
+    list.forEach((forecast) => {
+      if (daysForecasts.length === 0) {
+        daysForecasts.push(forecast);
+      } else {
+        const lastForecastDay =
+          daysForecasts[daysForecasts.length - 1].dt_txt.split(" ")[0];
+        const forecastDay = forecast.dt_txt.split(" ")[0];
+
+        if (forecastDay === lastForecastDay) {
+          daysForecasts.push(forecast);
+        } else {
+          forecasts.push(daysForecasts);
+          daysForecasts = [forecast];
+        }
+      }
+    });
+    forecasts.push(daysForecasts);
+
+    setLocation({ city: name, country });
+    setForecasts(forecasts);
+    setSelectedDate(forecasts[0][0].dt);
     setErrMessage("");
   } catch (err) {
-    const { status } = err.response;
+    const { status } = err;
     if (status === 404) {
       console.error("Invalid Location", err);
       setErrMessage("Could not find that city or town, please try again.");

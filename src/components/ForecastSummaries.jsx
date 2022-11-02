@@ -13,7 +13,7 @@ function ForecastSummaries(props) {
           <ForecastSummary
             forecast={forecast}
             handleForecastSelect={handleForecastSelect}
-            key={forecast.date}
+            key={forecast.key}
           />
         );
       })}
@@ -21,18 +21,21 @@ function ForecastSummaries(props) {
   );
 }
 
+ForecastSummaries.defaultProps = {
+  handleForecastSelect: undefined,
+};
+
 ForecastSummaries.propTypes = {
   forecasts: PropTypes.arrayOf(
     PropTypes.shape({
-      date: PropTypes.number,
-      description: PropTypes.string,
-      icon: PropTypes.number,
-      temperature: PropTypes.shape({
-        max: PropTypes.number,
-      }),
+      dateOrTime: PropTypes.string,
+      weather: PropTypes.string,
+      icon: PropTypes.string,
+      temp: PropTypes.string,
+      key: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     })
   ).isRequired,
-  handleForecastSelect: PropTypes.func.isRequired,
+  handleForecastSelect: PropTypes.func,
 };
 
 export default ForecastSummaries;

@@ -2,32 +2,52 @@ import React, { useEffect, useState } from "react";
 import "../styles/App.css";
 import LocationDetails from "./LocationDetails";
 import ForecastSummaries from "./ForecastSummaries";
-import ForecastDetails from "./ForecastDetails";
 import getForecast from "../requests/getForecast";
 import SearchForm from "./SearchForm";
+import ForecastDetails from "./ForecastDetails";
 
 function App() {
-  const [{ forecasts, location }, setForecastData] = useState({
-    forecasts: [],
-    location: {},
-  });
+  const [location, setLocation] = useState({ city: "", country: "" });
+  const [forecasts, setForecasts] = useState([]);
   const [selectedDate, setSelectedDate] = useState(0);
   const [errMessage, setErrMessage] = useState("");
 
+  const simplifiedForecasts = forecasts.map((forecast) => {
+    const [
+      {
+        dt,
+        weather: [{ description, id }],
+      },
+    ] = forecast;
+
+    return {
+      dateOrTime: new Date(dt * 1000).toDateString(),
+      icon: id.toString(),
+      key: dt,
+      temp: (
+        forecast.reduce((prev, curr) => prev + curr.main.temp, 0) /
+        forecast.length
+      ).toFixed(2),
+      weather: description,
+    };
+  });
+
   const selectedForecast = forecasts.find(
-    (forecast) => forecast.date === selectedDate
+    (forecast) => forecast[0].dt === selectedDate
   );
 
-  const handleForecaseSelect = (date) => {
-    setSelectedDate(date);
-  };
-
   const handleCitySearch = (city) => {
-    getForecast(setForecastData, setSelectedDate, city, setErrMessage);
+    getForecast(
+      setLocation,
+      setForecasts,
+      setSelectedDate,
+      setErrMessage,
+      city
+    );
   };
 
   useEffect(() => {
-    handleCitySearch();
+    handleCitySearch("leeds");
   }, []);
 
   return (
@@ -37,8 +57,8 @@ function App() {
       {!errMessage && (
         <>
           <ForecastSummaries
-            forecasts={forecasts}
-            handleForecastSelect={handleForecaseSelect}
+            forecasts={simplifiedForecasts}
+            handleForecastSelect={setSelectedDate}
           />
           {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
         </>
