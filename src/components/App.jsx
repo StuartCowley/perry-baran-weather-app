@@ -5,6 +5,8 @@ import ForecastSummaries from "./ForecastSummaries";
 import getForecast from "../requests/getForecast";
 import SearchForm from "./SearchForm";
 import ForecastDetails from "./ForecastDetails";
+import { calcMean } from "../helpers/calculateValues";
+import { dateString } from "../helpers/dateTime";
 
 function App() {
   const [location, setLocation] = useState({ city: "", country: "" });
@@ -21,13 +23,10 @@ function App() {
     ] = forecast;
 
     return {
-      dateOrTime: new Date(dt * 1000).toDateString(),
+      dateOrTime: dateString(dt),
       icon: id.toString(),
       key: dt,
-      temp: (
-        forecast.reduce((prev, curr) => prev + curr.main.temp, 0) /
-        forecast.length
-      ).toFixed(2),
+      temp: calcMean(forecast, "main", "temp", 2),
       weather: description,
     };
   });

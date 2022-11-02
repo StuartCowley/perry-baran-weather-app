@@ -11,19 +11,19 @@ function ForecastBreakdown(props) {
         {temp}°C
       </p>
       <p className="forecast-breakdown__min-temp">
-        <span>Minimum Temperature:</span>
+        <span>Minimum Temperature: </span>
         {minTemp}°C
       </p>
       <p className="forecast-breakdown__max-temp">
-        <span>Maximum Temperature:</span>
+        <span>Maximum Temperature: </span>
         {maxTemp}°C
       </p>
       <p className="forecast-breakdown__humidity">
-        <span>Humidity:</span>
+        <span>Humidity: </span>
         {humidity}%
       </p>
       <p className="forecast-breakdown__wind-speed">
-        <span>Wind Speed:</span>
+        <span>Wind Speed: </span>
         {windSpeed}km/h
       </p>
     </div>

@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import { v4 as uuid } from "uuid";
 import ForecastSummaries from "./ForecastSummaries";
 import ForecastBreakdown from "./ForecastBreakdown";
+import { calcMean, calcMax, calcMin } from "../helpers/calculateValues";
+import { dateString } from "../helpers/dateTime";
 
 function ForecastDetails({ forecasts }) {
   const simplifiedForecast = Array.from({ length: 8 }, (_, i) => {
@@ -42,31 +44,12 @@ function ForecastDetails({ forecasts }) {
     return item;
   });
 
-  const day = new Date(forecasts[0].dt * 1000).toDateString();
-  const temp = (
-    forecasts.reduce((prev, curr) => prev + curr.main.temp, 0) /
-    forecasts.length
-  ).toFixed(2);
-  const minTemp = forecasts
-    .reduce((prev, curr) => {
-      const currTemp = curr.main.temp_min;
-      return prev < currTemp ? prev : currTemp;
-    }, 1000)
-    .toFixed(2);
-  const maxTemp = forecasts
-    .reduce((prev, curr) => {
-      const currTemp = curr.main.temp_max;
-      return prev > currTemp ? prev : currTemp;
-    }, -1000)
-    .toFixed(2);
-  const humidity = (
-    forecasts.reduce((prev, curr) => prev + curr.main.humidity, 0) /
-    forecasts.length
-  ).toFixed(0);
-  const windSpeed = (
-    forecasts.reduce((prev, curr) => prev + curr.wind.speed, 0) /
-    forecasts.length
-  ).toFixed(2);
+  const day = dateString(forecasts[0].dt);
+  const temp = calcMean(forecasts, "main", "temp", 2);
+  const minTemp = calcMin(forecasts, "main", "temp_max", 2);
+  const maxTemp = calcMax(forecasts, "main", "temp_max", 2);
+  const humidity = calcMean(forecasts, "main", "humidity", 0);
+  const windSpeed = calcMean(forecasts, "wind", "speed", 2);
 
   return (
     <div className="forecast-details">

@@ -203,15 +203,15 @@ exports[`ForecastDetails snapshot renders correctly 1`] = `
         class="forecast-breakdown__min-temp"
       >
         <span>
-          Minimum Temperature:
+          Minimum Temperature: 
         </span>
-        18.00°C
+        22.00°C
       </p>
       <p
         class="forecast-breakdown__max-temp"
       >
         <span>
-          Maximum Temperature:
+          Maximum Temperature: 
         </span>
         23.00°C
       </p>
@@ -219,7 +219,7 @@ exports[`ForecastDetails snapshot renders correctly 1`] = `
         class="forecast-breakdown__humidity"
       >
         <span>
-          Humidity:
+          Humidity: 
         </span>
         11%
       </p>
@@ -227,7 +227,7 @@ exports[`ForecastDetails snapshot renders correctly 1`] = `
         class="forecast-breakdown__wind-speed"
       >
         <span>
-          Wind Speed:
+          Wind Speed: 
         </span>
         13.50km/h
       </p>
