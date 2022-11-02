@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastBreakdown snapshot renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="forecast-breakdown"
+  >
+    <p
+      class="forecast-breakdown__temp"
+    >
+      <span>
+        Temperture: 
+      </span>
+      20°C
+    </p>
+    <p
+      class="forecast-breakdown__min-temp"
+    >
+      <span>
+        Minimum Temperature:
+      </span>
+      18°C
+    </p>
+    <p
+      class="forecast-breakdown__max-temp"
+    >
+      <span>
+        Maximum Temperature:
+      </span>
+      22°C
+    </p>
+    <p
+      class="forecast-breakdown__humidity"
+    >
+      <span>
+        Humidity:
+      </span>
+      30%
+    </p>
+    <p
+      class="forecast-breakdown__wind-speed"
+    >
+      <span>
+        Wind Speed:
+      </span>
+      40km/h
+    </p>
+  </div>
+</DocumentFragment>
+`;

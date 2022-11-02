@@ -60,7 +60,7 @@ function App() {
             forecasts={simplifiedForecasts}
             handleForecastSelect={setSelectedDate}
           />
-          {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
+          {selectedForecast && <ForecastDetails forecasts={selectedForecast} />}
         </>
       )}
     </div>

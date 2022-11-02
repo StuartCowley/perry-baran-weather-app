@@ -6,20 +6,18 @@ describe("ForecastSummaries", () => {
   const validProps = {
     forecasts: [
       {
-        date: 111111111,
-        description: "Desc 1",
-        icon: 800,
-        temperature: {
-          max: 1,
-        },
+        dateOrTime: "today",
+        weather: "Test description 1",
+        icon: "800",
+        temp: "20",
+        key: 20,
       },
       {
-        date: 222222222,
-        description: "Desc 2",
-        icon: 211,
-        temperature: {
-          max: 2,
-        },
+        dateOrTime: "tomorrow",
+        weather: "Test description 2",
+        icon: "900",
+        temp: "25",
+        key: 4,
       },
     ],
     handleForecastSelect: () => {},

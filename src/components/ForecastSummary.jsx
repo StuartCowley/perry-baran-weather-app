@@ -8,12 +8,12 @@ function ForecastSummary({ forecast, handleForecastSelect }) {
 
   return (
     <div className="forecast-summary" data-testid="forecast-summary">
-      <p>{dateOrTime}</p>
+      <p className="forecast-summary__dateOrTime">{dateOrTime}</p>
       <div className="forecast-summary__icon" data-testid="forecast-icon">
         {icon ? <WeatherIcon name="owm" iconId={icon} /> : "No Data"}
       </div>
-      <div>{weather}</div>
-      <div>{temp ? `${temp}°C` : null}</div>
+      <p className="forecast-summary__description">{weather}</p>
+      <p className="forecast-summary__temp">{temp ? `${temp}°C` : null}</p>
       {handleForecastSelect && (
         <button type="button" onClick={() => handleForecastSelect(key)}>
           More Details

@@ -9,11 +9,11 @@ exports[`ForecastSummaries snapshot renders correctlty 1`] = `
       class="forecast-summary"
       data-testid="forecast-summary"
     >
-      <div
-        class="forecast-summary__date"
+      <p
+        class="forecast-summary__dateOrTime"
       >
-        Fri Jan 02 1970
-      </div>
+        today
+      </p>
       <div
         class="forecast-summary__icon"
         data-testid="forecast-icon"
@@ -23,16 +23,16 @@ exports[`ForecastSummaries snapshot renders correctlty 1`] = `
           name="owm"
         />
       </div>
-      <div
-        class="forecast-summary__temperature"
-      >
-        1°C
-      </div>
-      <div
+      <p
         class="forecast-summary__description"
       >
-        Desc 1
-      </div>
+        Test description 1
+      </p>
+      <p
+        class="forecast-summary__temp"
+      >
+        20°C
+      </p>
       <button
         type="button"
       >
@@ -43,30 +43,30 @@ exports[`ForecastSummaries snapshot renders correctlty 1`] = `
       class="forecast-summary"
       data-testid="forecast-summary"
     >
-      <div
-        class="forecast-summary__date"
+      <p
+        class="forecast-summary__dateOrTime"
       >
-        Sat Jan 03 1970
-      </div>
+        tomorrow
+      </p>
       <div
         class="forecast-summary__icon"
         data-testid="forecast-icon"
       >
         <i
-          class="wi wi-day-thunderstorm"
+          class="wi wi-tornado"
           name="owm"
         />
       </div>
-      <div
-        class="forecast-summary__temperature"
-      >
-        2°C
-      </div>
-      <div
+      <p
         class="forecast-summary__description"
       >
-        Desc 2
-      </div>
+        Test description 2
+      </p>
+      <p
+        class="forecast-summary__temp"
+      >
+        25°C
+      </p>
       <button
         type="button"
       >

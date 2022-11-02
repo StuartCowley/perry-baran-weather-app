@@ -6,11 +6,11 @@ exports[`ForecastSummary snapshot renders corretly 1`] = `
     class="forecast-summary"
     data-testid="forecast-summary"
   >
-    <div
-      class="forecast-summary__date"
+    <p
+      class="forecast-summary__dateOrTime"
     >
-      Thu Jan 01 1970
-    </div>
+      today
+    </p>
     <div
       class="forecast-summary__icon"
       data-testid="forecast-icon"
@@ -20,16 +20,16 @@ exports[`ForecastSummary snapshot renders corretly 1`] = `
         name="owm"
       />
     </div>
-    <div
-      class="forecast-summary__temperature"
-    >
-      20°C
-    </div>
-    <div
+    <p
       class="forecast-summary__description"
     >
       Test description
-    </div>
+    </p>
+    <p
+      class="forecast-summary__temp"
+    >
+      20°C
+    </p>
     <button
       type="button"
     >

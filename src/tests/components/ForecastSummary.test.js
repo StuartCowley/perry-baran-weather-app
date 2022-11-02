@@ -5,14 +5,12 @@ import ForecastSummary from "../../components/ForecastSummary";
 describe("ForecastSummary", () => {
   const validProps = {
     forecast: {
-      date: 12345,
-      description: "Test description",
-      icon: 800,
-      temperature: {
-        max: 20,
-      },
+      dateOrTime: "today",
+      weather: "Test description",
+      icon: "800",
+      temp: "20",
+      key: 20,
     },
-    key: 0,
     handleForecastSelect: () => {},
   };
 
@@ -22,7 +20,6 @@ describe("ForecastSummary", () => {
         <ForecastSummary
           forecast={validProps.forecast}
           handleForecastSelect={validProps.handleForecastSelect}
-          key={validProps.key}
         />
       );
 
@@ -36,14 +33,14 @@ describe("ForecastSummary", () => {
         <ForecastSummary
           forecast={validProps.forecast}
           handleForecastSelect={validProps.handleForecastSelect}
-          key={validProps.key}
         />
       );
 
-      expect(
-        getByText(new Date(validProps.forecast.date).toDateString())
-      ).toHaveAttribute("class", "forecast-summary__date");
-      expect(getByText(validProps.forecast.description)).toHaveAttribute(
+      expect(getByText(validProps.forecast.dateOrTime)).toHaveAttribute(
+        "class",
+        "forecast-summary__dateOrTime"
+      );
+      expect(getByText(validProps.forecast.weather)).toHaveAttribute(
         "class",
         "forecast-summary__description"
       );
@@ -51,9 +48,10 @@ describe("ForecastSummary", () => {
         "class",
         "forecast-summary__icon"
       );
-      expect(
-        getByText(`${validProps.forecast.temperature.max}°C`)
-      ).toHaveAttribute("class", "forecast-summary__temperature");
+      expect(getByText(`${validProps.forecast.temp}°C`)).toHaveAttribute(
+        "class",
+        "forecast-summary__temp"
+      );
     });
   });
 });
