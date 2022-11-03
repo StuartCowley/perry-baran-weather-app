@@ -28,10 +28,9 @@ function SearchForm({ handleSearch, setSelectedUnits }) {
         </button>
       </div>
       <div className="search-form__radio">
-        <h3>Units</h3>
         <div>
           <label htmlFor="metric">
-            Metric:
+            Metric
             <input
               id="metric"
               type="radio"
@@ -40,7 +39,7 @@ function SearchForm({ handleSearch, setSelectedUnits }) {
             />
           </label>
           <label htmlFor="imperial">
-            Imperial:
+            Imperial
             <input
               id="imperial"
               type="radio"
