@@ -1,5 +1,6 @@
 import React, { useRef, useContext } from "react";
 import PropTypes from "prop-types";
+import "../styles/SearchForm.css";
 import UnitContext from "../context/UnitContext";
 import { populateLocalStorage } from "../requests/localStorage";
 
@@ -20,11 +21,13 @@ function SearchForm({ handleSearch, setSelectedUnits }) {
 
   return (
     <form className="search-form">
-      <input type="text" ref={searchRef} />
-      <button type="submit" onClick={handleSubmit}>
-        Search
-      </button>
-      <div>
+      <div className="search-form__search">
+        <input type="text" ref={searchRef} />
+        <button type="submit" onClick={handleSubmit}>
+          Search
+        </button>
+      </div>
+      <div className="search-form__radio">
         <h3>Units</h3>
         <div>
           <label htmlFor="metric">

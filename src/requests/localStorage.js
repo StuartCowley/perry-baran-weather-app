@@ -1,9 +1,6 @@
 exports.getLocalStorage = (name) => {
   const item = localStorage.getItem(name);
-  if (!item) {
-    return undefined;
-  }
-  return JSON.parse(item);
+  return item ? JSON.parse(item) : undefined;
 };
 
 exports.populateLocalStorage = (name, value) => {

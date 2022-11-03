@@ -1,0 +1,32 @@
+.search-form {
+  width: 100%;
+  background-color: rgb(8, 107, 149);
+  display: inline-block;
+}
+
+.search-form__search {
+  display: inline-block;
+  background-color: green;
+  width: 50%;
+}
+
+.search-form__search > input {
+  width: calc(100% - 80px);
+}
+
+.search-form__radio > button {
+  width: 80px;
+}
+
+.search-form__radio {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+}
+
+.search-form__radio > div {
+  background-color: red;
+}
+
+.search-form label {
+}

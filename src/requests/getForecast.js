@@ -69,12 +69,12 @@ const getForecast = async (
     if (status === 500 || status === 502 || status === 503 || status === 504) {
       console.error("Server Error", err);
       setErrMessage(
-        "Oops, something went wrong on our side, please try again later."
+        "Oops, something went wrong with the server, please try again later."
       );
     } else {
       console.error("unexpected Error", err);
       setErrMessage(
-        "Oops, something unexpected went wrong, please try again later"
+        "Oops, something unexpected went wrong, please try again later."
       );
     }
   }
