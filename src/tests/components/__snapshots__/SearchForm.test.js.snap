@@ -2,7 +2,7 @@
 
 exports[`SearchForm snapshot renders correctly 1`] = `
 <DocumentFragment>
-  <div
+  <form
     class="search-form"
   >
     <input
@@ -13,6 +13,31 @@ exports[`SearchForm snapshot renders correctly 1`] = `
     >
       Search
     </button>
-  </div>
+    <div>
+      <h3>
+        Units
+      </h3>
+      <div>
+        <label
+          for="metric"
+        >
+          Metric:
+          <input
+            id="metric"
+            type="radio"
+          />
+        </label>
+        <label
+          for="imperial"
+        >
+          Imperial:
+          <input
+            id="imperial"
+            type="radio"
+          />
+        </label>
+      </div>
+    </div>
+  </form>
 </DocumentFragment>
 `;

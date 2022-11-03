@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ForecastDetails snapshot renders correctly 1`] = `
+exports[`ForecastMoreDetails snapshot renders correctly 1`] = `
 <DocumentFragment>
   <div
     class="forecast-details"
@@ -191,6 +191,20 @@ exports[`ForecastDetails snapshot renders correctly 1`] = `
     <div
       class="forecast-breakdown"
     >
+      <div
+        class="forecast-breakdown__icon"
+        data-testid="forecast-icon"
+      >
+        <i
+          class="wi wi-day-sunny"
+          name="owm"
+        />
+      </div>
+      <p
+        class="forecast-breakdown__weather"
+      >
+        desc 1
+      </p>
       <p
         class="forecast-breakdown__temp"
       >
@@ -229,7 +243,7 @@ exports[`ForecastDetails snapshot renders correctly 1`] = `
         <span>
           Wind Speed: 
         </span>
-        13.50km/h
+        13.50m/s
       </p>
     </div>
   </div>

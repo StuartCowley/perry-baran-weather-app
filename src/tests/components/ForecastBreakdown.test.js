@@ -4,22 +4,26 @@ import ForecastBreakdown from "../../components/ForecastBreakdown";
 
 describe("ForecastBreakdown", () => {
   const validProps = {
+    icon: "200",
     temp: "20",
     minTemp: "18",
     maxTemp: "22",
     humidity: "30",
     windSpeed: "40",
+    weather: "cold",
   };
 
   describe("snapshot", () => {
     it("renders correctly", () => {
       const { asFragment } = render(
         <ForecastBreakdown
+          icon={validProps.icon}
           temp={validProps.temp}
           minTemp={validProps.minTemp}
           maxTemp={validProps.maxTemp}
           humidity={validProps.humidity}
           windSpeed={validProps.windSpeed}
+          weather={validProps.weather}
         />
       );
 
@@ -29,16 +33,22 @@ describe("ForecastBreakdown", () => {
 
   describe("props", () => {
     it("renders correct values for props", () => {
-      const { getByText } = render(
+      const { getByText, getByTestId } = render(
         <ForecastBreakdown
+          icon={validProps.icon}
           temp={validProps.temp}
           minTemp={validProps.minTemp}
           maxTemp={validProps.maxTemp}
           humidity={validProps.humidity}
           windSpeed={validProps.windSpeed}
+          weather={validProps.weather}
         />
       );
 
+      expect(getByTestId("forecast-icon")).toHaveAttribute(
+        "class",
+        "forecast-breakdown__icon"
+      );
       expect(getByText(`${validProps.temp}°C`)).toHaveAttribute(
         "class",
         "forecast-breakdown__temp"
@@ -55,7 +65,7 @@ describe("ForecastBreakdown", () => {
         "class",
         "forecast-breakdown__humidity"
       );
-      expect(getByText(`${validProps.windSpeed}km/h`)).toHaveAttribute(
+      expect(getByText(`${validProps.windSpeed}m/s`)).toHaveAttribute(
         "class",
         "forecast-breakdown__wind-speed"
       );

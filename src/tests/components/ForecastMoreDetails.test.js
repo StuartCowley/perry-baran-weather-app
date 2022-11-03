@@ -1,8 +1,8 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import ForecastDetails from "../../components/ForecastDetails";
+import ForecastMoreDetails from "../../components/ForecastMoreDetails";
 
-describe("ForecastDetails", () => {
+describe("ForecastMoreDetails", () => {
   const validProps = {
     forecasts: [
       {
@@ -17,7 +17,7 @@ describe("ForecastDetails", () => {
         weather: [
           {
             description: "desc 1",
-            icon: "800",
+            id: 800,
           },
         ],
         wind: {
@@ -36,7 +36,7 @@ describe("ForecastDetails", () => {
         weather: [
           {
             description: "desc 2",
-            icon: "200",
+            id: 200,
           },
         ],
         wind: {
@@ -49,7 +49,7 @@ describe("ForecastDetails", () => {
   describe("snapshot", () => {
     it("renders correctly", () => {
       const { asFragment } = render(
-        <ForecastDetails forecasts={validProps.forecasts} />
+        <ForecastMoreDetails forecasts={validProps.forecasts} />
       );
 
       expect(asFragment()).toMatchSnapshot();

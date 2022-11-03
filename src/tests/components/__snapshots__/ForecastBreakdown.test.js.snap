@@ -5,6 +5,20 @@ exports[`ForecastBreakdown snapshot renders correctly 1`] = `
   <div
     class="forecast-breakdown"
   >
+    <div
+      class="forecast-breakdown__icon"
+      data-testid="forecast-icon"
+    >
+      <i
+        class="wi wi-day-storm-showers"
+        name="owm"
+      />
+    </div>
+    <p
+      class="forecast-breakdown__weather"
+    >
+      cold
+    </p>
     <p
       class="forecast-breakdown__temp"
     >
@@ -43,7 +57,7 @@ exports[`ForecastBreakdown snapshot renders correctly 1`] = `
       <span>
         Wind Speed: 
       </span>
-      40km/h
+      40m/s
     </p>
   </div>
 </DocumentFragment>
