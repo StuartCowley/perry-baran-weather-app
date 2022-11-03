@@ -62,7 +62,6 @@ function ForecastMoreDetails({ forecasts }) {
   return (
     <div className="forecast-details">
       <h2>{day}</h2>
-      <ForecastSummaries forecasts={triHourlyForecasts} />
       <ForecastBreakdown
         icon={icon}
         temp={temp}
@@ -72,6 +71,7 @@ function ForecastMoreDetails({ forecasts }) {
         windSpeed={windSpeed}
         weather={weather}
       />
+      <ForecastSummaries forecasts={triHourlyForecasts} />
     </div>
   );
 }

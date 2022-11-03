@@ -1,0 +1,8 @@
+.forecast-breakdown {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.forecast-breakdown span {
+  font-weight: 600;
+}

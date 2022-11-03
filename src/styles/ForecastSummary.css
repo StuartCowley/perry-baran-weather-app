@@ -1,3 +1,44 @@
 .forecast-summary {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.forecast-summary:first-child {
+  border-left: none;
+}
+
+.forecast-summary__dateOrTime {
+  font-size: 1rem;
+}
+
+.forecast-summary__icon {
+  font-size: min(4rem, 5vw);
+}
+
+.forecast-summary__no-data {
+  font-size: min(1.5rem, 2vw);
+}
+
+.forecast-summary__description {
+  font-size: min(1rem, 2.5vw);
+}
+
+.forecast-summary__temp {
+  font-size: min(1rem, 2.5vw);
+}
+
+.forecast-summary__more-details {
+  all: unset;
+  width: 95%;
+  padding: 5px 0;
+}
+
+@media screen and (max-width: 780px) {
+  .forecast-summary__dateOrTime {
+    width: 50px;
+  }
 }

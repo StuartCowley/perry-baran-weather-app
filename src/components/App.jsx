@@ -28,7 +28,7 @@ function App() {
     ] = forecast;
 
     return {
-      dateOrTime: dateString(dt),
+      dateOrTime: dateString(dt).slice(0, 10),
       icon: id.toString(),
       key: dt,
       temp: calcMean(forecast, "main", "temp", 2),

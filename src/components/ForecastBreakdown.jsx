@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import WeatherIcon from "react-icons-weather";
 import getUnits from "../helpers/getUnits";
 import UnitContext from "../context/UnitContext";
+import "../styles/ForecastBreakdown.css";
 
 function ForecastBreakdown(props) {
   const { icon, temp, minTemp, maxTemp, humidity, windSpeed, weather } = props;
