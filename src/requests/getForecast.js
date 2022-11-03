@@ -1,5 +1,6 @@
 import axios from "axios";
 import { populateLocalStorage } from "./localStorage";
+import forecastData from "../data/forecastData.json";
 
 const getForecast = async (
   setLocation,
@@ -11,7 +12,8 @@ const getForecast = async (
 ) => {
   const endpoint = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=${units}&APPID=d1cad75804f6bd996f5d83905ac66876`;
   try {
-    const response = await axios.get(endpoint);
+    // const response = await axios.get(endpoint);
+    const response = forecastData;
     const {
       data: {
         city: { name, country },
