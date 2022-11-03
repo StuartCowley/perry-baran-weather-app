@@ -5,23 +5,26 @@ exports[`SearchForm snapshot renders correctly 1`] = `
   <form
     class="search-form"
   >
-    <input
-      type="text"
-    />
-    <button
-      type="submit"
+    <div
+      class="search-form__search"
     >
-      Search
-    </button>
-    <div>
-      <h3>
-        Units
-      </h3>
+      <input
+        type="text"
+      />
+      <button
+        type="submit"
+      >
+        Search
+      </button>
+    </div>
+    <div
+      class="search-form__radio"
+    >
       <div>
         <label
           for="metric"
         >
-          Metric:
+          Metric
           <input
             id="metric"
             type="radio"
@@ -30,7 +33,7 @@ exports[`SearchForm snapshot renders correctly 1`] = `
         <label
           for="imperial"
         >
-          Imperial:
+          Imperial
           <input
             id="imperial"
             type="radio"

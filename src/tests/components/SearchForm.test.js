@@ -30,8 +30,8 @@ describe("SearchForm", () => {
         />
       );
 
-      const metricRadio = getByLabelText("Metric:");
-      const imperialRadio = getByLabelText("Imperial:");
+      const metricRadio = getByLabelText("Metric");
+      const imperialRadio = getByLabelText("Imperial");
 
       expect(getByText("Search")).toHaveAttribute("type", "submit");
       expect(metricRadio).toHaveAttribute("type", "radio");
