@@ -48,7 +48,7 @@ describe("ForecastTrihourlySummary", () => {
         "class",
         "forecast-trihourly-summary__icon"
       );
-      expect(getByText(`${validProps.temp}°C`)).toHaveAttribute(
+      expect(getByText(`${validProps.temp.toFixed(1)}°C`)).toHaveAttribute(
         "class",
         "forecast-trihourly-summary__temp"
       );

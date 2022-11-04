@@ -36,7 +36,7 @@ exports[`ForecastDailySummaries snapshot renders correctlty 1`] = `
       <p
         class="forecast-daily-summary__temp"
       >
-        13.00°C
+        13.0°C
       </p>
       <button
         class="forecast-daily-summary__more-details"
@@ -76,7 +76,7 @@ exports[`ForecastDailySummaries snapshot renders correctlty 1`] = `
       <p
         class="forecast-daily-summary__temp"
       >
-        14.00°C
+        14.0°C
       </p>
       <button
         class="forecast-daily-summary__more-details"

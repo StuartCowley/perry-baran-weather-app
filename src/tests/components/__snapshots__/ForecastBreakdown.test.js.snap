@@ -6,59 +6,67 @@ exports[`ForecastBreakdown snapshot renders correctly 1`] = `
     class="forecast-breakdown"
   >
     <div
-      class="forecast-breakdown__icon"
-      data-testid="forecast-icon"
+      class="forecast-breakdown__right"
     >
-      <i
-        class="wi wi-day-storm-showers"
-        name="owm"
-      />
+      <div
+        class="forecast-breakdown__icon"
+        data-testid="forecast-icon"
+      >
+        <i
+          class="wi wi-day-storm-showers"
+          name="owm"
+        />
+      </div>
+      <p
+        class="forecast-breakdown__weather"
+      >
+        cold
+      </p>
     </div>
-    <p
-      class="forecast-breakdown__weather"
+    <div
+      class="forecast-breakdown__left"
     >
-      cold
-    </p>
-    <p
-      class="forecast-breakdown__temp"
-    >
-      <span>
-        Temperture: 
-      </span>
-      20°C
-    </p>
-    <p
-      class="forecast-breakdown__min-temp"
-    >
-      <span>
-        Minimum Temperature: 
-      </span>
-      18°C
-    </p>
-    <p
-      class="forecast-breakdown__max-temp"
-    >
-      <span>
-        Maximum Temperature: 
-      </span>
-      22°C
-    </p>
-    <p
-      class="forecast-breakdown__humidity"
-    >
-      <span>
-        Humidity: 
-      </span>
-      30%
-    </p>
-    <p
-      class="forecast-breakdown__wind-speed"
-    >
-      <span>
-        Wind Speed: 
-      </span>
-      40m/s
-    </p>
+      <p
+        class="forecast-breakdown__temp"
+      >
+        20
+        <span>
+          °C
+        </span>
+      </p>
+      <p
+        class="forecast-breakdown__min-temp"
+      >
+        <span>
+          Min: 
+        </span>
+        18°C
+      </p>
+      <p
+        class="forecast-breakdown__max-temp"
+      >
+        <span>
+          Max: 
+        </span>
+        22°C
+      </p>
+      <p
+        class="forecast-breakdown__humidity"
+      >
+        <span>
+          Humidity: 
+        </span>
+        30%
+      </p>
+      <p
+        class="forecast-breakdown__wind-speed"
+      >
+        <span>
+          Wind Speed: 
+        </span>
+        40m/s
+      </p>
+    </div>
   </div>
 </DocumentFragment>
 `;

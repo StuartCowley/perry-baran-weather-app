@@ -20,26 +20,29 @@ exports[`SearchForm snapshot renders correctly 1`] = `
     <div
       class="search-form__radio"
     >
-      <div>
-        <label
-          for="metric"
-        >
-          Metric
-          <input
-            id="metric"
-            type="radio"
-          />
-        </label>
-        <label
-          for="imperial"
-        >
-          Imperial
-          <input
-            id="imperial"
-            type="radio"
-          />
-        </label>
-      </div>
+      <h3>
+        Units:
+      </h3>
+      <label
+        class="search-form__radio__label"
+        for="metric"
+      >
+        Metric
+        <input
+          id="metric"
+          type="radio"
+        />
+      </label>
+      <label
+        class="search-form__radio__label"
+        for="imperial"
+      >
+        Imperial
+        <input
+          id="imperial"
+          type="radio"
+        />
+      </label>
     </div>
   </form>
 </DocumentFragment>

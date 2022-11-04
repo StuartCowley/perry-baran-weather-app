@@ -49,7 +49,7 @@ describe("ForecastBreakdown", () => {
         "class",
         "forecast-breakdown__icon"
       );
-      expect(getByText(`${validProps.temp}°C`)).toHaveAttribute(
+      expect(getByText(validProps.temp)).toHaveAttribute(
         "class",
         "forecast-breakdown__temp"
       );
