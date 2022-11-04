@@ -28,26 +28,25 @@ function SearchForm({ handleSearch, setSelectedUnits }) {
         </button>
       </div>
       <div className="search-form__radio">
-        <div>
-          <label htmlFor="metric">
-            Metric
-            <input
-              id="metric"
-              type="radio"
-              checked={selectedUnits === "metric"}
-              onChange={handleRadioChange}
-            />
-          </label>
-          <label htmlFor="imperial">
-            Imperial
-            <input
-              id="imperial"
-              type="radio"
-              checked={selectedUnits === "imperial"}
-              onChange={handleRadioChange}
-            />
-          </label>
-        </div>
+        <h3>Units:</h3>
+        <label htmlFor="metric" className="search-form__radio__label">
+          Metric
+          <input
+            id="metric"
+            type="radio"
+            checked={selectedUnits === "metric"}
+            onChange={handleRadioChange}
+          />
+        </label>
+        <label htmlFor="imperial" className="search-form__radio__label">
+          Imperial
+          <input
+            id="imperial"
+            type="radio"
+            checked={selectedUnits === "imperial"}
+            onChange={handleRadioChange}
+          />
+        </label>
       </div>
     </form>
   );
