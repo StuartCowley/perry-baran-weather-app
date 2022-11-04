@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "../styles/App.css";
 import LocationDetails from "./LocationDetails";
-import ForecastSummaries from "./ForecastSummaries";
+import ForecastDailySummaries from "./ForecastDailySummaries";
 import SearchForm from "./SearchForm";
 import ForecastMoreDetails from "./ForecastMoreDetails";
 import getForecast from "../requests/getForecast";
-import { calcMean } from "../helpers/calculateValues";
-import { dateString } from "../helpers/dateTime";
 import UnitContext from "../context/UnitContext";
 import { getLocalStorage } from "../requests/localStorage";
 
@@ -19,25 +17,8 @@ function App() {
     getLocalStorage("units") || "metric"
   );
 
-  const simplifiedForecasts = forecasts.map((forecast) => {
-    const [
-      {
-        dt,
-        weather: [{ description, id }],
-      },
-    ] = forecast;
-
-    return {
-      dateOrTime: dateString(dt).slice(0, 10),
-      icon: id.toString(),
-      key: dt,
-      temp: calcMean(forecast, "main", "temp", 2),
-      weather: description,
-    };
-  });
-
   const selectedForecast = forecasts.find(
-    (forecast) => forecast[0].dt === selectedDate
+    (forecast) => forecast[0].dateTime === selectedDate
   );
 
   const handleCitySearch = (city, units) => {
@@ -57,7 +38,6 @@ function App() {
     handleCitySearch(city, selectedUnits);
   }, [selectedUnits]);
 
-
   return (
     <div className="weather-app">
       <UnitContext.Provider value={selectedUnits}>
@@ -68,8 +48,8 @@ function App() {
         <LocationDetails location={location} errMessage={errMessage} />
         {!errMessage && (
           <>
-            <ForecastSummaries
-              forecasts={simplifiedForecasts}
+            <ForecastDailySummaries
+              forecasts={forecasts}
               handleForecastSelect={setSelectedDate}
             />
             {selectedForecast && (

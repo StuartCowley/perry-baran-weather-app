@@ -1,0 +1,35 @@
+.forecast-trihourly-summary {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.forecast-trihourly-summary:first-child {
+  border-left: none;
+}
+
+.forecast-trihourly-summary__time {
+  font-size: 1rem;
+}
+
+.forecast-trihourly-summary__icon {
+  font-size: min(4rem, 5vw);
+}
+
+.forecast-daily-summary__description {
+  font-size: min(1rem, 2.5vw);
+}
+
+.forecast-trihourly-summary__temp {
+  font-size: min(1rem, 2.5vw);
+}
+
+
+@media screen and (max-width: 780px) {
+  .forecast-trihourly-summary__date {
+    width: 50px;
+  }
+}

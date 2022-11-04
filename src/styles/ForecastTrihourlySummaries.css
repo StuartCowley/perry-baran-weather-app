@@ -1,0 +1,4 @@
+.forecast-trihourly-summaries {
+  display: flex;
+  justify-content: space-evenly;
+}

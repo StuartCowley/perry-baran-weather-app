@@ -1,6 +1,7 @@
 import axios from "axios";
 import { populateLocalStorage } from "./localStorage";
 import forecastData from "../data/forecastData.json";
+import { dateString } from "../helpers/dateTime";
 
 const getForecast = async (
   setLocation,
@@ -21,27 +22,59 @@ const getForecast = async (
       },
     } = response;
 
+    const simplifyForecast = (forecast) => {
+      const {
+        dt,
+        dt_txt: dtTxt,
+        main: {
+          temp,
+          temp_min: minTemp,
+          temp_max: maxTemp,
+          humidity,
+          pressure,
+        },
+        weather: [{ description, id }],
+        wind: { speed },
+      } = forecast;
+
+      return {
+        date: dateString(dt),
+        time: dtTxt.slice(11, 16),
+        icon: id.toString(),
+        dateTime: dt,
+        temp,
+        minTemp,
+        maxTemp,
+        humidity,
+        pressure,
+        weather: description,
+        windSpeed: speed,
+      };
+    };
+
     const seperateForecastByDay = (data) => {
       const forecasts = [];
       let daysForecasts = [];
 
       data.forEach((forecast) => {
+        const simplifiedForecast = simplifyForecast(forecast);
+
         if (daysForecasts.length === 0) {
-          daysForecasts.push(forecast);
+          daysForecasts.push(simplifiedForecast);
         } else {
-          const prevForecastDay =
-            daysForecasts[daysForecasts.length - 1].dt_txt.split(" ")[0];
-          const forecastDay = forecast.dt_txt.split(" ")[0];
+          const prevForecastDay = daysForecasts[
+            daysForecasts.length - 1
+          ].date.slice(0, 10);
+          const forecastDay = simplifiedForecast.date.slice(0, 10);
 
           if (forecastDay === prevForecastDay) {
-            daysForecasts.push(forecast);
+            daysForecasts.push(simplifiedForecast);
           } else {
             forecasts.push(daysForecasts);
-            daysForecasts = [forecast];
+            daysForecasts = [simplifiedForecast];
           }
         }
       });
-
       forecasts.push(daysForecasts);
 
       return forecasts;
@@ -51,7 +84,7 @@ const getForecast = async (
 
     setLocation({ city: name, country });
     setForecasts(forecasts);
-    setSelectedDate(forecasts[0][0].dt);
+    setSelectedDate(forecasts[0][0].dateTime);
     setErrMessage("");
     populateLocalStorage("location", `${name}, ${country}`);
   } catch (err) {

@@ -5,8 +5,15 @@ import getUnits from "../helpers/getUnits";
 import UnitContext from "../context/UnitContext";
 import "../styles/ForecastBreakdown.css";
 
-function ForecastBreakdown(props) {
-  const { icon, temp, minTemp, maxTemp, humidity, windSpeed, weather } = props;
+function ForecastBreakdown({
+  icon,
+  temp,
+  minTemp,
+  maxTemp,
+  humidity,
+  windSpeed,
+  weather,
+}) {
   const selectedUnits = useContext(UnitContext);
   const { tempUnits, speedUnits } = getUnits(selectedUnits);
 
