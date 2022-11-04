@@ -26,16 +26,10 @@ function ForecastDailySummary({
       <div className="forecast-daily-summary__icon" data-testid="forecast-icon">
         <WeatherIcon name="owm" iconId={icon} />{" "}
       </div>
-      <div className="forecast-daily-summary__description">
-        {description.length === 1 ? (
-          <p>{description[0]}</p>
-        ) : (
-          <p>
-            {description[0]} <br />
-            {description[1]}
-          </p>
-        )}
-      </div>
+      <p className="forecast-daily-summary__description">
+        {description[0]}
+        {description.length === 2 ? <span>{description[1]}</span> : null}
+      </p>
       <p className="forecast-daily-summary__temp">
         {temp ? `${temp}${tempUnits}` : null}
       </p>

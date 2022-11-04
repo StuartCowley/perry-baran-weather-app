@@ -2,13 +2,14 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-items: center;
   align-items: center;
   gap: 10px;
-  border-left: 4px solid var(--light-blue);
-  border-bottom: 4px solid var(--light-blue);
-  width: 100%;
+  background-color: var(--light-blue);
+  width: 16%;
   padding-top: 5px;
+  margin: 0.5%;
+  border-radius: 15px;
+  box-shadow: 0.5px 0.5px 4px var(--dark-blue);
 }
 
 .forecast-daily-summary:first-child {
@@ -17,6 +18,8 @@
 
 .forecast-daily-summary__date {
   font-size: 1rem;
+  color: var(--almost-white);
+  text-shadow: 1px 1px 2px var(--almost-black);
 }
 
 .forecast-daily-summary__icon {
@@ -25,17 +28,31 @@
 
 .forecast-daily-summary__description {
   font-size: min(1rem, 2.5vw);
+  color: var(--almost-white);
+  text-shadow: 1px 1px 2px var(--almost-black);
+}
+
+.forecast-daily-summary__description > span {
+  color: var(--almost-white);
+  display: block;
+  text-shadow: 1px 1px 2px var(--almost-black);
 }
 
 .forecast-daily-summary__temp {
   font-size: min(1rem, 2.5vw);
+  color: var(--almost-white);
+  text-shadow: 1px 1px 2px var(--almost-black);
 }
 
 .forecast-daily-summary__more-details {
   all: unset;
-  width: 100%;
+  width: 80%;
+  max-width: 120px;
   padding: 5px 0;
-  border-top: 4px solid var(--light-blue);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.37), rgba(255, 255, 255, 0.713));
+  border-radius: 23px;
+  margin-bottom: 5px;
+  font-size: min(1rem, 1.5vw);
   cursor: pointer;
 }
 

@@ -11,10 +11,10 @@
 :root {
   --almost-white: rgb(240, 240, 240);
   --white-blue: rgb(196, 232, 250);
-  --light-blue: rgb(104, 180, 220);
+  --light-blue: rgb(76, 167, 216);
   --medium-blue: rgb(82, 143, 175);
   --dark-blue: rgb(4, 46, 65);
-  --almost-black: rgb(31, 31, 31);
+  --almost-black: rgb(40, 40, 40);
 }
 
 body {
