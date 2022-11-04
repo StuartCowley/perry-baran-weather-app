@@ -9,6 +9,7 @@
 }
 
 :root {
+  --almost-white: rgb(240, 240, 240);
   --white-blue: rgb(196, 232, 250);
   --light-blue: rgb(104, 180, 220);
   --medium-blue: rgb(82, 143, 175);
@@ -19,4 +20,9 @@
 body {
   background-image: linear-gradient(var(--light-blue), var(--white-blue));
   min-height: 100vh;
+}
+
+i {
+  color: var(--almost-white);
+  text-shadow: 2px 2px 2px var(--almost-black);
 }
