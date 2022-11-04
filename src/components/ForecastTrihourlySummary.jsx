@@ -11,7 +11,10 @@ function ForecastTrihourlySummary({ time, weather, icon, temp }) {
   const description = weather ? weather.split(" ") : [weather];
 
   return (
-    <div className="forecast-trihourly-summary" data-testid="forecast-summary">
+    <div
+      className="forecast-trihourly-summary"
+      data-testid="forecast-trihourly-summary"
+    >
       <p className="forecast-trihourly-summary__time">{time}</p>
       {!icon ? (
         <p className="forecast-trihourly-summary__no-data">

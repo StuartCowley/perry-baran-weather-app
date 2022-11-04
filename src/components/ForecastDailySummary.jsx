@@ -18,7 +18,10 @@ function ForecastDailySummary({
   const description = weather ? weather.split(" ") : [weather];
 
   return (
-    <div className="forecast-daily-summary" data-testid="forecast-summary">
+    <div
+      className="forecast-daily-summary"
+      data-testid="forecast-daily-summary"
+    >
       <p className="forecast-daily-summary__date">{date}</p>
       <div className="forecast-daily-summary__icon" data-testid="forecast-icon">
         <WeatherIcon name="owm" iconId={icon} />{" "}

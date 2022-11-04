@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastDailySummaries snapshot renders correctlty 1`] = `
+<DocumentFragment>
+  <div
+    class="forecast-daily-summaries"
+  >
+    <div
+      class="forecast-daily-summary"
+      data-testid="forecast-daily-summary"
+    >
+      <p
+        class="forecast-daily-summary__date"
+      >
+        today
+      </p>
+      <div
+        class="forecast-daily-summary__icon"
+        data-testid="forecast-icon"
+      >
+        <i
+          class="wi wi-day-storm-showers"
+          name="owm"
+        />
+         
+      </div>
+      <div
+        class="forecast-daily-summary__description"
+      >
+        <p>
+          really 
+          <br />
+          cold
+        </p>
+      </div>
+      <p
+        class="forecast-daily-summary__temp"
+      >
+        13.00°C
+      </p>
+      <button
+        class="forecast-daily-summary__more-details"
+        type="button"
+      >
+        More Details
+      </button>
+    </div>
+    <div
+      class="forecast-daily-summary"
+      data-testid="forecast-daily-summary"
+    >
+      <p
+        class="forecast-daily-summary__date"
+      >
+        tomorrow
+      </p>
+      <div
+        class="forecast-daily-summary__icon"
+        data-testid="forecast-icon"
+      >
+        <i
+          class="wi wi-day-sunny"
+          name="owm"
+        />
+         
+      </div>
+      <div
+        class="forecast-daily-summary__description"
+      >
+        <p>
+          kinda 
+          <br />
+          cold
+        </p>
+      </div>
+      <p
+        class="forecast-daily-summary__temp"
+      >
+        14.00°C
+      </p>
+      <button
+        class="forecast-daily-summary__more-details"
+        type="button"
+      >
+        More Details
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

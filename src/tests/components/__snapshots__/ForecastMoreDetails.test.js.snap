@@ -5,189 +5,7 @@ exports[`ForecastMoreDetails snapshot renders correctly 1`] = `
   <div
     class="forecast-details"
   >
-    <h2>
-      Thu Jan 01 1970
-    </h2>
-    <div
-      class="forecast-summaries"
-    >
-      <div
-        class="forecast-summary"
-        data-testid="forecast-summary"
-      >
-        <p
-          class="forecast-summary__dateOrTime"
-        >
-          00:00
-        </p>
-        <div
-          class="forecast-summary__icon"
-          data-testid="forecast-icon"
-        >
-          No Data
-        </div>
-        <p
-          class="forecast-summary__description"
-        />
-        <p
-          class="forecast-summary__temp"
-        />
-      </div>
-      <div
-        class="forecast-summary"
-        data-testid="forecast-summary"
-      >
-        <p
-          class="forecast-summary__dateOrTime"
-        >
-          03:00
-        </p>
-        <div
-          class="forecast-summary__icon"
-          data-testid="forecast-icon"
-        >
-          No Data
-        </div>
-        <p
-          class="forecast-summary__description"
-        />
-        <p
-          class="forecast-summary__temp"
-        />
-      </div>
-      <div
-        class="forecast-summary"
-        data-testid="forecast-summary"
-      >
-        <p
-          class="forecast-summary__dateOrTime"
-        >
-          06:00
-        </p>
-        <div
-          class="forecast-summary__icon"
-          data-testid="forecast-icon"
-        >
-          No Data
-        </div>
-        <p
-          class="forecast-summary__description"
-        />
-        <p
-          class="forecast-summary__temp"
-        />
-      </div>
-      <div
-        class="forecast-summary"
-        data-testid="forecast-summary"
-      >
-        <p
-          class="forecast-summary__dateOrTime"
-        >
-          09:00
-        </p>
-        <div
-          class="forecast-summary__icon"
-          data-testid="forecast-icon"
-        >
-          No Data
-        </div>
-        <p
-          class="forecast-summary__description"
-        />
-        <p
-          class="forecast-summary__temp"
-        />
-      </div>
-      <div
-        class="forecast-summary"
-        data-testid="forecast-summary"
-      >
-        <p
-          class="forecast-summary__dateOrTime"
-        >
-          12:00
-        </p>
-        <div
-          class="forecast-summary__icon"
-          data-testid="forecast-icon"
-        >
-          No Data
-        </div>
-        <p
-          class="forecast-summary__description"
-        />
-        <p
-          class="forecast-summary__temp"
-        />
-      </div>
-      <div
-        class="forecast-summary"
-        data-testid="forecast-summary"
-      >
-        <p
-          class="forecast-summary__dateOrTime"
-        >
-          15:00
-        </p>
-        <div
-          class="forecast-summary__icon"
-          data-testid="forecast-icon"
-        >
-          No Data
-        </div>
-        <p
-          class="forecast-summary__description"
-        />
-        <p
-          class="forecast-summary__temp"
-        />
-      </div>
-      <div
-        class="forecast-summary"
-        data-testid="forecast-summary"
-      >
-        <p
-          class="forecast-summary__dateOrTime"
-        >
-          18:00
-        </p>
-        <div
-          class="forecast-summary__icon"
-          data-testid="forecast-icon"
-        >
-          No Data
-        </div>
-        <p
-          class="forecast-summary__description"
-        />
-        <p
-          class="forecast-summary__temp"
-        />
-      </div>
-      <div
-        class="forecast-summary"
-        data-testid="forecast-summary"
-      >
-        <p
-          class="forecast-summary__dateOrTime"
-        >
-          21:00
-        </p>
-        <div
-          class="forecast-summary__icon"
-          data-testid="forecast-icon"
-        >
-          No Data
-        </div>
-        <p
-          class="forecast-summary__description"
-        />
-        <p
-          class="forecast-summary__temp"
-        />
-      </div>
-    </div>
+    <h3 />
     <div
       class="forecast-breakdown"
     >
@@ -196,14 +14,14 @@ exports[`ForecastMoreDetails snapshot renders correctly 1`] = `
         data-testid="forecast-icon"
       >
         <i
-          class="wi wi-day-sunny"
+          class="wi wi-day-storm-showers"
           name="owm"
         />
       </div>
       <p
         class="forecast-breakdown__weather"
       >
-        desc 1
+        very cold
       </p>
       <p
         class="forecast-breakdown__temp"
@@ -211,7 +29,7 @@ exports[`ForecastMoreDetails snapshot renders correctly 1`] = `
         <span>
           Temperture: 
         </span>
-        20.50°C
+        15.00°C
       </p>
       <p
         class="forecast-breakdown__min-temp"
@@ -219,7 +37,7 @@ exports[`ForecastMoreDetails snapshot renders correctly 1`] = `
         <span>
           Minimum Temperature: 
         </span>
-        22.00°C
+        9.00°C
       </p>
       <p
         class="forecast-breakdown__max-temp"
@@ -227,7 +45,7 @@ exports[`ForecastMoreDetails snapshot renders correctly 1`] = `
         <span>
           Maximum Temperature: 
         </span>
-        23.00°C
+        21.00°C
       </p>
       <p
         class="forecast-breakdown__humidity"
@@ -235,7 +53,7 @@ exports[`ForecastMoreDetails snapshot renders correctly 1`] = `
         <span>
           Humidity: 
         </span>
-        11%
+        NaN%
       </p>
       <p
         class="forecast-breakdown__wind-speed"
@@ -243,8 +61,148 @@ exports[`ForecastMoreDetails snapshot renders correctly 1`] = `
         <span>
           Wind Speed: 
         </span>
-        13.50m/s
+        46.00m/s
       </p>
+    </div>
+    <div
+      class="forecast-trihourly-summaries"
+    >
+      <div
+        class="forecast-trihourly-summary"
+        data-testid="forecast-trihourly-summary"
+      >
+        <p
+          class="forecast-trihourly-summary__time"
+        >
+          00:00
+        </p>
+        <p
+          class="forecast-trihourly-summary__no-data"
+        >
+          No 
+          <br />
+          Data
+        </p>
+      </div>
+      <div
+        class="forecast-trihourly-summary"
+        data-testid="forecast-trihourly-summary"
+      >
+        <p
+          class="forecast-trihourly-summary__time"
+        >
+          03:00
+        </p>
+        <p
+          class="forecast-trihourly-summary__no-data"
+        >
+          No 
+          <br />
+          Data
+        </p>
+      </div>
+      <div
+        class="forecast-trihourly-summary"
+        data-testid="forecast-trihourly-summary"
+      >
+        <p
+          class="forecast-trihourly-summary__time"
+        >
+          06:00
+        </p>
+        <p
+          class="forecast-trihourly-summary__no-data"
+        >
+          No 
+          <br />
+          Data
+        </p>
+      </div>
+      <div
+        class="forecast-trihourly-summary"
+        data-testid="forecast-trihourly-summary"
+      >
+        <p
+          class="forecast-trihourly-summary__time"
+        >
+          09:00
+        </p>
+        <p
+          class="forecast-trihourly-summary__no-data"
+        >
+          No 
+          <br />
+          Data
+        </p>
+      </div>
+      <div
+        class="forecast-trihourly-summary"
+        data-testid="forecast-trihourly-summary"
+      >
+        <p
+          class="forecast-trihourly-summary__time"
+        >
+          12:00
+        </p>
+        <p
+          class="forecast-trihourly-summary__no-data"
+        >
+          No 
+          <br />
+          Data
+        </p>
+      </div>
+      <div
+        class="forecast-trihourly-summary"
+        data-testid="forecast-trihourly-summary"
+      >
+        <p
+          class="forecast-trihourly-summary__time"
+        >
+          15:00
+        </p>
+        <p
+          class="forecast-trihourly-summary__no-data"
+        >
+          No 
+          <br />
+          Data
+        </p>
+      </div>
+      <div
+        class="forecast-trihourly-summary"
+        data-testid="forecast-trihourly-summary"
+      >
+        <p
+          class="forecast-trihourly-summary__time"
+        >
+          18:00
+        </p>
+        <p
+          class="forecast-trihourly-summary__no-data"
+        >
+          No 
+          <br />
+          Data
+        </p>
+      </div>
+      <div
+        class="forecast-trihourly-summary"
+        data-testid="forecast-trihourly-summary"
+      >
+        <p
+          class="forecast-trihourly-summary__time"
+        >
+          21:00
+        </p>
+        <p
+          class="forecast-trihourly-summary__no-data"
+        >
+          No 
+          <br />
+          Data
+        </p>
+      </div>
     </div>
   </div>
 </DocumentFragment>

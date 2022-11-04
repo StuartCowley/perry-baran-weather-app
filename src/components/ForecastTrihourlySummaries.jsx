@@ -4,9 +4,7 @@ import { v4 as uuid } from "uuid";
 import "../styles/ForecastTrihourlySummaries.css";
 import ForecastTrihourlySummary from "./ForecastTrihourlySummary";
 
-function ForecastTriHourlySummaries(props) {
-  const { forecasts } = props;
-
+function ForecastTriHourlySummaries({ forecasts }) {
   const addMissingForecasts = (trihourlyForecasts) => {
     const FORECAST_INTERVAL = 3;
     const FORECASTS_PER_DAY = 24 / FORECAST_INTERVAL;
@@ -59,6 +57,7 @@ function ForecastTriHourlySummaries(props) {
 ForecastTriHourlySummaries.propTypes = {
   forecasts: PropTypes.arrayOf(
     PropTypes.shape({
+      dateTime: PropTypes.number,
       time: PropTypes.string,
       icon: PropTypes.string,
       temp: PropTypes.number,

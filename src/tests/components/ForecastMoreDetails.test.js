@@ -6,42 +6,24 @@ describe("ForecastMoreDetails", () => {
   const validProps = {
     forecasts: [
       {
-        dt: 1,
-        dt_txt: "dt_txt 1",
-        main: {
-          humidity: 10,
-          temp: 20,
-          temp_max: 22,
-          temp_min: 18,
-        },
-        weather: [
-          {
-            description: "desc 1",
-            id: 800,
-          },
-        ],
-        wind: {
-          speed: 13,
-        },
+        time: "now",
+        icon: "200",
+        temp: 20,
+        maxTemp: 21,
+        minTemp: 19,
+        humdidity: 69,
+        weather: "very cold",
+        windSpeed: 4,
       },
       {
-        dt: 2,
-        dt_txt: "dt_txt 2",
-        main: {
-          humidity: 12,
-          temp: 21,
-          temp_max: 23,
-          temp_min: 19,
-        },
-        weather: [
-          {
-            description: "desc 2",
-            id: 200,
-          },
-        ],
-        wind: {
-          speed: 14,
-        },
+        time: "later",
+        icon: "400",
+        temp: 10,
+        maxTemp: 11,
+        minTemp: 9,
+        humdidity: 96,
+        weather: "more cold",
+        windSpeed: 88,
       },
     ],
   };
