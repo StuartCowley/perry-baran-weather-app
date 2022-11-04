@@ -1,4 +1,4 @@
-exports.calcMean = (array, param, decimals) => {
+exports.calcMean = (array, param, decimals = 1) => {
   return (
     array.reduce((prev, curr) => {
       return prev + curr[param];
@@ -6,14 +6,14 @@ exports.calcMean = (array, param, decimals) => {
   ).toFixed(decimals);
 };
 
-exports.calcMax = (array, param, decimals) => {
+exports.calcMax = (array, param, decimals = 1) => {
   const values = array.map((item) => {
     return item[param];
   });
   return Math.max(...values).toFixed(decimals);
 };
 
-exports.calcMin = (array, param, decimals) => {
+exports.calcMin = (array, param, decimals = 1) => {
   const values = array.map((item) => {
     return item[param];
   });

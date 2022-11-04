@@ -5,6 +5,10 @@
   justify-items: center;
   align-items: center;
   gap: 10px;
+  width: 100%;
+  border-left: 4px solid var(--white-blue);
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .forecast-trihourly-summary:first-child {
@@ -12,15 +16,15 @@
 }
 
 .forecast-trihourly-summary__time {
-  font-size: 1rem;
+  font-size: min(1rem, 3vw);
 }
 
 .forecast-trihourly-summary__icon {
   font-size: min(4rem, 5vw);
 }
 
-.forecast-daily-summary__description {
-  font-size: min(1rem, 2.5vw);
+.forecast-trihourly-summary__description {
+  font-size: min(1rem, 2vw);
 }
 
 .forecast-trihourly-summary__temp {

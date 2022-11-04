@@ -14,7 +14,7 @@ function ForecastDailySummaries(props) {
         date: date.slice(0, 10),
         dateTime,
         icon,
-        temp: calcMean(forecast, "temp", 2),
+        temp: calcMean(forecast, "temp"),
         weather,
       };
     });

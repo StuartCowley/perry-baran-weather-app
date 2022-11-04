@@ -40,7 +40,7 @@ function ForecastTrihourlySummary({ time, weather, icon, temp }) {
             )}
           </div>
           <p className="forecast-trihourly-summary__temp">
-            {temp}
+            {temp.toFixed(1)}
             {tempUnits}
           </p>
         </>

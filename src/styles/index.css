@@ -5,17 +5,18 @@
   margin: 0;
   -webkit-tap-highlight-color:  rgba(255, 255, 255, 0.5);
   font-family: Anonymous-Pro, Arial, Helvetica, sans-serif;
-  overflow: hidden;
   color: var(--almost-black);
 }
 
 :root {
-  --light-blue: rgb(56, 113, 138);
-  --lighter-blue: rgb(86, 143, 167);
-  --dark-blue: rgb(57, 128, 159);
+  --white-blue: rgb(196, 232, 250);
+  --light-blue: rgb(104, 180, 220);
+  --medium-blue: rgb(82, 143, 175);
+  --dark-blue: rgb(4, 46, 65);
   --almost-black: rgb(31, 31, 31);
 }
 
 body {
-  background-color: #eceef1;
+  background-image: linear-gradient(var(--light-blue), var(--white-blue));
+  min-height: 100vh;
 }
