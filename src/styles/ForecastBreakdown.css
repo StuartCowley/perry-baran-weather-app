@@ -1,9 +1,44 @@
 .forecast-breakdown {
-  margin-top: 20px;
   text-align: center;
   flex: 1 1 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.forecast-breakdown > div {
+  width: 100%;
 }
 
 .forecast-breakdown span {
   font-weight: 600;
+}
+
+.forecast-breakdown__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.forecast-breakdown__icon {
+  font-size: min(10rem, 15vw);
+}
+
+.forecast-breakdown__weather {
+  font-size: min(1.5rem, 2.5vw);
+}
+
+.forecast-breakdown__temp {
+  font-size: min(6rem, 15vw);
+  font-weight: 100;
+}
+
+.forecast-breakdown__temp > span {
+  font-weight: 100;
+}
+
+.forecast-breakdown__left > p > {
+  font-weight: 100;
+  font-size: min(2rem, 3vw);
 }

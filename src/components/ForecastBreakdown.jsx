@@ -19,34 +19,37 @@ function ForecastBreakdown({
 
   return (
     <div className="forecast-breakdown">
-      <div className="forecast-breakdown__icon" data-testid="forecast-icon">
-        <WeatherIcon name="owm" iconId={icon} />
+      <div className="forecast-breakdown__right">
+        <div className="forecast-breakdown__icon" data-testid="forecast-icon">
+          <WeatherIcon name="owm" iconId={icon} />
+        </div>
+        <p className="forecast-breakdown__weather">{weather}</p>
       </div>
-      <p className="forecast-breakdown__weather">{weather}</p>
-      <p className="forecast-breakdown__temp">
-        <span>Temperture: </span>
-        {temp}
-        {tempUnits}
-      </p>
-      <p className="forecast-breakdown__min-temp">
-        <span>Minimum Temperature: </span>
-        {minTemp}
-        {tempUnits}
-      </p>
-      <p className="forecast-breakdown__max-temp">
-        <span>Maximum Temperature: </span>
-        {maxTemp}
-        {tempUnits}
-      </p>
-      <p className="forecast-breakdown__humidity">
-        <span>Humidity: </span>
-        {humidity}%
-      </p>
-      <p className="forecast-breakdown__wind-speed">
-        <span>Wind Speed: </span>
-        {windSpeed}
-        {speedUnits}
-      </p>
+      <div className="forecast-breakdown__left">
+        <p className="forecast-breakdown__temp">
+          {temp}
+          <span>{tempUnits}</span>
+        </p>
+        <p className="forecast-breakdown__min-temp">
+          <span>Min: </span>
+          {minTemp}
+          {tempUnits}
+        </p>
+        <p className="forecast-breakdown__max-temp">
+          <span>Max: </span>
+          {maxTemp}
+          {tempUnits}
+        </p>
+        <p className="forecast-breakdown__humidity">
+          <span>Humidity: </span>
+          {humidity}%
+        </p>
+        <p className="forecast-breakdown__wind-speed">
+          <span>Wind Speed: </span>
+          {windSpeed}
+          {speedUnits}
+        </p>
+      </div>
     </div>
   );
 }
