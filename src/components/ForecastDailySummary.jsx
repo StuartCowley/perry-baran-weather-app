@@ -16,13 +16,18 @@ function ForecastDailySummary({
   const selectedUnits = useContext(UnitContext);
   const { tempUnits } = getUnits(selectedUnits);
   const description = weather ? weather.split(" ") : [weather];
+  const dayOfTheWeek = date.slice(0, 3);
+  const monthAndDay = date.slice(3, 10);
 
   return (
     <div
       className="forecast-daily-summary"
       data-testid="forecast-daily-summary"
     >
-      <p className="forecast-daily-summary__date">{date}</p>
+      <p className="forecast-daily-summary__date">
+        {dayOfTheWeek} <br />
+        {monthAndDay}
+      </p>
       <div className="forecast-daily-summary__icon" data-testid="forecast-icon">
         <WeatherIcon name="owm" iconId={icon} />{" "}
       </div>
