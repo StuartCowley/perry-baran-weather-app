@@ -1,4 +1,6 @@
-const getUnits = (units) => {
+const getUnits = (unitType) => {
+  let units;
+  if (typeof unitType === "string") units = unitType.toLowerCase();
   switch (units) {
     case "imperial":
       return {
