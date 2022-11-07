@@ -22,6 +22,7 @@ function OptionsMenu({ setSelectedUnits }) {
   const handleApply = (e) => {
     e.preventDefault();
     setSelectedUnits(radioUnits);
+    setVisible(false);
     populateLocalStorage("units", radioUnits);
   };
 
