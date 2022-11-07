@@ -2,48 +2,17 @@
 
 exports[`SearchForm snapshot renders correctly 1`] = `
 <DocumentFragment>
-  <form
+  <div
     class="search-form"
   >
-    <div
-      class="search-form__search"
+    <input
+      type="text"
+    />
+    <button
+      type="submit"
     >
-      <input
-        type="text"
-      />
-      <button
-        type="submit"
-      >
-        Search
-      </button>
-    </div>
-    <div
-      class="search-form__radio"
-    >
-      <h3>
-        Units:
-      </h3>
-      <label
-        class="search-form__radio__label"
-        for="metric"
-      >
-        Metric
-        <input
-          id="metric"
-          type="radio"
-        />
-      </label>
-      <label
-        class="search-form__radio__label"
-        for="imperial"
-      >
-        Imperial
-        <input
-          id="imperial"
-          type="radio"
-        />
-      </label>
-    </div>
-  </form>
+      Search
+    </button>
+  </div>
 </DocumentFragment>
 `;

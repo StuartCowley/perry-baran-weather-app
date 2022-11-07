@@ -53,11 +53,11 @@ describe("ForecastBreakdown", () => {
         "class",
         "forecast-breakdown__temp"
       );
-      expect(getByText(`${validProps.minTemp}°C`)).toHaveAttribute(
+      expect(getByText(`${validProps.minTemp}K`)).toHaveAttribute(
         "class",
         "forecast-breakdown__min-temp"
       );
-      expect(getByText(`${validProps.maxTemp}°C`)).toHaveAttribute(
+      expect(getByText(`${validProps.maxTemp}K`)).toHaveAttribute(
         "class",
         "forecast-breakdown__max-temp"
       );

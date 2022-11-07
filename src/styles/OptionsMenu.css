@@ -35,6 +35,8 @@
   top: 0;
   transition-duration: 500ms;
   border-bottom-left-radius: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hidden {
@@ -74,5 +76,16 @@
   padding: 5px;
   color: var(--almost-white);
   background-color: var(--dark-blue);
+}
+
+.options-menu-form__apply {
+  all: unset;
+  background-color: var(--light-blue);
+  padding: 5px 10px;
+  border: 1px solid white;
+  color: white;
+  border-radius: 3px;
+  align-self: flex-end;
+  cursor: pointer;
 }
 

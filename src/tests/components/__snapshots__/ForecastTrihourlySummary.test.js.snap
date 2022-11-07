@@ -31,7 +31,7 @@ exports[`ForecastTrihourlySummary snapshot renders corretly 1`] = `
     <p
       class="forecast-trihourly-summary__temp"
     >
-      34.0°C
+      34.0K
     </p>
   </div>
 </DocumentFragment>

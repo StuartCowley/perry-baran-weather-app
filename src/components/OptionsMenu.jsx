@@ -1,18 +1,35 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useReducer } from "react";
 import PropTypes from "prop-types";
 import "../styles/OptionsMenu.css";
 import UnitContext from "../context/UnitContext";
 import menu from "../images/menu.png";
-import { populateLocalStorage } from "../requests/localStorage";
+
+const reducer = (state, { type, key, value }) => {
+  switch (type) {
+    case "update":
+      return {
+        ...state,
+        [key]: value,
+      };
+    default:
+      return state;
+  }
+};
 
 function OptionsMenu({ setSelectedUnits }) {
   const selectedUnits = useContext(UnitContext);
   const [visisble, setVisible] = useState(false);
-  const [radioUnits, setRadioUnits] = useState(selectedUnits);
+  const [state, dispatch] = useReducer(reducer, {
+    units: selectedUnits,
+  });
 
-  const handleRadioChange = (e) => {
-    const units = e.target.value;
-    setRadioUnits(units);
+  const updateState = (e) => {
+    const { name, value } = e.target;
+    dispatch({
+      type: "update",
+      key: name,
+      value,
+    });
   };
 
   const handleHamburger = () => {
@@ -21,9 +38,9 @@ function OptionsMenu({ setSelectedUnits }) {
 
   const handleApply = (e) => {
     e.preventDefault();
-    setSelectedUnits(radioUnits);
+    const { units } = state;
+    setSelectedUnits(units);
     setVisible(false);
-    populateLocalStorage("units", radioUnits);
   };
 
   return (
@@ -32,6 +49,7 @@ function OptionsMenu({ setSelectedUnits }) {
         type="button"
         className="options-menu-button"
         onClick={handleHamburger}
+        data-testid="hamburger-menu"
       >
         <img src={menu} alt="options menu" />
       </button>
@@ -40,6 +58,19 @@ function OptionsMenu({ setSelectedUnits }) {
           <h3>Options</h3>
           <div className="options-menu-form__units">
             <h4>Units:</h4>
+            <label htmlFor="standardRadio" className="options-menu-form__label">
+              Scientific
+              <input
+                className="options-menu-form__radio"
+                id="standardRadio"
+                type="radio"
+                value="standard"
+                name="units"
+                checked={state.units === "standard"}
+                onChange={updateState}
+                data-testId="radio-scientific"
+              />
+            </label>
             <label htmlFor="metricRadio" className="options-menu-form__label">
               Metric
               <input
@@ -47,9 +78,10 @@ function OptionsMenu({ setSelectedUnits }) {
                 id="metricRadio"
                 type="radio"
                 value="metric"
-                name="metric"
-                checked={radioUnits === "metric"}
-                onChange={handleRadioChange}
+                name="units"
+                checked={state.units === "metric"}
+                onChange={updateState}
+                data-testId="radio-metric"
               />
             </label>
             <label htmlFor="imperialRadio" className="options-menu-form__label">
@@ -59,13 +91,18 @@ function OptionsMenu({ setSelectedUnits }) {
                 id="imperialRadio"
                 type="radio"
                 value="imperial"
-                name="imperial"
-                checked={radioUnits === "imperial"}
-                onChange={handleRadioChange}
+                name="units"
+                checked={state.units === "imperial"}
+                onChange={updateState}
+                data-testId="radio-imperial"
               />
             </label>
           </div>
-          <button type="submit" onClick={handleApply}>
+          <button
+            type="submit"
+            onClick={handleApply}
+            className="options-menu-form__apply"
+          >
             Apply
           </button>
         </form>

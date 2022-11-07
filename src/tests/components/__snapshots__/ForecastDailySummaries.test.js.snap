@@ -12,7 +12,9 @@ exports[`ForecastDailySummaries snapshot renders correctlty 1`] = `
       <p
         class="forecast-daily-summary__date"
       >
-        today
+        tod 
+        <br />
+        ay
       </p>
       <div
         class="forecast-daily-summary__icon"
@@ -24,19 +26,18 @@ exports[`ForecastDailySummaries snapshot renders correctlty 1`] = `
         />
          
       </div>
-      <div
+      <p
         class="forecast-daily-summary__description"
       >
-        <p>
-          really 
-          <br />
+        really
+        <span>
           cold
-        </p>
-      </div>
+        </span>
+      </p>
       <p
         class="forecast-daily-summary__temp"
       >
-        13.0°C
+        13.0K
       </p>
       <button
         class="forecast-daily-summary__more-details"
@@ -52,7 +53,9 @@ exports[`ForecastDailySummaries snapshot renders correctlty 1`] = `
       <p
         class="forecast-daily-summary__date"
       >
-        tomorrow
+        tom 
+        <br />
+        orrow
       </p>
       <div
         class="forecast-daily-summary__icon"
@@ -64,19 +67,18 @@ exports[`ForecastDailySummaries snapshot renders correctlty 1`] = `
         />
          
       </div>
-      <div
+      <p
         class="forecast-daily-summary__description"
       >
-        <p>
-          kinda 
-          <br />
+        kinda
+        <span>
           cold
-        </p>
-      </div>
+        </span>
+      </p>
       <p
         class="forecast-daily-summary__temp"
       >
-        14.0°C
+        14.0K
       </p>
       <button
         class="forecast-daily-summary__more-details"

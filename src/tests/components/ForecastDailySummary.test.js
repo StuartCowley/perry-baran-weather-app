@@ -5,7 +5,7 @@ import ForecastDailySummary from "../../components/ForecastDailySummary";
 describe("ForecastDailySummary", () => {
   const validProps = {
     dateTime: 20,
-    date: "today",
+    date: "now",
     weather: "cold",
     icon: "800",
     temp: "20",
@@ -46,7 +46,7 @@ describe("ForecastDailySummary", () => {
         "class",
         "forecast-daily-summary__date"
       );
-      expect(getByText(validProps.weather).closest("div")).toHaveAttribute(
+      expect(getByText(validProps.weather)).toHaveAttribute(
         "class",
         "forecast-daily-summary__description"
       );
@@ -54,7 +54,7 @@ describe("ForecastDailySummary", () => {
         "class",
         "forecast-daily-summary__icon"
       );
-      expect(getByText(`${validProps.temp}°C`)).toHaveAttribute(
+      expect(getByText(`${validProps.temp}K`)).toHaveAttribute(
         "class",
         "forecast-daily-summary__temp"
       );

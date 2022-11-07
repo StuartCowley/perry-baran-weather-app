@@ -6,7 +6,10 @@ import TopBar from "./TopBar";
 import ForecastMoreDetails from "./ForecastMoreDetails";
 import getForecast from "../requests/getForecast";
 import UnitContext from "../context/UnitContext";
-import { getLocalStorage } from "../requests/localStorage";
+import {
+  getLocalStorage,
+  populateLocalStorage,
+} from "../requests/localStorage";
 
 function App() {
   const [location, setLocation] = useState({ city: "", country: "" });
@@ -34,6 +37,7 @@ function App() {
 
   useEffect(() => {
     const city = getLocalStorage("location") || "London, GB";
+    populateLocalStorage("units", selectedUnits);
 
     handleCitySearch(city, selectedUnits);
   }, [selectedUnits]);

@@ -35,7 +35,7 @@ exports[`ForecastMoreDetails snapshot renders correctly 1`] = `
         >
           15.0
           <span>
-            °C
+            K
           </span>
         </p>
         <p
@@ -44,7 +44,7 @@ exports[`ForecastMoreDetails snapshot renders correctly 1`] = `
           <span>
             Min: 
           </span>
-          9.0°C
+          9.0K
         </p>
         <p
           class="forecast-breakdown__max-temp"
@@ -52,7 +52,7 @@ exports[`ForecastMoreDetails snapshot renders correctly 1`] = `
           <span>
             Max: 
           </span>
-          21.0°C
+          21.0K
         </p>
         <p
           class="forecast-breakdown__humidity"

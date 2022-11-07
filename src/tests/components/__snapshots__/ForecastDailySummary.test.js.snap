@@ -9,7 +9,8 @@ exports[`ForecastDailySummary snapshot renders corretly 1`] = `
     <p
       class="forecast-daily-summary__date"
     >
-      today
+      now 
+      <br />
     </p>
     <div
       class="forecast-daily-summary__icon"
@@ -21,17 +22,15 @@ exports[`ForecastDailySummary snapshot renders corretly 1`] = `
       />
        
     </div>
-    <div
+    <p
       class="forecast-daily-summary__description"
     >
-      <p>
-        cold
-      </p>
-    </div>
+      cold
+    </p>
     <p
       class="forecast-daily-summary__temp"
     >
-      20°C
+      20K
     </p>
     <button
       class="forecast-daily-summary__more-details"
