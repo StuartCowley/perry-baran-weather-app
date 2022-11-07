@@ -1,0 +1,78 @@
+
+.options-menu {
+  width: 200px;  
+  height: 100%;
+  margin-left: 20px;
+  text-align: center;
+  font-weight: 300;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.options-menu-button {
+  all: unset;
+  cursor: pointer;
+}
+
+.options-menu-button > img {
+  aspect-ratio: 1;
+  width: 40px;
+}
+
+.options-menu-form__container {
+  position: absolute;
+  top: var(--top-bar-height);
+  right: 0;
+  overflow: hidden;
+}
+
+.options-menu-form {
+  padding: 10px;
+  background-color: var(--medium-blue);
+  position: relative;
+  top: 0;
+  transition-duration: 500ms;
+  border-bottom-left-radius: 5px;
+}
+
+.hidden {
+  top: -200px;
+}
+
+.options-menu-form h3 {
+  color: var(--dark-blue);
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-decoration: underline;
+}
+
+.options-menu-form__units {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.options-menu-form__units h4 {
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+
+.options-menu-form__radio {
+  display: none;
+}
+
+.options-menu-form__label:has(.options-menu-form__radio:checked) {
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+}
+
+.options-menu-form__label {
+  border: 1px solid white;
+  cursor: pointer;
+  padding: 5px;
+  color: var(--almost-white);
+  background-color: var(--dark-blue);
+}
+

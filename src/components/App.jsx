@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/App.css";
 import LocationDetails from "./LocationDetails";
 import ForecastDailySummaries from "./ForecastDailySummaries";
-import SearchForm from "./SearchForm";
+import TopBar from "./TopBar";
 import ForecastMoreDetails from "./ForecastMoreDetails";
 import getForecast from "../requests/getForecast";
 import UnitContext from "../context/UnitContext";
@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="weather-app">
       <UnitContext.Provider value={selectedUnits}>
-        <SearchForm
+        <TopBar
           handleSearch={handleCitySearch}
           setSelectedUnits={setSelectedUnits}
         />

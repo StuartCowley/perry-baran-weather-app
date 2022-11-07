@@ -1,0 +1,12 @@
+:root {
+  --top-bar-height: 60px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 10px 10px;
+  height: var(--top-bar-height);
+  background-color: var(--medium-blue);
+}
