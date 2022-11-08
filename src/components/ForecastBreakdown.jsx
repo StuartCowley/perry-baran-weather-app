@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import WeatherIcon from "react-icons-weather";
-import getUnits from "../helpers/getUnits";
-import UnitContext from "../context/UnitContext";
+import useUnits from "../helpers/getUnits";
+import { useUnitContext } from "../context/UnitContext";
 import "../styles/ForecastBreakdown.css";
 
 function ForecastBreakdown({
@@ -14,8 +14,8 @@ function ForecastBreakdown({
   windSpeed,
   weather,
 }) {
-  const selectedUnits = useContext(UnitContext);
-  const { tempUnits, speedUnits } = getUnits(selectedUnits);
+  const { units } = useUnitContext();
+  const { tempUnits, speedUnits } = useUnits(units);
 
   return (
     <div className="forecast-breakdown">

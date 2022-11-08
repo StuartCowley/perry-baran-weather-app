@@ -4,18 +4,17 @@ import "../styles/TopBar.css";
 import SearchForm from "./SearchForm";
 import OptionsMenu from "./OptionsMenu";
 
-function TopBar({ handleSearch, setSelectedUnits }) {
+function TopBar({ handleSearch }) {
   return (
     <div className="top-bar">
       <SearchForm handleSearch={handleSearch} />
-      <OptionsMenu setSelectedUnits={setSelectedUnits} />
+      <OptionsMenu />
     </div>
   );
 }
 
 TopBar.propTypes = {
   handleSearch: PropTypes.func.isRequired,
-  setSelectedUnits: PropTypes.func.isRequired,
 };
 
 export default TopBar;

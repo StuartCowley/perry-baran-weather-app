@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import WeatherIcon from "react-icons-weather";
-import UnitContext from "../context/UnitContext";
 import "../styles/ForecastTrihourlySummary.css";
-import getUnits from "../helpers/getUnits";
+import useUnits from "../helpers/getUnits";
+import { useUnitContext } from "../context/UnitContext";
 
 function ForecastTrihourlySummary({ time, weather, icon, temp }) {
-  const selectedUnits = useContext(UnitContext);
-  const { tempUnits } = getUnits(selectedUnits);
+  const { units } = useUnitContext();
+  const { tempUnits } = useUnits(units);
   const description = weather ? weather.split(" ") : [weather];
 
   return (

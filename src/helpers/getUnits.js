@@ -1,5 +1,7 @@
 const getUnits = (units) => {
-  switch (units) {
+  let selectedUnits;
+  if (typeof units === "string") selectedUnits = units.toLowerCase();
+  switch (selectedUnits) {
     case "imperial":
       return {
         tempUnits: "°F",

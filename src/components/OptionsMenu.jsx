@@ -1,7 +1,6 @@
-import React, { useState, useContext, useReducer } from "react";
-import PropTypes from "prop-types";
+import React, { useState, useReducer } from "react";
 import "../styles/OptionsMenu.css";
-import UnitContext from "../context/UnitContext";
+import { useUnitContext } from "../context/UnitContext";
 import menu from "../images/menu.png";
 
 const reducer = (state, { type, key, value }) => {
@@ -16,11 +15,11 @@ const reducer = (state, { type, key, value }) => {
   }
 };
 
-function OptionsMenu({ setSelectedUnits }) {
-  const selectedUnits = useContext(UnitContext);
+function OptionsMenu() {
+  const { units, setUnits } = useUnitContext();
   const [visisble, setVisible] = useState(false);
   const [state, dispatch] = useReducer(reducer, {
-    units: selectedUnits,
+    units,
   });
 
   const updateState = (e) => {
@@ -38,8 +37,7 @@ function OptionsMenu({ setSelectedUnits }) {
 
   const handleApply = (e) => {
     e.preventDefault();
-    const { units } = state;
-    setSelectedUnits(units);
+    setUnits(state.units);
     setVisible(false);
   };
 
@@ -68,7 +66,7 @@ function OptionsMenu({ setSelectedUnits }) {
                 name="units"
                 checked={state.units === "standard"}
                 onChange={updateState}
-                data-testId="radio-scientific"
+                data-testid="radio-scientific"
               />
             </label>
             <label htmlFor="metricRadio" className="options-menu-form__label">
@@ -81,7 +79,7 @@ function OptionsMenu({ setSelectedUnits }) {
                 name="units"
                 checked={state.units === "metric"}
                 onChange={updateState}
-                data-testId="radio-metric"
+                data-testid="radio-metric"
               />
             </label>
             <label htmlFor="imperialRadio" className="options-menu-form__label">
@@ -94,7 +92,7 @@ function OptionsMenu({ setSelectedUnits }) {
                 name="units"
                 checked={state.units === "imperial"}
                 onChange={updateState}
-                data-testId="radio-imperial"
+                data-testid="radio-imperial"
               />
             </label>
           </div>
@@ -110,9 +108,5 @@ function OptionsMenu({ setSelectedUnits }) {
     </>
   );
 }
-
-OptionsMenu.propTypes = {
-  setSelectedUnits: PropTypes.func.isRequired,
-};
 
 export default OptionsMenu;

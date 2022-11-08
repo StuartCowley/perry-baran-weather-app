@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import WeatherIcon from "react-icons-weather";
 import "../styles/ForecastDailySummary.css";
-import UnitContext from "../context/UnitContext";
-import getUnits from "../helpers/getUnits";
+import useUnits from "../helpers/getUnits";
+import { useUnitContext } from "../context/UnitContext";
 
 function ForecastDailySummary({
   dateTime,
@@ -13,8 +13,8 @@ function ForecastDailySummary({
   temp,
   handleForecastSelect,
 }) {
-  const selectedUnits = useContext(UnitContext);
-  const { tempUnits } = getUnits(selectedUnits);
+  const { units } = useUnitContext();
+  const { tempUnits } = useUnits(units);
   const description = weather ? weather.split(" ") : [weather];
   const dayOfTheWeek = date.slice(0, 3);
   const monthAndDay = date.slice(3, 10);
