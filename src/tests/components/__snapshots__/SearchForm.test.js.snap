@@ -9,7 +9,7 @@ exports[`SearchForm snapshot renders correctly 1`] = `
       type="text"
     />
     <button
-      type="submit"
+      type="button"
     >
       Search
     </button>

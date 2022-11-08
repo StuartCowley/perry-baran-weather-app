@@ -24,7 +24,7 @@ describe("SearchForm", () => {
         <SearchForm handleSearch={validProps.handleSearch} />
       );
 
-      expect(getByText("Search")).toHaveAttribute("type", "submit");
+      expect(getByText("Search")).toHaveAttribute("type", "button");
     });
   });
 });
