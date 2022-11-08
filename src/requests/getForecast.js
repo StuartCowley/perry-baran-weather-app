@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import axios from "axios";
 import { populateLocalStorage } from "./localStorage";
 import forecastData from "../data/forecastData.json";
@@ -96,12 +97,15 @@ const getForecast = async (
     if (status === 404) {
       console.error("Invalid Location", err);
       setErrMessage("Could not find that city or town, please try again.");
-    }
-    if (status === 429) {
+    } else if (status === 429) {
       console.error("Too many API calls", err);
       setErrMessage("Too many requests made, please try again later.");
-    }
-    if (status === 500 || status === 502 || status === 503 || status === 504) {
+    } else if (
+      status === 500 ||
+      status === 502 ||
+      status === 503 ||
+      status === 504
+    ) {
       console.error("Server Error", err);
       setErrMessage(
         "Oops, something went wrong with the server, please try again later."
