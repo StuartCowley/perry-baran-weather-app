@@ -12,7 +12,7 @@ exports[`TopBar renders correctly 1`] = `
         type="text"
       />
       <button
-        type="button"
+        type="submit"
       >
         Search
       </button>
