@@ -1,6 +1,6 @@
 :root {
   --top-bar-height: 60px;
-  --top-bar-border: 4px solid rgb(65, 113, 140);
+  --top-bar-border: 4px solid var(--dark-blue);
 }
 
 .top-bar {

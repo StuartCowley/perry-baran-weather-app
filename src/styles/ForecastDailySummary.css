@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  background-image: linear-gradient(-8deg, var(--medium-blue), var(--light-blue));
+  background-image: linear-gradient(-8deg, var(--dark-blue), var(--medium-blue));
   width: 16%;
   padding-top: 5px;
   margin: 0.5%;

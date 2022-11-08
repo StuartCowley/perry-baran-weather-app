@@ -38,6 +38,7 @@
   display: flex;
   flex-direction: column;
   border-bottom: var(--top-bar-border);
+  border-left: 3px solid var(--dark-blue);
 }
 
 .hidden {
@@ -45,7 +46,6 @@
 }
 
 .options-menu-form h3 {
-  color: var(--dark-blue);
   font-weight: 500;
   font-size: 1.6rem;
   text-decoration: underline;
@@ -68,7 +68,7 @@
 
 .options-menu-form__label:has(.options-menu-form__radio:checked) {
   background-color: var(--light-blue);
-  color: var(--dark-blue);
+  color: var(--almost-black);
 }
 
 .options-menu-form__label {
