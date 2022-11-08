@@ -37,6 +37,7 @@
   border-bottom-left-radius: 5px;
   display: flex;
   flex-direction: column;
+  border-bottom: var(--top-bar-border);
 }
 
 .hidden {
@@ -71,11 +72,16 @@
 }
 
 .options-menu-form__label {
-  border: 1px solid white;
+  border: 1px solid var(--almost-white);
   cursor: pointer;
   padding: 5px;
   color: var(--almost-white);
   background-color: var(--dark-blue);
+  transition-duration: 200ms;
+}
+
+.options-menu-form__label:hover {
+  box-shadow: 0 0 10px var(--almost-white);
 }
 
 .options-menu-form__apply {
@@ -87,5 +93,9 @@
   border-radius: 3px;
   align-self: flex-end;
   cursor: pointer;
+}
+
+.options-menu-form__apply:hover {
+  box-shadow: 0 0 10px var(--almost-white);
 }
 

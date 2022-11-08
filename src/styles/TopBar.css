@@ -1,5 +1,6 @@
 :root {
   --top-bar-height: 60px;
+  --top-bar-border: 4px solid rgb(65, 113, 140);
 }
 
 .top-bar {
@@ -9,4 +10,5 @@
   padding: 10px 10px;
   height: var(--top-bar-height);
   background-color: var(--medium-blue);
+  border-bottom: var(--top-bar-border);
 }
