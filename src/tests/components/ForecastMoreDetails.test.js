@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import ForecastMoreDetails from "../../components/ForecastMoreDetails";
 
-describe("ForecastMoreDetails", () => {
+xdescribe("ForecastMoreDetails", () => {
   const validProps = {
     forecasts: [
       {

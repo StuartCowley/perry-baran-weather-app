@@ -9,8 +9,9 @@ exports[`ForecastDailySummary snapshot renders corretly 1`] = `
     <p
       class="forecast-daily-summary__date"
     >
-      now 
+      Thu 
       <br />
+       Jan 01
     </p>
     <div
       class="forecast-daily-summary__icon"

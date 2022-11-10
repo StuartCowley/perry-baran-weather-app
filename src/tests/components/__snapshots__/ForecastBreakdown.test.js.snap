@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ForecastBreakdown snapshot renders correctly 1`] = `
+exports[`ForecastBreakdown snapshot 1`] = `
 <DocumentFragment>
   <div
     class="forecast-breakdown"
@@ -29,43 +29,48 @@ exports[`ForecastBreakdown snapshot renders correctly 1`] = `
       <p
         class="forecast-breakdown__temp"
       >
-        20
-        <span>
-          K
-        </span>
+        20K
       </p>
-      <p
+      <div
         class="forecast-breakdown__min-temp"
       >
-        <span>
+        <h4>
           Min: 
-        </span>
-        18K
-      </p>
-      <p
+        </h4>
+        <p>
+          18K
+        </p>
+      </div>
+      <div
         class="forecast-breakdown__max-temp"
       >
-        <span>
+        <h4>
           Max: 
-        </span>
-        22K
-      </p>
-      <p
+        </h4>
+        <p>
+          22K
+        </p>
+      </div>
+      <div
         class="forecast-breakdown__humidity"
       >
-        <span>
+        <h4>
           Humidity: 
-        </span>
-        30%
-      </p>
-      <p
+        </h4>
+        <p>
+          30%
+        </p>
+      </div>
+      <div
         class="forecast-breakdown__wind-speed"
       >
-        <span>
+        <h4>
           Wind Speed: 
-        </span>
-        40m/s
-      </p>
+        </h4>
+        <p>
+          40m/s
+        </p>
+      </div>
     </div>
   </div>
 </DocumentFragment>

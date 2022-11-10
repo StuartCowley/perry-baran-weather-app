@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ForecastDailySummaries snapshot renders correctlty 1`] = `
+exports[`ForecastDailySummaries snapshot 1`] = `
 <DocumentFragment>
   <div
     class="forecast-daily-summaries"
@@ -12,9 +12,9 @@ exports[`ForecastDailySummaries snapshot renders correctlty 1`] = `
       <p
         class="forecast-daily-summary__date"
       >
-        tod 
+        Thu 
         <br />
-        ay
+         Nov 03
       </p>
       <div
         class="forecast-daily-summary__icon"
@@ -29,15 +29,15 @@ exports[`ForecastDailySummaries snapshot renders correctlty 1`] = `
       <p
         class="forecast-daily-summary__description"
       >
-        really
+        unique1
         <span>
-          cold
+          weather1
         </span>
       </p>
       <p
         class="forecast-daily-summary__temp"
       >
-        13.0K
+        10.5K
       </p>
       <button
         class="forecast-daily-summary__more-details"
@@ -53,9 +53,9 @@ exports[`ForecastDailySummaries snapshot renders correctlty 1`] = `
       <p
         class="forecast-daily-summary__date"
       >
-        tom 
+        Tue 
         <br />
-        orrow
+         Nov 08
       </p>
       <div
         class="forecast-daily-summary__icon"
@@ -70,15 +70,56 @@ exports[`ForecastDailySummaries snapshot renders correctlty 1`] = `
       <p
         class="forecast-daily-summary__description"
       >
-        kinda
+        unique3
         <span>
-          cold
+          weather3
         </span>
       </p>
       <p
         class="forecast-daily-summary__temp"
       >
-        14.0K
+        12.5K
+      </p>
+      <button
+        class="forecast-daily-summary__more-details"
+        type="button"
+      >
+        More Details
+      </button>
+    </div>
+    <div
+      class="forecast-daily-summary"
+      data-testid="forecast-daily-summary"
+    >
+      <p
+        class="forecast-daily-summary__date"
+      >
+        Sun 
+        <br />
+         Feb 26
+      </p>
+      <div
+        class="forecast-daily-summary__icon"
+        data-testid="forecast-icon"
+      >
+        <i
+          class="wi wi-day-snow"
+          name="owm"
+        />
+         
+      </div>
+      <p
+        class="forecast-daily-summary__description"
+      >
+        unique5
+        <span>
+          weather5
+        </span>
+      </p>
+      <p
+        class="forecast-daily-summary__temp"
+      >
+        14.5K
       </p>
       <button
         class="forecast-daily-summary__more-details"

@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import ForecastDailySummary from "../../components/ForecastDailySummary";
 
-describe("ForecastDailySummary", () => {
+xdescribe("ForecastDailySummary", () => {
   const validProps = {
     dateTime: 20,
     date: "now",

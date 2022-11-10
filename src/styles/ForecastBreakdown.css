@@ -7,6 +7,10 @@
   padding: 20px;
 }
 
+.forecast-breakdown h4, .forecast-breakdown h4 + p {
+  display: inline;
+}
+
 .forecast-breakdown > div {
   width: 100%;
 }
