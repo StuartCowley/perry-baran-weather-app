@@ -3,34 +3,30 @@ import { render } from "@testing-library/react";
 import ForecastTrihourlySummaries from "../../components/ForecastTrihourlySummaries";
 
 describe("ForecastTrihourlySummaries", () => {
-  const validProps = {
-    forecasts: [
-      {
-        dateTime: 123,
-        dateTimeTxt: "2022-11-03 15:00:00",
-        icon: "200",
-        temp: 12,
-        maxTemp: 13,
-        minTemp: 11,
-        humidity: 44,
-        weather: "really cold",
-        windSpeed: 66,
-      },
-      {
-        dateTime: 456,
-        dateTimeTxt: "2022-11-03 18:00:00",
-        icon: "500",
-        temp: 22,
-        maxTemp: 23,
-        minTemp: 21,
-        humidity: 45,
-        weather: "less cold",
-        windSpeed: 99,
-      },
-    ],
-  };
-
-  const { forecasts } = validProps;
+  const forecasts = [
+    {
+      dateTime: 123,
+      dateTimeTxt: "2022-11-03 15:00:00",
+      icon: "200",
+      temp: 12,
+      maxTemp: 13,
+      minTemp: 11,
+      humidity: 44,
+      weather: "really cold",
+      windSpeed: 66,
+    },
+    {
+      dateTime: 456,
+      dateTimeTxt: "2022-11-03 18:00:00",
+      icon: "500",
+      temp: 22,
+      maxTemp: 23,
+      minTemp: 21,
+      humidity: 45,
+      weather: "less cold",
+      windSpeed: 99,
+    },
+  ];
 
   test("snapshot", () => {
     const { asFragment } = render(

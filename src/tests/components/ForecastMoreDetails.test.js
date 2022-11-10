@@ -5,34 +5,30 @@ import { dateString } from "../../helpers/dateTime";
 import { calcMax, calcMean, calcMin } from "../../helpers/calculateValues";
 
 describe("ForecastMoreDetails", () => {
-  const validProps = {
-    forecasts: [
-      {
-        dateTime: 1667487600,
-        dateTimeTxt: "2022-11-03 15:00:00",
-        icon: "200",
-        temp: 25,
-        maxTemp: 22,
-        minTemp: 27,
-        humdidity: 29,
-        weather: "light rain",
-        windSpeed: 100,
-      },
-      {
-        dateTime: 2667554800,
-        dateTimeTxt: "2022-11-04 12:00:00",
-        icon: "500",
-        temp: 35,
-        maxTemp: 32,
-        minTemp: 37,
-        humdidity: 39,
-        weather: "broken clouds",
-        windSpeed: 90,
-      },
-    ],
-  };
-
-  const { forecasts } = validProps;
+  const forecasts = [
+    {
+      dateTime: 1667487600,
+      dateTimeTxt: "2022-11-03 15:00:00",
+      icon: "200",
+      temp: 25,
+      maxTemp: 22,
+      minTemp: 27,
+      humdidity: 29,
+      weather: "light rain",
+      windSpeed: 100,
+    },
+    {
+      dateTime: 2667554800,
+      dateTimeTxt: "2022-11-04 12:00:00",
+      icon: "500",
+      temp: 35,
+      maxTemp: 32,
+      minTemp: 37,
+      humdidity: 39,
+      weather: "broken clouds",
+      windSpeed: 90,
+    },
+  ];
 
   test("snapshot", () => {
     const { asFragment } = render(

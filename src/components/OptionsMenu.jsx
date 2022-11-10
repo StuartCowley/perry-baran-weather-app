@@ -49,12 +49,14 @@ function OptionsMenu({ handleSearch }) {
         type="button"
         className="options-menu-button"
         onClick={handleHamburger}
-        data-testid="hamburger-menu"
       >
         <img src={menu} alt="options menu" />
       </button>
       <div className="options-menu-form__container">
-        <form className={`options-menu-form ${!visisble && "hidden"}`}>
+        <form
+          className={`options-menu-form ${!visisble && "hidden"}`}
+          name="options menu form"
+        >
           <h3>Options</h3>
           <div className="options-menu-form__units">
             <h4>Units:</h4>
@@ -68,7 +70,6 @@ function OptionsMenu({ handleSearch }) {
                 name="units"
                 checked={state.units === "standard"}
                 onChange={updateState}
-                data-testid="radio-scientific"
               />
             </label>
             <label htmlFor="metricRadio" className="options-menu-form__label">
@@ -81,7 +82,6 @@ function OptionsMenu({ handleSearch }) {
                 name="units"
                 checked={state.units === "metric"}
                 onChange={updateState}
-                data-testid="radio-metric"
               />
             </label>
             <label htmlFor="imperialRadio" className="options-menu-form__label">
@@ -94,7 +94,6 @@ function OptionsMenu({ handleSearch }) {
                 name="units"
                 checked={state.units === "imperial"}
                 onChange={updateState}
-                data-testid="radio-imperial"
               />
             </label>
           </div>
