@@ -1,30 +1,52 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import SearchForm from "../../components/SearchForm";
 
-xdescribe("SearchForm", () => {
-  const validProps = {
-    handleSearch: () => {},
-    setSelectedUnits: () => {},
-  };
+describe("SearchForm", () => {
+  const handleSearch = jest.fn();
 
-  describe("snapshot", () => {
-    it("renders correctly", () => {
-      const { asFragment } = render(
-        <SearchForm handleSearch={validProps.handleSearch} />
-      );
+  test("snapshot", () => {
+    const { asFragment } = render(<SearchForm handleSearch={handleSearch} />);
 
-      expect(asFragment()).toMatchSnapshot();
-    });
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  describe("button", () => {
-    it("renders corret text", () => {
-      const { getByText } = render(
-        <SearchForm handleSearch={validProps.handleSearch} />
-      );
+  test("renders correctly", () => {
+    const { getByRole } = render(<SearchForm handleSearch={handleSearch} />);
 
-      expect(getByText("Search")).toHaveAttribute("type", "submit");
-    });
+    const button = getByRole("button");
+    const input = getByRole("textbox");
+
+    expect(button).toHaveTextContent(/search/i);
+    expect(button).toHaveAttribute("type", "submit");
+    expect(input).toBeInTheDocument();
+    expect(input.value).toBe("");
+  });
+
+  test("inputs", async () => {
+    const { getByRole } = render(<SearchForm handleSearch={handleSearch} />);
+
+    const button = getByRole("button");
+    const input = getByRole("textbox");
+    const string = "string";
+
+    fireEvent.change(input, { target: { value: string } });
+    expect(input.value).toBe(string);
+    fireEvent.click(button);
+    expect(handleSearch).toBeCalledWith(string);
+    expect(input.value).toBe("");
+  });
+
+  test("can press enter in search input to search", () => {
+    const { getByRole } = render(<SearchForm handleSearch={handleSearch} />);
+
+    const input = getByRole("textbox");
+    const string = "string";
+
+    fireEvent.change(input, { target: { value: string } });
+    expect(input.value).toBe(string);
+    fireEvent.keyDown(input, { code: "Enter", charCode: 13 });
+    expect(handleSearch).toBeCalledWith(string);
+    expect(input.value).toBe("");
   });
 });
