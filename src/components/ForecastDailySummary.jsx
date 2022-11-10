@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import WeatherIcon from "react-icons-weather";
 import "../styles/ForecastDailySummary.css";
-import useUnits from "../helpers/getUnits";
+import getUnits from "../helpers/getUnits";
 import useUnitContext from "../hooks/useUnitContext";
 import { dateString } from "../helpers/dateTime";
 
@@ -14,7 +14,7 @@ function ForecastDailySummary({
   handleForecastSelect,
 }) {
   const { units } = useUnitContext();
-  const { tempUnits } = useUnits(units);
+  const { tempUnits } = getUnits(units);
   const description = weather ? weather.split(" ") : [weather];
   const date = dateString(dateTime);
   const dayOfTheWeek = date.slice(0, 3);

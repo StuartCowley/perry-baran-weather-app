@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ForecastDailySummary snapshot renders corretly 1`] = `
+exports[`ForecastDailySummary snapshot 1`] = `
 <DocumentFragment>
   <div
     class="forecast-daily-summary"
@@ -26,7 +26,10 @@ exports[`ForecastDailySummary snapshot renders corretly 1`] = `
     <p
       class="forecast-daily-summary__description"
     >
-      cold
+      broken
+      <span>
+        clouds
+      </span>
     </p>
     <p
       class="forecast-daily-summary__temp"

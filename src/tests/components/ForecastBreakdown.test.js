@@ -1,7 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import ForecastBreakdown from "../../components/ForecastBreakdown";
-import getUnits from "../../helpers/getUnits";
 
 describe("ForecastBreakdown", () => {
   const validProps = {
@@ -33,7 +32,7 @@ describe("ForecastBreakdown", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  test("correctly render props", () => {
+  test("correctly renders props", () => {
     const { getByText, getByTestId } = render(
       <ForecastBreakdown
         icon={icon}
@@ -46,20 +45,14 @@ describe("ForecastBreakdown", () => {
       />
     );
 
-    const { tempUnits, speedUnits } = getUnits();
-
     expect(getByTestId("forecast-icon")).toContainHTML("i");
-    expect(getByText(`${temp}${tempUnits}`)).toBeInstanceOf(
+    expect(getByText(new RegExp(temp))).toBeInstanceOf(HTMLParagraphElement);
+    expect(getByText(new RegExp(minTemp))).toBeInstanceOf(HTMLParagraphElement);
+    expect(getByText(new RegExp(maxTemp))).toBeInstanceOf(HTMLParagraphElement);
+    expect(getByText(new RegExp(humidity))).toBeInstanceOf(
       HTMLParagraphElement
     );
-    expect(getByText(`${minTemp}${tempUnits}`)).toBeInstanceOf(
-      HTMLParagraphElement
-    );
-    expect(getByText(`${maxTemp}${tempUnits}`)).toBeInstanceOf(
-      HTMLParagraphElement
-    );
-    expect(getByText(`${humidity}%`)).toBeInstanceOf(HTMLParagraphElement);
-    expect(getByText(`${windSpeed}${speedUnits}`)).toBeInstanceOf(
+    expect(getByText(new RegExp(windSpeed))).toBeInstanceOf(
       HTMLParagraphElement
     );
   });

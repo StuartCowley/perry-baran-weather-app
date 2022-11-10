@@ -3,7 +3,6 @@ import { render } from "@testing-library/react";
 import ForecastDailySummaries from "../../components/ForecastDailySummaries";
 import { calcMean } from "../../helpers/calculateValues";
 import { dateString } from "../../helpers/dateTime";
-import getUnits from "../../helpers/getUnits";
 
 describe("ForecastDailySummaries", () => {
   const validProps = {
@@ -90,13 +89,12 @@ describe("ForecastDailySummaries", () => {
 
     forecasts.forEach((forecast) => {
       const temp = calcMean(forecast, "temp");
-      const { tempUnits } = getUnits();
       const date0 = dateString(forecast[0].dateTime).slice(3, 10);
       const description0 = forecast[0].weather.split(" ")[0];
       const date1 = dateString(forecast[1].dateTime).slice(3, 10);
       const description1 = forecast[1].weather.split(" ")[0];
 
-      expect(queryByText(`${temp}${tempUnits}`)).toBeInTheDocument();
+      expect(queryByText(new RegExp(temp))).toBeInTheDocument();
       expect(queryByText(new RegExp(date0))).toBeInTheDocument();
       expect(queryByText(new RegExp(description0))).toBeInTheDocument();
       expect(queryByText(new RegExp(date1))).not.toBeInTheDocument();
