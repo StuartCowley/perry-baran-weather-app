@@ -15,11 +15,18 @@ function ForecastTriHourlySummaries({ forecasts }) {
       if (time.length === 4) time = `0${time}`;
 
       const trihourlyForecast = trihourlyForecasts.find(
-        (forecast) => forecast.time === time
+        (forecast) => time === forecast.dateTimeTxt.slice(11, 16)
       );
 
       if (trihourlyForecast) {
-        forecastsArray.push(trihourlyForecast);
+        const { dateTime, icon, weather, temp } = trihourlyForecast;
+        forecastsArray.push({
+          time,
+          dateTime,
+          weather,
+          icon,
+          temp,
+        });
       } else {
         forecastsArray.push({
           time,
@@ -58,7 +65,7 @@ ForecastTriHourlySummaries.propTypes = {
   forecasts: PropTypes.arrayOf(
     PropTypes.shape({
       dateTime: PropTypes.number,
-      time: PropTypes.string,
+      dateTimeTxt: PropTypes.string,
       icon: PropTypes.string,
       temp: PropTypes.number,
       maxTemp: PropTypes.number,

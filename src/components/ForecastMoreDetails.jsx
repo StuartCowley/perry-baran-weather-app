@@ -4,9 +4,11 @@ import PropTypes from "prop-types";
 import ForecastTrihourlySummaries from "./ForecastTrihourlySummaries";
 import ForecastBreakdown from "./ForecastBreakdown";
 import { calcMean, calcMax, calcMin } from "../helpers/calculateValues";
+import { dateString } from "../helpers/dateTime";
 
 function ForecastMoreDetails({ forecasts }) {
-  const [{ date, icon, weather }] = forecasts;
+  const [{ dateTime, icon, weather }] = forecasts;
+  const date = dateString(dateTime);
   const temp = calcMean(forecasts, "temp");
   const minTemp = calcMin(forecasts, "minTemp");
   const maxTemp = calcMax(forecasts, "maxTemp");
@@ -33,6 +35,7 @@ function ForecastMoreDetails({ forecasts }) {
 ForecastMoreDetails.propTypes = {
   forecasts: PropTypes.arrayOf(
     PropTypes.shape({
+      dateTime: PropTypes.number,
       time: PropTypes.string,
       icon: PropTypes.string,
       temp: PropTypes.number,

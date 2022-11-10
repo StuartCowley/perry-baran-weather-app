@@ -4,14 +4,11 @@ import PropTypes from "prop-types";
 import ForecastSummary from "./ForecastDailySummary";
 import { calcMean } from "../helpers/calculateValues";
 
-function ForecastDailySummaries(props) {
-  const { forecasts, handleForecastSelect } = props;
-
+function ForecastDailySummaries({ forecasts, handleForecastSelect }) {
   const getDailyForecast = (forecastsArray) => {
     return forecastsArray.map((forecast) => {
-      const [{ date, dateTime, icon, weather }] = forecast;
+      const [{ dateTime, icon, weather }] = forecast;
       return {
-        date: date.slice(0, 10),
         dateTime,
         icon,
         temp: calcMean(forecast, "temp"),
@@ -25,11 +22,10 @@ function ForecastDailySummaries(props) {
   return (
     <div className="forecast-daily-summaries">
       {dailyForecast.map((forecast) => {
-        const { dateTime, date, weather, icon, temp } = forecast;
+        const { dateTime, weather, icon, temp } = forecast;
         return (
           <ForecastSummary
             dateTime={dateTime}
-            date={date}
             weather={weather}
             icon={icon}
             temp={temp}
@@ -46,7 +42,6 @@ ForecastDailySummaries.propTypes = {
   forecasts: PropTypes.arrayOf(
     PropTypes.arrayOf(
       PropTypes.shape({
-        date: PropTypes.string.isRequired,
         dateTime: PropTypes.number.isRequired,
         icon: PropTypes.string.isRequired,
         temp: PropTypes.number.isRequired,

@@ -5,11 +5,11 @@ import ForecastDailySummaries from "./ForecastDailySummaries";
 import TopBar from "./TopBar";
 import ForecastMoreDetails from "./ForecastMoreDetails";
 import getForecast from "../requests/getForecast";
-import { useUnitContext } from "../context/UnitContext";
-import { getLocalStorage } from "../requests/localStorage";
+import useUnitContext from "../hooks/useUnitContext";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 function App() {
-  const [location, setLocation] = useState({ city: "", country: "" });
+  const [location, setLocation] = useLocalStorage("location", "London, GB");
   const [forecasts, setForecasts] = useState([]);
   const [selectedDate, setSelectedDate] = useState(0);
   const [errMessage, setErrMessage] = useState("");
@@ -19,22 +19,24 @@ function App() {
     (forecast) => forecast[0].dateTime === selectedDate
   );
 
-  const handleCitySearch = (city, selectedUnits) => {
+  const handleCitySearch = (locationInput, unitsInput) => {
+    const selectedLocation = locationInput || location;
+    const selectedUnits = unitsInput || units;
+
     getForecast(
       setLocation,
       setForecasts,
       setSelectedDate,
       setErrMessage,
-      city,
+      selectedLocation,
       selectedUnits
     );
   };
 
   useEffect(() => {
-    const city = getLocalStorage("location") || "London, GB";
-
-    handleCitySearch(city, units);
-  }, [units]);
+    handleCitySearch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="weather-app">

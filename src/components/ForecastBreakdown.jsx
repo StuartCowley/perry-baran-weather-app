@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import WeatherIcon from "react-icons-weather";
 import useUnits from "../helpers/getUnits";
-import { useUnitContext } from "../context/UnitContext";
+import useUnitContext from "../hooks/useUnitContext";
 import "../styles/ForecastBreakdown.css";
 
 function ForecastBreakdown({

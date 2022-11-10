@@ -1,8 +1,6 @@
 /* eslint-disable no-console */
 import axios from "axios";
-import { populateLocalStorage } from "./localStorage";
 import forecastData from "../data/forecastData.json";
-import { dateString } from "../helpers/dateTime";
 
 const getForecast = async (
   setLocation,
@@ -10,7 +8,7 @@ const getForecast = async (
   setSelectedDate,
   setErrMessage,
   location,
-  units = "metric"
+  units
 ) => {
   const endpoint = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=${units}&APPID=d1cad75804f6bd996f5d83905ac66876`;
   try {
@@ -25,8 +23,8 @@ const getForecast = async (
 
     const simplifyForecast = (forecast) => {
       const {
-        dt,
-        dt_txt: dtTxt,
+        dt: dateTime,
+        dt_txt: dateTimeTxt,
         main: {
           temp,
           temp_min: minTemp,
@@ -34,22 +32,21 @@ const getForecast = async (
           humidity,
           pressure,
         },
-        weather: [{ description, id }],
-        wind: { speed },
+        weather: [{ description: weather, id }],
+        wind: { speed: windSpeed },
       } = forecast;
 
       return {
-        date: dateString(dt),
-        time: dtTxt.slice(11, 16),
+        dateTime,
+        dateTimeTxt,
         icon: id.toString(),
-        dateTime: dt,
         temp,
         minTemp,
         maxTemp,
         humidity,
         pressure,
-        weather: description,
-        windSpeed: speed,
+        weather,
+        windSpeed,
       };
     };
 
@@ -63,10 +60,9 @@ const getForecast = async (
         if (daysForecasts.length === 0) {
           daysForecasts.push(simplifiedForecast);
         } else {
-          const prevForecastDay = daysForecasts[
-            daysForecasts.length - 1
-          ].date.slice(0, 10);
-          const forecastDay = simplifiedForecast.date.slice(0, 10);
+          const prevForecastDay =
+            daysForecasts[daysForecasts.length - 1].dateTimeTxt.split(" ")[0];
+          const forecastDay = simplifiedForecast.dateTimeTxt.split(" ")[0];
 
           if (forecastDay === prevForecastDay) {
             daysForecasts.push(simplifiedForecast);
@@ -83,11 +79,10 @@ const getForecast = async (
 
     const forecasts = seperateForecastByDay(list);
 
-    setLocation({ city: name, country });
+    setLocation(`${name}, ${country}`);
     setForecasts(forecasts);
     setSelectedDate(forecasts[0][0].dateTime);
     setErrMessage("");
-    populateLocalStorage("location", `${name}, ${country}`);
   } catch (err) {
     const {
       response: {

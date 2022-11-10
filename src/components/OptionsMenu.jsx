@@ -1,6 +1,7 @@
 import React, { useState, useReducer } from "react";
+import PropTypes from "prop-types";
 import "../styles/OptionsMenu.css";
-import { useUnitContext } from "../context/UnitContext";
+import useUnitContext from "../hooks/useUnitContext";
 import menu from "../images/menu.png";
 
 const reducer = (state, { type, key, value }) => {
@@ -15,7 +16,7 @@ const reducer = (state, { type, key, value }) => {
   }
 };
 
-function OptionsMenu() {
+function OptionsMenu({ handleSearch }) {
   const { units, setUnits } = useUnitContext();
   const [visisble, setVisible] = useState(false);
   const [state, dispatch] = useReducer(reducer, {
@@ -38,6 +39,7 @@ function OptionsMenu() {
   const handleApply = (e) => {
     e.preventDefault();
     setUnits(state.units);
+    handleSearch(undefined, state.units);
     setVisible(false);
   };
 
@@ -108,5 +110,9 @@ function OptionsMenu() {
     </>
   );
 }
+
+OptionsMenu.propTypes = {
+  handleSearch: PropTypes.func.isRequired,
+};
 
 export default OptionsMenu;

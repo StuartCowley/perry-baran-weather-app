@@ -8,7 +8,7 @@ function TopBar({ handleSearch }) {
   return (
     <div className="top-bar">
       <SearchForm handleSearch={handleSearch} />
-      <OptionsMenu />
+      <OptionsMenu handleSearch={handleSearch} />
     </div>
   );
 }

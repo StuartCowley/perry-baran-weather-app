@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import WeatherIcon from "react-icons-weather";
 import "../styles/ForecastDailySummary.css";
 import useUnits from "../helpers/getUnits";
-import { useUnitContext } from "../context/UnitContext";
+import useUnitContext from "../hooks/useUnitContext";
+import { dateString } from "../helpers/dateTime";
 
 function ForecastDailySummary({
   dateTime,
-  date,
   weather,
   icon,
   temp,
@@ -16,6 +16,7 @@ function ForecastDailySummary({
   const { units } = useUnitContext();
   const { tempUnits } = useUnits(units);
   const description = weather ? weather.split(" ") : [weather];
+  const date = dateString(dateTime);
   const dayOfTheWeek = date.slice(0, 3);
   const monthAndDay = date.slice(3, 10);
 
@@ -51,7 +52,6 @@ function ForecastDailySummary({
 
 ForecastDailySummary.propTypes = {
   dateTime: PropTypes.number.isRequired,
-  date: PropTypes.string.isRequired,
   weather: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   temp: PropTypes.string.isRequired,
