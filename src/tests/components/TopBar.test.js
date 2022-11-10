@@ -2,19 +2,11 @@ import React from "react";
 import { render } from "@testing-library/react";
 import TopBar from "../../components/TopBar";
 
-xdescribe("TopBar", () => {
-  const validProps = {
-    handleSearch: () => {},
-    setSelectedUnits: () => {},
-  };
+describe("TopBar", () => {
+  const handleSearch = jest.fn();
 
-  it("renders correctly", () => {
-    const { asFragment } = render(
-      <TopBar
-        handleSearch={validProps.handleSearch}
-        setSelectedUnits={validProps.setSelectedUnits}
-      />
-    );
+  test("snapshot", () => {
+    const { asFragment } = render(<TopBar handleSearch={handleSearch} />);
 
     expect(asFragment()).toMatchSnapshot();
   });

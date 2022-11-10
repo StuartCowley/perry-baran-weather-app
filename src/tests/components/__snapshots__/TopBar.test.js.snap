@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopBar snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="top-bar"
+  >
+    <div
+      class="search-form"
+    >
+      <input
+        type="text"
+      />
+      <button
+        type="submit"
+      >
+        Search
+      </button>
+    </div>
+    <button
+      class="options-menu-button"
+      type="button"
+    >
+      <img
+        alt="options menu"
+        src="menu.png"
+      />
+    </button>
+    <div
+      class="options-menu-form__container"
+    >
+      <form
+        class="options-menu-form hidden"
+        name="options menu form"
+      >
+        <h3>
+          Options
+        </h3>
+        <div
+          class="options-menu-form__units"
+        >
+          <h4>
+            Units:
+          </h4>
+          <label
+            class="options-menu-form__label"
+            for="standardRadio"
+          >
+            Scientific
+            <input
+              checked=""
+              class="options-menu-form__radio"
+              id="standardRadio"
+              name="units"
+              type="radio"
+              value="standard"
+            />
+          </label>
+          <label
+            class="options-menu-form__label"
+            for="metricRadio"
+          >
+            Metric
+            <input
+              class="options-menu-form__radio"
+              id="metricRadio"
+              name="units"
+              type="radio"
+              value="metric"
+            />
+          </label>
+          <label
+            class="options-menu-form__label"
+            for="imperialRadio"
+          >
+            Imperial
+            <input
+              class="options-menu-form__radio"
+              id="imperialRadio"
+              name="units"
+              type="radio"
+              value="imperial"
+            />
+          </label>
+        </div>
+        <button
+          class="options-menu-form__apply"
+          type="submit"
+        >
+          Apply
+        </button>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
