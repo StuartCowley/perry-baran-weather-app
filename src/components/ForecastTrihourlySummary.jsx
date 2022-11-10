@@ -27,7 +27,7 @@ function ForecastTrihourlySummary({ time, weather, icon, temp }) {
             className="forecast-trihourly-summary__icon"
             data-testid="forecast-icon"
           >
-            <WeatherIcon name="owm" iconId={icon} />{" "}
+            <WeatherIcon name="owm" iconId={icon} />
           </div>
           <div className="forecast-trihourly-summary__description">
             {description.length === 1 ? (

@@ -36,7 +36,7 @@ ForecastMoreDetails.propTypes = {
   forecasts: PropTypes.arrayOf(
     PropTypes.shape({
       dateTime: PropTypes.number,
-      time: PropTypes.string,
+      dateTimeTxt: PropTypes.string,
       icon: PropTypes.string,
       temp: PropTypes.number,
       maxTemp: PropTypes.number,

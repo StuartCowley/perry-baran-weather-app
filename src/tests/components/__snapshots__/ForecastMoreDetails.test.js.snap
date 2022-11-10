@@ -1,11 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ForecastMoreDetails snapshot renders correctly 1`] = `
+exports[`ForecastMoreDetails snapshot 1`] = `
 <DocumentFragment>
   <div
     class="forecast-details"
   >
-    <h3 />
+    <h3>
+      Thu Nov 03 2022
+    </h3>
     <div
       class="forecast-breakdown"
     >
@@ -24,7 +26,7 @@ exports[`ForecastMoreDetails snapshot renders correctly 1`] = `
         <p
           class="forecast-breakdown__weather"
         >
-          very cold
+          light rain
         </p>
       </div>
       <div
@@ -33,43 +35,48 @@ exports[`ForecastMoreDetails snapshot renders correctly 1`] = `
         <p
           class="forecast-breakdown__temp"
         >
-          15.0
-          <span>
-            K
-          </span>
+          30.0K
         </p>
-        <p
+        <div
           class="forecast-breakdown__min-temp"
         >
-          <span>
+          <h4>
             Min: 
-          </span>
-          9.0K
-        </p>
-        <p
+          </h4>
+          <p>
+            27.0K
+          </p>
+        </div>
+        <div
           class="forecast-breakdown__max-temp"
         >
-          <span>
+          <h4>
             Max: 
-          </span>
-          21.0K
-        </p>
-        <p
+          </h4>
+          <p>
+            32.0K
+          </p>
+        </div>
+        <div
           class="forecast-breakdown__humidity"
         >
-          <span>
+          <h4>
             Humidity: 
-          </span>
-          NaN%
-        </p>
-        <p
+          </h4>
+          <p>
+            NaN%
+          </p>
+        </div>
+        <div
           class="forecast-breakdown__wind-speed"
         >
-          <span>
+          <h4>
             Wind Speed: 
-          </span>
-          46.0m/s
-        </p>
+          </h4>
+          <p>
+            95.0m/s
+          </p>
+        </div>
       </div>
     </div>
     <div
@@ -152,12 +159,28 @@ exports[`ForecastMoreDetails snapshot renders correctly 1`] = `
         >
           12:00
         </p>
-        <p
-          class="forecast-trihourly-summary__no-data"
+        <div
+          class="forecast-trihourly-summary__icon"
+          data-testid="forecast-icon"
         >
-          No 
-          <br />
-          Data
+          <i
+            class="wi wi-day-rain"
+            name="owm"
+          />
+        </div>
+        <div
+          class="forecast-trihourly-summary__description"
+        >
+          <p>
+            broken 
+            <br />
+            clouds
+          </p>
+        </div>
+        <p
+          class="forecast-trihourly-summary__temp"
+        >
+          35.0K
         </p>
       </div>
       <div
@@ -169,12 +192,28 @@ exports[`ForecastMoreDetails snapshot renders correctly 1`] = `
         >
           15:00
         </p>
-        <p
-          class="forecast-trihourly-summary__no-data"
+        <div
+          class="forecast-trihourly-summary__icon"
+          data-testid="forecast-icon"
         >
-          No 
-          <br />
-          Data
+          <i
+            class="wi wi-day-storm-showers"
+            name="owm"
+          />
+        </div>
+        <div
+          class="forecast-trihourly-summary__description"
+        >
+          <p>
+            light 
+            <br />
+            rain
+          </p>
+        </div>
+        <p
+          class="forecast-trihourly-summary__temp"
+        >
+          25.0K
         </p>
       </div>
       <div
