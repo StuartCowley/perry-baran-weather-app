@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import ForecastTrihourlySummaries from "../../components/ForecastTrihourlySummaries";
 
-xdescribe("ForecastTrihourlySummaries", () => {
+describe("ForecastTrihourlySummaries", () => {
   const validProps = {
     forecasts: [
       {
@@ -19,7 +19,7 @@ xdescribe("ForecastTrihourlySummaries", () => {
       {
         dateTime: 456,
         dateTimeTxt: "2022-11-03 18:00:00",
-        icon: "400",
+        icon: "500",
         temp: 22,
         maxTemp: 23,
         minTemp: 21,
@@ -30,23 +30,31 @@ xdescribe("ForecastTrihourlySummaries", () => {
     ],
   };
 
-  describe("snapshot", () => {
-    it("renders correctlty", () => {
-      const { asFragment } = render(
-        <ForecastTrihourlySummaries forecasts={validProps.forecasts} />
-      );
+  const { forecasts } = validProps;
 
-      expect(asFragment()).toMatchSnapshot();
-    });
+  test("snapshot", () => {
+    const { asFragment } = render(
+      <ForecastTrihourlySummaries forecasts={forecasts} />
+    );
+
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  describe("list", () => {
-    it("renders correct values for props", () => {
-      const { getAllByTestId } = render(
-        <ForecastTrihourlySummaries forecasts={validProps.forecasts} />
-      );
+  test("ForecastTrihourlySummary is called correct number of times, every 3 hours for 1 day", () => {
+    const { getAllByTestId, getByText } = render(
+      <ForecastTrihourlySummaries forecasts={forecasts} />
+    );
 
-      expect(getAllByTestId("forecast-trihourly-summary")).toHaveLength(8);
-    });
+    const FORECAST_INTERVAL = 3;
+    const FORECASTS_PER_DAY = 24 / FORECAST_INTERVAL;
+    expect(getAllByTestId("forecast-trihourly-summary")).toHaveLength(
+      FORECASTS_PER_DAY
+    );
+
+    for (let i = 0; i < FORECASTS_PER_DAY; i += 1) {
+      let time = `${i * FORECAST_INTERVAL}:00`;
+      if (time.length === 4) time = `0${time}`;
+      expect(getByText(time)).toBeInTheDocument();
+    }
   });
 });
