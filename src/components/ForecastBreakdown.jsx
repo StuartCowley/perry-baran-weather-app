@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import WeatherIcon from "react-icons-weather";
-import useUnits from "../helpers/getUnits";
+import getUnits from "../helpers/getUnits";
 import useUnitContext from "../hooks/useUnitContext";
 import "../styles/ForecastBreakdown.css";
 
@@ -15,7 +15,7 @@ function ForecastBreakdown({
   weather,
 }) {
   const { units } = useUnitContext();
-  const { tempUnits, speedUnits } = useUnits(units);
+  const { tempUnits, speedUnits } = getUnits(units);
 
   return (
     <div className="forecast-breakdown">
@@ -28,27 +28,33 @@ function ForecastBreakdown({
       <div className="forecast-breakdown__left">
         <p className="forecast-breakdown__temp">
           {temp}
-          <span>{tempUnits}</span>
-        </p>
-        <p className="forecast-breakdown__min-temp">
-          <span>Min: </span>
-          {minTemp}
           {tempUnits}
         </p>
-        <p className="forecast-breakdown__max-temp">
-          <span>Max: </span>
-          {maxTemp}
-          {tempUnits}
-        </p>
-        <p className="forecast-breakdown__humidity">
-          <span>Humidity: </span>
-          {humidity}%
-        </p>
-        <p className="forecast-breakdown__wind-speed">
-          <span>Wind Speed: </span>
-          {windSpeed}
-          {speedUnits}
-        </p>
+        <div className="forecast-breakdown__min-temp">
+          <h4>Min: </h4>
+          <p>
+            {minTemp}
+            {tempUnits}
+          </p>
+        </div>
+        <div className="forecast-breakdown__max-temp">
+          <h4>Max: </h4>
+          <p>
+            {maxTemp}
+            {tempUnits}
+          </p>
+        </div>
+        <div className="forecast-breakdown__humidity">
+          <h4>Humidity: </h4>
+          <p>{humidity}%</p>
+        </div>
+        <div className="forecast-breakdown__wind-speed">
+          <h4>Wind Speed: </h4>
+          <p>
+            {windSpeed}
+            {speedUnits}
+          </p>
+        </div>
       </div>
     </div>
   );
