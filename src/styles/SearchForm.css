@@ -3,7 +3,10 @@
   width: calc(100% - 50px);
   max-width: 600px;
   margin: auto 0;
-  background-color: white;
+  border: 1px solid var(--almost-white);
+  border-radius: 2px;
+  background-color: var(--almost-white);
+  overflow: hidden;
 }
 
 .search-form input {
@@ -17,14 +20,18 @@
 
 .search-form button {
   all: unset;
+  box-sizing: border-box;
   height: 100%;
   width: 65px;
+  background-color: var(--medium-blue);
+  color: var(--almost-white);
   font-size: 1rem;
   text-align: center;
-  font-weight: 400;
-  vertical-align: top;  
-  background-color: var(--dark-blue);
-  color: var(--almost-white);
-  text-shadow: none;
+  vertical-align: top;
   cursor: pointer;
+  transition-duration: 200ms;
+}
+
+.search-form button:hover {
+  background-color: var(--dark-blue);
 }
