@@ -55,7 +55,7 @@ describe("ForecastDailySummary", () => {
       HTMLParagraphElement
     );
     expect(getByText(new RegExp(description[1]))).toBeInstanceOf(
-      HTMLSpanElement
+      HTMLParagraphElement
     );
     expect(getByText(new RegExp(temp))).toBeInstanceOf(HTMLParagraphElement);
   });

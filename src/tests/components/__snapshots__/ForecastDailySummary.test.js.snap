@@ -6,9 +6,7 @@ exports[`ForecastDailySummary snapshot 1`] = `
     class="forecast-daily-summary"
     data-testid="forecast-daily-summary"
   >
-    <p
-      class="forecast-daily-summary__date"
-    >
+    <p>
       Thu 
       <br />
        Jan 01
@@ -26,14 +24,11 @@ exports[`ForecastDailySummary snapshot 1`] = `
     <p
       class="forecast-daily-summary__description"
     >
-      broken
-      <span>
-        clouds
-      </span>
+      broken 
+      <br />
+      clouds
     </p>
-    <p
-      class="forecast-daily-summary__temp"
-    >
+    <p>
       20K
     </p>
     <button

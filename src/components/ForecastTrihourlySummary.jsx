@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import WeatherIcon from "react-icons-weather";
 import "../styles/ForecastTrihourlySummary.css";
-import useUnits from "../helpers/getUnits";
+import getUnits from "../helpers/getUnits";
 import useUnitContext from "../hooks/useUnitContext";
 
 function ForecastTrihourlySummary({ time, weather, icon, temp }) {
   const { units } = useUnitContext();
-  const { tempUnits } = useUnits(units);
+  const { tempUnits } = getUnits(units);
   const description = weather ? weather.split(" ") : [weather];
 
   return (

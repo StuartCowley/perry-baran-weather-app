@@ -9,9 +9,7 @@ exports[`ForecastDailySummaries snapshot 1`] = `
       class="forecast-daily-summary"
       data-testid="forecast-daily-summary"
     >
-      <p
-        class="forecast-daily-summary__date"
-      >
+      <p>
         Thu 
         <br />
          Nov 03
@@ -29,14 +27,11 @@ exports[`ForecastDailySummaries snapshot 1`] = `
       <p
         class="forecast-daily-summary__description"
       >
-        unique1
-        <span>
-          weather1
-        </span>
+        unique1 
+        <br />
+        weather1
       </p>
-      <p
-        class="forecast-daily-summary__temp"
-      >
+      <p>
         10.5K
       </p>
       <button
@@ -50,9 +45,7 @@ exports[`ForecastDailySummaries snapshot 1`] = `
       class="forecast-daily-summary"
       data-testid="forecast-daily-summary"
     >
-      <p
-        class="forecast-daily-summary__date"
-      >
+      <p>
         Tue 
         <br />
          Nov 08
@@ -70,14 +63,11 @@ exports[`ForecastDailySummaries snapshot 1`] = `
       <p
         class="forecast-daily-summary__description"
       >
-        unique3
-        <span>
-          weather3
-        </span>
+        unique3 
+        <br />
+        weather3
       </p>
-      <p
-        class="forecast-daily-summary__temp"
-      >
+      <p>
         12.5K
       </p>
       <button
@@ -91,9 +81,7 @@ exports[`ForecastDailySummaries snapshot 1`] = `
       class="forecast-daily-summary"
       data-testid="forecast-daily-summary"
     >
-      <p
-        class="forecast-daily-summary__date"
-      >
+      <p>
         Sun 
         <br />
          Feb 26
@@ -111,14 +99,11 @@ exports[`ForecastDailySummaries snapshot 1`] = `
       <p
         class="forecast-daily-summary__description"
       >
-        unique5
-        <span>
-          weather5
-        </span>
+        unique5 
+        <br />
+        weather5
       </p>
-      <p
-        class="forecast-daily-summary__temp"
-      >
+      <p>
         14.5K
       </p>
       <button

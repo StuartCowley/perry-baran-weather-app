@@ -105,9 +105,7 @@ exports[`App snapshot 1`] = `
         class="forecast-daily-summary"
         data-testid="forecast-daily-summary"
       >
-        <p
-          class="forecast-daily-summary__date"
-        >
+        <p>
           Thu 
           <br />
            Nov 03
@@ -125,14 +123,11 @@ exports[`App snapshot 1`] = `
         <p
           class="forecast-daily-summary__description"
         >
-          scattered
-          <span>
-            clouds
-          </span>
+          scattered 
+          <br />
+          clouds
         </p>
-        <p
-          class="forecast-daily-summary__temp"
-        >
+        <p>
           10.3K
         </p>
         <button
@@ -146,9 +141,7 @@ exports[`App snapshot 1`] = `
         class="forecast-daily-summary"
         data-testid="forecast-daily-summary"
       >
-        <p
-          class="forecast-daily-summary__date"
-        >
+        <p>
           Fri 
           <br />
            Nov 04
@@ -166,14 +159,11 @@ exports[`App snapshot 1`] = `
         <p
           class="forecast-daily-summary__description"
         >
-          scattered
-          <span>
-            clouds
-          </span>
+          scattered 
+          <br />
+          clouds
         </p>
-        <p
-          class="forecast-daily-summary__temp"
-        >
+        <p>
           8.3K
         </p>
         <button
@@ -187,9 +177,7 @@ exports[`App snapshot 1`] = `
         class="forecast-daily-summary"
         data-testid="forecast-daily-summary"
       >
-        <p
-          class="forecast-daily-summary__date"
-        >
+        <p>
           Sat 
           <br />
            Nov 05
@@ -207,14 +195,11 @@ exports[`App snapshot 1`] = `
         <p
           class="forecast-daily-summary__description"
         >
-          scattered
-          <span>
-            clouds
-          </span>
+          scattered 
+          <br />
+          clouds
         </p>
-        <p
-          class="forecast-daily-summary__temp"
-        >
+        <p>
           8.8K
         </p>
         <button
@@ -228,9 +213,7 @@ exports[`App snapshot 1`] = `
         class="forecast-daily-summary"
         data-testid="forecast-daily-summary"
       >
-        <p
-          class="forecast-daily-summary__date"
-        >
+        <p>
           Sun 
           <br />
            Nov 06
@@ -248,14 +231,11 @@ exports[`App snapshot 1`] = `
         <p
           class="forecast-daily-summary__description"
         >
-          scattered
-          <span>
-            clouds
-          </span>
+          scattered 
+          <br />
+          clouds
         </p>
-        <p
-          class="forecast-daily-summary__temp"
-        >
+        <p>
           8.7K
         </p>
         <button
@@ -269,9 +249,7 @@ exports[`App snapshot 1`] = `
         class="forecast-daily-summary"
         data-testid="forecast-daily-summary"
       >
-        <p
-          class="forecast-daily-summary__date"
-        >
+        <p>
           Mon 
           <br />
            Nov 07
@@ -289,14 +267,11 @@ exports[`App snapshot 1`] = `
         <p
           class="forecast-daily-summary__description"
         >
-          broken
-          <span>
-            clouds
-          </span>
+          broken 
+          <br />
+          clouds
         </p>
-        <p
-          class="forecast-daily-summary__temp"
-        >
+        <p>
           12.2K
         </p>
         <button
@@ -310,9 +285,7 @@ exports[`App snapshot 1`] = `
         class="forecast-daily-summary"
         data-testid="forecast-daily-summary"
       >
-        <p
-          class="forecast-daily-summary__date"
-        >
+        <p>
           Tue 
           <br />
            Nov 08
@@ -330,14 +303,11 @@ exports[`App snapshot 1`] = `
         <p
           class="forecast-daily-summary__description"
         >
-          moderate
-          <span>
-            rain
-          </span>
+          moderate 
+          <br />
+          rain
         </p>
-        <p
-          class="forecast-daily-summary__temp"
-        >
+        <p>
           11.1K
         </p>
         <button
