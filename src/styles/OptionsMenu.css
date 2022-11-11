@@ -69,7 +69,7 @@
 
 .options-menu-form__label:hover {
   background-color: var(--dark-blue);
-  box-shadow: 0 0 10px var(--almost-white);
+  box-shadow: var(--box-shadow-white);
 }
 
 .options-menu-form__apply {
@@ -85,6 +85,6 @@
 
 .options-menu-form__apply:hover {
   background-color: var(--dark-blue);
-  box-shadow: 0 0 10px var(--almost-white);
+  box-shadow: var(--box-shadow-white);
 }
 

@@ -7,8 +7,8 @@
   display: flex;
   justify-content: space-between;
   width: 100vw;
+  height: var(--top-bar-height);  
   padding: 10px 10px;
-  height: var(--top-bar-height);
-  background-color: var(--medium-blue);
   border-bottom: var(--top-bar-border);
+  background-color: var(--medium-blue);
 }
