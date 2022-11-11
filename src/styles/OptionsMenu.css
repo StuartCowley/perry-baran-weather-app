@@ -52,11 +52,16 @@
 .options-menu-form__label {
   width: 75px;
   padding: 5px 0;
-  border: 1px solid var(--almost-white);
+  border: var(--border-dark-blue);
+  border-left: hidden;
   color: var(--almost-white);
   text-align: center;
   cursor: pointer;
   transition-duration: 200ms;
+}
+
+.options-menu-form__label:first-of-type {
+  border-left: var(--border-dark-blue);
 }
 
 .options-menu-form__label input {
@@ -69,14 +74,13 @@
 
 .options-menu-form__label:hover {
   background-color: var(--dark-blue);
-  box-shadow: var(--box-shadow-white);
 }
 
 .options-menu-form__apply {
   all: unset;
   align-self: flex-end;
   padding: 5px 10px;
-  border: 1px solid white;
+  border: var(--border-dark-blue);
   border-radius: 3px;
   color: white;
   cursor: pointer;
@@ -85,6 +89,5 @@
 
 .options-menu-form__apply:hover {
   background-color: var(--dark-blue);
-  box-shadow: var(--box-shadow-white);
 }
 

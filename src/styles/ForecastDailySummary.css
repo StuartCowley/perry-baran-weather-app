@@ -28,7 +28,8 @@
   padding: 5px 0;
   border-radius: 4px;
   margin-bottom: 10px;
-  background-color: var(--almost-white);
+  border: 2px solid var(--almost-white);
+  color: white;
   font-size: min(1rem, 1.7cqw);
   font-weight: 600;
   transition-duration: 100ms;
@@ -36,8 +37,8 @@
 }
 
 .forecast-daily-summary__more-details:hover {
-  box-shadow: var(--box-shadow-white);
-  background-color: white;
+  background-color: var(--almost-white);
+  color: var(--dark-blue);
 }
 
 @media (min-width: 600px) {

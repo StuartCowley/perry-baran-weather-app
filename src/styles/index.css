@@ -17,6 +17,7 @@
   --almost-black: rgb(33, 33, 33);
   --text-shadow-black: 2px 2px 2px var(--almost-black);
   --box-shadow-white: 0 0 10px var(--almost-white);
+  --border-dark-blue: 2px solid var(--dark-blue);
 }
 
 body {
