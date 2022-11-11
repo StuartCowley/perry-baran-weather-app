@@ -4,7 +4,7 @@ Weather app that interacts with an OpenWeatherMap API to get up to date weather 
 
 Created as part of the Manchester Codes full-stack web development boot-camp.
 
-[Live Preview]("https://perrybaran.github.io/weather-app")
+## [Live Preview](https://perrybaran.github.io/weather-app)
 
 ## Table of Contents
 
