@@ -18,19 +18,20 @@ exports[`TopBar snapshot 1`] = `
       </button>
     </div>
     <button
-      class="options-menu-button"
+      class="drop-down-menu-button"
       type="button"
     >
       <img
-        alt="options menu"
+        alt="hamburger menu"
         src="menu.png"
       />
     </button>
     <div
-      class="options-menu-form__container"
+      class="drop-down-menu drop-down-menu__hidden"
+      data-testid="drop-down-menu"
     >
       <form
-        class="options-menu-form hidden"
+        class="options-menu-form"
         name="options menu form"
       >
         <h2>

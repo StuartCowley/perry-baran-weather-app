@@ -1,0 +1,26 @@
+.drop-down-menu-button {
+  all: unset;
+  cursor: pointer;
+}
+
+.drop-down-menu-button > img {
+  aspect-ratio: 1;
+  width: 40px;
+}
+
+.drop-down-menu {
+  position: absolute;
+  top: var(--top-bar-height);
+  right: 0;
+  overflow: hidden;
+}
+
+.drop-down-menu > * {
+  position: relative;
+  top: 0;
+  transition-duration: 500ms;
+}
+
+.drop-down-menu__hidden > * {
+  top: -200px;
+}

@@ -1,35 +1,12 @@
-.options-menu-button {
-  all: unset;
-  cursor: pointer;
-}
-
-.options-menu-button > img {
-  aspect-ratio: 1;
-  width: 40px;
-}
-
-.options-menu-form__container {
-  position: absolute;
-  top: var(--top-bar-height);
-  right: 0;
-  overflow: hidden;
-}
-
 .options-menu-form {
   display: flex;
   flex-direction: column;
-  position: relative;
-  top: 0;
   border-bottom: var(--top-bar-border);
   border-left: var(--top-bar-border);
   border-bottom-left-radius: 5px;  
   padding: 10px;
   background-color: var(--medium-blue);
   transition-duration: 500ms;
-}
-
-.hidden {
-  top: -200px;
 }
 
 .options-menu-form h2 {

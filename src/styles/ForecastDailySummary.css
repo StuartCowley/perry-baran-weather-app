@@ -36,6 +36,10 @@
   cursor: pointer;
 }
 
+.forecast-daily-summary__more-details:disabled {
+  opacity: 0.4;
+}
+
 .forecast-daily-summary__more-details:hover {
   background-color: var(--almost-white);
   color: var(--dark-blue);

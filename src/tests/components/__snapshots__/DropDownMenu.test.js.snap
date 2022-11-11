@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropDownMenu snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="drop-down-menu-button"
+    type="button"
+  >
+    <img
+      alt="hamburger menu"
+      src="menu.png"
+    />
+  </button>
+  <div
+    class="drop-down-menu drop-down-menu__hidden"
+    data-testid="drop-down-menu"
+  >
+    <form
+      class="options-menu-form"
+      name="options menu form"
+    >
+      <h2>
+        Options
+      </h2>
+      <div
+        class="options-menu-form__units"
+      >
+        <h3>
+          Units:
+        </h3>
+        <label
+          class="options-menu-form__label"
+          for="standardRadio"
+        >
+          Scientific
+          <input
+            checked=""
+            id="standardRadio"
+            name="units"
+            type="radio"
+            value="standard"
+          />
+        </label>
+        <label
+          class="options-menu-form__label"
+          for="metricRadio"
+        >
+          Metric
+          <input
+            id="metricRadio"
+            name="units"
+            type="radio"
+            value="metric"
+          />
+        </label>
+        <label
+          class="options-menu-form__label"
+          for="imperialRadio"
+        >
+          Imperial
+          <input
+            id="imperialRadio"
+            name="units"
+            type="radio"
+            value="imperial"
+          />
+        </label>
+      </div>
+      <button
+        class="options-menu-form__apply"
+        type="submit"
+      >
+        Apply
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;

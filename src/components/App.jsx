@@ -47,6 +47,7 @@ function App() {
           <ForecastDailySummaries
             forecasts={forecasts}
             handleForecastSelect={setSelectedDate}
+            selectedDate={selectedDate}
           />
           {selectedForecast && (
             <ForecastMoreDetails forecasts={selectedForecast} />

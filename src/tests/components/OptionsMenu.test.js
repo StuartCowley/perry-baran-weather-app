@@ -2,91 +2,87 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import OptionsMenu from "../../components/OptionsMenu";
 
+const findRadio = (radios, value) => {
+  return radios.find((radio) => radio.value === value);
+}
+
 describe("OptionsMenu", () => {
-  const handleSearch = jest.fn();
+  const validProps = {
+    handleSearch: jest.fn(),
+    setVisible: jest.fn(),
+  };
+
+  const { handleSearch, setVisible } = validProps;
 
   test("snapshot", () => {
-    const { asFragment } = render(<OptionsMenu handleSearch={handleSearch} />);
+    const { asFragment } = render(
+      <OptionsMenu handleSearch={handleSearch} setVisible={setVisible} />
+    );
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  describe("hamburger menu", () => {
-    test("image", () => {
-      const { getByAltText } = render(
-        <OptionsMenu handleSearch={handleSearch} />
-      );
+  test("all fields correctly rendered", () => {
+    const { getByText, getAllByRole, getByRole } = render(
+      <OptionsMenu handleSearch={handleSearch} setVisible={setVisible} />
+    );
 
-      const hamburgerImage = getByAltText("options menu");
-      expect(hamburgerImage).toHaveAttribute("src", "menu.png");
-    });
-
-    test("button", () => {
-      const { getAllByRole, getByRole } = render(
-        <OptionsMenu handleSearch={handleSearch} />
-      );
-
-      const [hamburgerButton] = getAllByRole("button");
-      const optionsForm = getByRole("form");
-      expect(hamburgerButton).toHaveAttribute("type", "button");
-      expect(optionsForm).toHaveClass("hidden");
-      fireEvent.click(hamburgerButton);
-      expect(optionsForm).not.toHaveClass("hidden");
-    });
+    const radios = getAllByRole("radio");
+    const standard = findRadio(radios, "standard");
+    const metric = findRadio(radios, "metric");
+    const imperial = findRadio(radios, "imperial");
+    const apply = getByRole("button");
+    expect(getByText(/options/i)).toBeInstanceOf(HTMLHeadingElement);
+    expect(getByText(/units:/i)).toBeInstanceOf(HTMLHeadingElement);
+    expect(radios).toHaveLength(3);
+    expect(standard).toHaveAttribute("id", "standardRadio");
+    expect(getByText(/scientific/i)).toHaveAttribute("for", "standardRadio");
+    expect(metric).toHaveAttribute("id", "metricRadio");
+    expect(getByText(/metric/i)).toHaveAttribute("for", "metricRadio");
+    expect(imperial).toHaveAttribute("id", "imperialRadio");
+    expect(getByText(/imperial/i)).toHaveAttribute("for", "imperialRadio");
+    expect(apply).toHaveAttribute("type", "submit");
+    expect(apply).toHaveTextContent(/apply/i);
   });
 
-  describe("form", () => {
-    test("all fields correctly rendered", () => {
-      const { getByText, getAllByRole } = render(
-        <OptionsMenu handleSearch={handleSearch} />
-      );
+  test("selecting units", () => {
+    const { getByRole, getAllByRole } = render(
+      <OptionsMenu handleSearch={handleSearch} setVisible={setVisible} />
+    );
 
-      const radios = getAllByRole("radio");
-      const apply = getAllByRole("button")[1];
-      expect(getByText(/options/i)).toBeInstanceOf(HTMLHeadingElement);
-      expect(getByText(/units:/i)).toBeInstanceOf(HTMLHeadingElement);
-      expect(getByText(/scientific/i)).toBeInstanceOf(HTMLLabelElement);
-      expect(getByText(/metric/i)).toBeInstanceOf(HTMLLabelElement);
-      expect(getByText(/imperial/i)).toBeInstanceOf(HTMLLabelElement);
-      expect(radios).toHaveLength(3);
-      expect(radios[0]).toHaveAttribute("value", "standard");
-      expect(radios[1]).toHaveAttribute("value", "metric");
-      expect(radios[2]).toHaveAttribute("value", "imperial");
-      radios.forEach((radio) => {
-        expect(radio).toHaveAttribute("name", "units");
-      });
-      expect(apply).toHaveAttribute("type", "submit");
-      expect(apply).toHaveTextContent(/apply/i);
-    });
+    const [standard, metric, imperial] = getAllByRole("radio");
+    const apply = getByRole("button");
 
-    test("selecting units", () => {
-      const { getAllByRole } = render(
-        <OptionsMenu handleSearch={handleSearch} />
-      );
+    fireEvent.click(standard);
+    expect(standard).toBeChecked();
+    expect(metric).not.toBeChecked();
+    expect(imperial).not.toBeChecked();
+    fireEvent.click(apply);
+    expect(handleSearch).toBeCalledWith(undefined, standard.value);
 
-      const [standard, metric, imperial] = getAllByRole("radio");
-      const apply = getAllByRole("button")[1];
+    fireEvent.click(metric);
+    expect(standard).not.toBeChecked();
+    expect(metric).toBeChecked();
+    expect(imperial).not.toBeChecked();
+    fireEvent.click(apply);
+    expect(handleSearch).toBeCalledWith(undefined, metric.value);
 
-      fireEvent.click(standard);
-      expect(standard).toBeChecked();
-      expect(metric).not.toBeChecked();
-      expect(imperial).not.toBeChecked();
-      fireEvent.click(apply);
-      expect(handleSearch).toBeCalledWith(undefined, standard.value);
+    fireEvent.click(imperial);
+    expect(standard).not.toBeChecked();
+    expect(metric).not.toBeChecked();
+    expect(imperial).toBeChecked();
+    fireEvent.click(apply);
+    expect(handleSearch).toBeCalledWith(undefined, imperial.value);
+  });
 
-      fireEvent.click(metric);
-      expect(standard).not.toBeChecked();
-      expect(metric).toBeChecked();
-      expect(imperial).not.toBeChecked();
-      fireEvent.click(apply);
-      expect(handleSearch).toBeCalledWith(undefined, metric.value);
+  test("apply calls setVisible", () => {
+    const { getByRole } = render(
+      <OptionsMenu handleSearch={handleSearch} setVisible={setVisible} />
+    );
 
-      fireEvent.click(imperial);
-      expect(standard).not.toBeChecked();
-      expect(metric).not.toBeChecked();
-      expect(imperial).toBeChecked();
-      fireEvent.click(apply);
-      expect(handleSearch).toBeCalledWith(undefined, imperial.value);
-    });
+    const apply = getByRole("button");
+    expect(setVisible).toBeCalledTimes(0);
+    fireEvent.click(apply);
+    expect(setVisible).toBeCalledWith(false);
   });
 });

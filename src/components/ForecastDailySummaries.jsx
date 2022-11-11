@@ -4,7 +4,11 @@ import PropTypes from "prop-types";
 import ForecastSummary from "./ForecastDailySummary";
 import { calcMean } from "../helpers/calculateValues";
 
-function ForecastDailySummaries({ forecasts, handleForecastSelect }) {
+function ForecastDailySummaries({
+  forecasts,
+  handleForecastSelect,
+  selectedDate,
+}) {
   const getDailyForecast = (forecastsArray) => {
     return forecastsArray.map((forecast) => {
       const [{ dateTime, icon, weather }] = forecast;
@@ -30,6 +34,7 @@ function ForecastDailySummaries({ forecasts, handleForecastSelect }) {
             icon={icon}
             temp={temp}
             handleForecastSelect={handleForecastSelect}
+            selectedDate={selectedDate}
             key={forecast.dateTime}
           />
         );
@@ -37,6 +42,10 @@ function ForecastDailySummaries({ forecasts, handleForecastSelect }) {
     </div>
   );
 }
+
+ForecastDailySummaries.defaultProps = {
+  selectedDate: 0,
+};
 
 ForecastDailySummaries.propTypes = {
   forecasts: PropTypes.arrayOf(
@@ -50,6 +59,7 @@ ForecastDailySummaries.propTypes = {
     )
   ).isRequired,
   handleForecastSelect: PropTypes.func.isRequired,
+  selectedDate: PropTypes.number,
 };
 
 export default ForecastDailySummaries;

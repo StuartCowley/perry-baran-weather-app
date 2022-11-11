@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import "../styles/TopBar.css";
 import SearchForm from "./SearchForm";
-import OptionsMenu from "./OptionsMenu";
+import DropDownMenu from "./DropDownMenu";
 
 function TopBar({ handleSearch }) {
   return (
     <div className="top-bar">
       <SearchForm handleSearch={handleSearch} />
-      <OptionsMenu handleSearch={handleSearch} />
+      <DropDownMenu handleSearch={handleSearch} />
     </div>
   );
 }

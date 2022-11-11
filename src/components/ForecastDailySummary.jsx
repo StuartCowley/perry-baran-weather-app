@@ -12,6 +12,7 @@ function ForecastDailySummary({
   icon,
   temp,
   handleForecastSelect,
+  selectedDate,
 }) {
   const { units } = useUnitContext();
   const { tempUnits } = getUnits(units);
@@ -44,6 +45,7 @@ function ForecastDailySummary({
         type="button"
         onClick={() => handleForecastSelect(dateTime)}
         className="forecast-daily-summary__more-details"
+        disabled={selectedDate === dateTime}
       >
         More Details
       </button>
@@ -51,12 +53,17 @@ function ForecastDailySummary({
   );
 }
 
+ForecastDailySummary.defaultProps = {
+  selectedDate: 0,
+};
+
 ForecastDailySummary.propTypes = {
   dateTime: PropTypes.number.isRequired,
   weather: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   temp: PropTypes.string.isRequired,
   handleForecastSelect: PropTypes.func.isRequired,
+  selectedDate: PropTypes.number,
 };
 
 export default ForecastDailySummary;
