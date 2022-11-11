@@ -1,4 +1,4 @@
-import { dateString } from "../../helpers/dateTime";
+import dateString from "../../helpers/dateString";
 
 describe("dateTime", () => {
   const dt = 1667487600;

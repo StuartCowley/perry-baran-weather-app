@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import ForecastDailySummary from "../../components/ForecastDailySummary";
-import { dateString } from "../../helpers/dateTime";
+import dateString from "../../helpers/dateString";
 
 describe("ForecastDailySummary", () => {
   const validProps = {

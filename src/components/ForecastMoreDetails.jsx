@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import ForecastTrihourlySummaries from "./ForecastTrihourlySummaries";
 import ForecastBreakdown from "./ForecastBreakdown";
 import { calcMean, calcMax, calcMin } from "../helpers/calculateValues";
-import { dateString } from "../helpers/dateTime";
+import dateString from "../helpers/dateString";
 
 function ForecastMoreDetails({ forecasts }) {
   const [{ dateTime, icon, weather }] = forecasts;

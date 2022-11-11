@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import ForecastMoreDetails from "../../components/ForecastMoreDetails";
-import { dateString } from "../../helpers/dateTime";
+import dateString from "../../helpers/dateString";
 import { calcMax, calcMean, calcMin } from "../../helpers/calculateValues";
 
 describe("ForecastMoreDetails", () => {

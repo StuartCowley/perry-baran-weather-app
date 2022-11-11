@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import ForecastDailySummaries from "../../components/ForecastDailySummaries";
 import { calcMean } from "../../helpers/calculateValues";
-import { dateString } from "../../helpers/dateTime";
+import dateString from "../../helpers/dateString";
 
 describe("ForecastDailySummaries", () => {
   const validProps = {

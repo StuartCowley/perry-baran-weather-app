@@ -4,7 +4,7 @@ import WeatherIcon from "react-icons-weather";
 import "../styles/ForecastDailySummary.css";
 import getUnits from "../helpers/getUnits";
 import useUnitContext from "../hooks/useUnitContext";
-import { dateString } from "../helpers/dateTime";
+import dateString from "../helpers/dateString";
 
 function ForecastDailySummary({
   dateTime,

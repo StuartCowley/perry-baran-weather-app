@@ -1,30 +1,31 @@
 # Weather App
 
-Weather app that interacts with an API to get weather data that is presented using React.
+Weather app that interacts with an OpenWeatherMap API to get up to date weather forecast and displays that data using React.
 
 Created as part of the Manchester Codes full-stack web development boot-camp.
+
+## [Live Preview]("https://perrybaran.github.io/weather-app")
 
 ## Table of Contents
 
 1. [Dependencies](#dependencies)
-2. [Seup](#setup)
+2. [Setup](#setup)
 3. [Commands](#commands)
 4. [Attribution](#attribution)
 
+
 ## Dependencies
 
-- [React](https://reactjs.org/)
+- [react](https://reactjs.org/)
+- [axios](https://www.npmjs.com/package/axios)
+- [uuid](https://www.npmjs.com/package/uuid)
+- [react-icons-weather](https://www.npmjs.com/package/react-icons-weather)
+- [prop-types](https://www.npmjs.com/package/prop-types)
 
 ### Dev Dependencies
 
-- eslint-config-airbnb
-- eslint-config-prettier
-- eslint-plugin-import
-- eslint-plugin-jsx-ally
-- eslint-plugin-prettier
-- eslint-plugin-react
-- eslint-plugin-react-hooks
-- prettier
+- [prettier](https://prettier.io/docs/en/install.html)
+- [gh-pages](https://www.npmjs.com/package/gh-pages)
 
 ## Setup
 
@@ -72,6 +73,23 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+```
+$ npm run lint:fix
+```
+
+Runs eslint on all files to format code.
+
+```
+$ npm run predeploy
+```
+helps to bundle the react app.
+
+```
+$ npm run deploy
+```
+Generates a production build of the app and deploys it to GitHub pages.
+
 
 ## Attribution
 
