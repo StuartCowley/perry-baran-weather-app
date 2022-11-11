@@ -4,15 +4,20 @@ import SearchForm from "../../components/SearchForm";
 
 describe("SearchForm", () => {
   const handleSearch = jest.fn();
+  let screen;
+
+  beforeEach(() => {
+    screen = render(<SearchForm handleSearch={handleSearch} />);
+  });
 
   test("snapshot", () => {
-    const { asFragment } = render(<SearchForm handleSearch={handleSearch} />);
+    const { asFragment } = screen;
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   test("renders correctly", () => {
-    const { getByRole } = render(<SearchForm handleSearch={handleSearch} />);
+    const { getByRole } = screen;
 
     const button = getByRole("button");
     const input = getByRole("textbox");
@@ -24,7 +29,7 @@ describe("SearchForm", () => {
   });
 
   test("inputs", async () => {
-    const { getByRole } = render(<SearchForm handleSearch={handleSearch} />);
+    const { getByRole } = screen;
 
     const button = getByRole("button");
     const input = getByRole("textbox");
@@ -38,7 +43,7 @@ describe("SearchForm", () => {
   });
 
   test("can press enter in search input to search", () => {
-    const { getByRole } = render(<SearchForm handleSearch={handleSearch} />);
+    const { getByRole } = screen;
 
     const input = getByRole("textbox");
     const string = "string";

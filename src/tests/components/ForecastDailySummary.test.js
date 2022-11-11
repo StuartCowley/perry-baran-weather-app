@@ -11,11 +11,11 @@ describe("ForecastDailySummary", () => {
     temp: "20",
     handleForecastSelect: jest.fn(),
   };
-
   const { dateTime, weather, icon, temp, handleForecastSelect } = validProps;
+  let screen;
 
-  test("snapshot", () => {
-    const { asFragment } = render(
+  beforeEach(() => {
+    screen = render(
       <ForecastDailySummary
         dateTime={dateTime}
         weather={weather}
@@ -24,20 +24,16 @@ describe("ForecastDailySummary", () => {
         handleForecastSelect={handleForecastSelect}
       />
     );
+  });
+
+  test("snapshot", () => {
+    const { asFragment } = screen;
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   test("correctly renders props", () => {
-    const { getByText, getByTestId } = render(
-      <ForecastDailySummary
-        dateTime={dateTime}
-        weather={weather}
-        icon={icon}
-        temp={temp}
-        handleForecastSelect={handleForecastSelect}
-      />
-    );
+    const { getByText, getByTestId } = screen;
 
     const date = dateString(dateTime);
     const dayOfTheWeek = date.slice(0, 3);
@@ -61,15 +57,7 @@ describe("ForecastDailySummary", () => {
   });
 
   test("button", () => {
-    const { getByText } = render(
-      <ForecastDailySummary
-        dateTime={dateTime}
-        weather={weather}
-        icon={icon}
-        temp={temp}
-        handleForecastSelect={handleForecastSelect}
-      />
-    );
+    const { getByText } = screen;
 
     const button = getByText(/more details/i);
 

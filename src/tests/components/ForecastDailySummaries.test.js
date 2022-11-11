@@ -55,24 +55,25 @@ describe("ForecastDailySummaries", () => {
 
   const { forecasts, handleForecastSelect } = validProps;
 
-  test("snapshot", () => {
-    const { asFragment } = render(
+  let screen;
+
+  beforeEach(() => {
+    screen = render(
       <ForecastDailySummaries
         forecasts={forecasts}
         handleForecastSelect={handleForecastSelect}
       />
     );
+  });
+
+  test("snapshot", () => {
+    const { asFragment } = screen;
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   test("ForecastDailySummary is called correct amount of times", () => {
-    const { getAllByTestId } = render(
-      <ForecastDailySummaries
-        forecasts={forecasts}
-        handleForecastSelect={handleForecastSelect}
-      />
-    );
+    const { getAllByTestId } = screen;
 
     expect(getAllByTestId("forecast-daily-summary")).toHaveLength(
       forecasts.length
@@ -80,12 +81,7 @@ describe("ForecastDailySummaries", () => {
   });
 
   test("data is properly manipulated", () => {
-    const { queryByText } = render(
-      <ForecastDailySummaries
-        forecasts={forecasts}
-        handleForecastSelect={handleForecastSelect}
-      />
-    );
+    const { queryByText } = screen;
 
     forecasts.forEach((forecast) => {
       const temp = calcMean(forecast, "temp");

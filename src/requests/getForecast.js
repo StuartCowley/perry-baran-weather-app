@@ -84,11 +84,7 @@ const getForecast = async (
     setSelectedDate(forecasts[0][0].dateTime);
     setErrMessage("");
   } catch (err) {
-    const {
-      response: {
-        request: { status },
-      },
-    } = err;
+    const status = err.response?.request?.status;
     if (status === 404) {
       console.error("Invalid Location", err);
       setErrMessage("Could not find that city or town, please try again.");

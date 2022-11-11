@@ -27,19 +27,20 @@ describe("ForecastTrihourlySummaries", () => {
       windSpeed: 99,
     },
   ];
+  let screen;
+
+  beforeEach(() => {
+    screen = render(<ForecastTrihourlySummaries forecasts={forecasts} />);
+  });
 
   test("snapshot", () => {
-    const { asFragment } = render(
-      <ForecastTrihourlySummaries forecasts={forecasts} />
-    );
+    const { asFragment } = screen;
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  test("ForecastTrihourlySummary is called correct number of times, every 3 hours for 1 day", () => {
-    const { getAllByTestId, getByText } = render(
-      <ForecastTrihourlySummaries forecasts={forecasts} />
-    );
+  test("ForecastTrihourlySummary is called correct number of times, for every 3 hours for 1 day", () => {
+    const { getAllByTestId, getByText } = screen;
 
     const FORECAST_INTERVAL = 3;
     const FORECASTS_PER_DAY = 24 / FORECAST_INTERVAL;

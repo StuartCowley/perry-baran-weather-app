@@ -12,12 +12,12 @@ describe("ForecastBreakdown", () => {
     windSpeed: "40",
     weather: "cold",
   };
-
   const { icon, temp, minTemp, maxTemp, humidity, windSpeed, weather } =
     validProps;
+  let screen;
 
-  test("snapshot", () => {
-    const { asFragment } = render(
+  beforeEach(() => {
+    screen = render(
       <ForecastBreakdown
         icon={icon}
         temp={temp}
@@ -28,22 +28,16 @@ describe("ForecastBreakdown", () => {
         weather={weather}
       />
     );
+  });
+
+  test("snapshot", () => {
+    const { asFragment } = screen;
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   test("correctly renders props", () => {
-    const { getByText, getByTestId } = render(
-      <ForecastBreakdown
-        icon={icon}
-        temp={temp}
-        minTemp={minTemp}
-        maxTemp={maxTemp}
-        humidity={humidity}
-        windSpeed={windSpeed}
-        weather={weather}
-      />
-    );
+    const { getByText, getByTestId } = screen;
 
     expect(getByTestId("forecast-icon")).toContainHTML("i");
     expect(getByText(new RegExp(temp))).toBeInstanceOf(HTMLParagraphElement);
@@ -58,17 +52,7 @@ describe("ForecastBreakdown", () => {
   });
 
   test("it contains correct headings", () => {
-    const { getByText } = render(
-      <ForecastBreakdown
-        icon={icon}
-        temp={temp}
-        minTemp={minTemp}
-        maxTemp={maxTemp}
-        humidity={humidity}
-        windSpeed={windSpeed}
-        weather={weather}
-      />
-    );
+    const { getByText } = screen;
 
     expect(getByText(/min:/i)).toBeInstanceOf(HTMLHeadingElement);
     expect(getByText(/max:/i)).toBeInstanceOf(HTMLHeadingElement);

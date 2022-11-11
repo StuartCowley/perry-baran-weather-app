@@ -4,26 +4,27 @@ import DropDownMenu from "../../components/DropDownMenu";
 
 describe("DropDownMenu", () => {
   const handleSearch = jest.fn();
+  let screen;
+
+  beforeEach(() => {
+    screen = render(<DropDownMenu handleSearch={handleSearch} />);
+  });
 
   test("snapshot", () => {
-    const { asFragment } = render(<DropDownMenu handleSearch={handleSearch} />);
+    const { asFragment } = screen;
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   test("image", () => {
-    const { getByAltText } = render(
-      <DropDownMenu handleSearch={handleSearch} />
-    );
+    const { getByAltText } = screen;
 
     const hamburgerImage = getByAltText("hamburger menu");
     expect(hamburgerImage).toHaveAttribute("src", "menu.png");
   });
 
   test("button", () => {
-    const { getAllByRole, getByTestId } = render(
-      <DropDownMenu handleSearch={handleSearch} />
-    );
+    const { getAllByRole, getByTestId } = screen;
 
     const [hamburgerButton] = getAllByRole("button");
     const dropDownMenu = getByTestId("drop-down-menu");

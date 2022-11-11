@@ -4,28 +4,30 @@ import OptionsMenu from "../../components/OptionsMenu";
 
 const findRadio = (radios, value) => {
   return radios.find((radio) => radio.value === value);
-}
+};
 
 describe("OptionsMenu", () => {
   const validProps = {
     handleSearch: jest.fn(),
     setVisible: jest.fn(),
   };
-
   const { handleSearch, setVisible } = validProps;
+  let screen;
 
-  test("snapshot", () => {
-    const { asFragment } = render(
+  beforeEach(() => {
+    screen = render(
       <OptionsMenu handleSearch={handleSearch} setVisible={setVisible} />
     );
+  });
+
+  test("snapshot", () => {
+    const { asFragment } = screen;
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   test("all fields correctly rendered", () => {
-    const { getByText, getAllByRole, getByRole } = render(
-      <OptionsMenu handleSearch={handleSearch} setVisible={setVisible} />
-    );
+    const { getByText, getAllByRole, getByRole } = screen;
 
     const radios = getAllByRole("radio");
     const standard = findRadio(radios, "standard");
@@ -46,9 +48,7 @@ describe("OptionsMenu", () => {
   });
 
   test("selecting units", () => {
-    const { getByRole, getAllByRole } = render(
-      <OptionsMenu handleSearch={handleSearch} setVisible={setVisible} />
-    );
+    const { getByRole, getAllByRole } = screen;
 
     const [standard, metric, imperial] = getAllByRole("radio");
     const apply = getByRole("button");
@@ -75,10 +75,8 @@ describe("OptionsMenu", () => {
     expect(handleSearch).toBeCalledWith(undefined, imperial.value);
   });
 
-  test("apply calls setVisible", () => {
-    const { getByRole } = render(
-      <OptionsMenu handleSearch={handleSearch} setVisible={setVisible} />
-    );
+  test("apply button calls setVisible", () => {
+    const { getByRole } = screen;
 
     const apply = getByRole("button");
     expect(setVisible).toBeCalledTimes(0);

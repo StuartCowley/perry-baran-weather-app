@@ -29,17 +29,20 @@ describe("ForecastMoreDetails", () => {
       windSpeed: 90,
     },
   ];
+  let screen;
+
+  beforeEach(() => {
+    screen = render(<ForecastMoreDetails forecasts={forecasts} />);
+  });
 
   test("snapshot", () => {
-    const { asFragment } = render(
-      <ForecastMoreDetails forecasts={forecasts} />
-    );
+    const { asFragment } = screen;
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   test("data is properly manipulated", () => {
-    const { getByText } = render(<ForecastMoreDetails forecasts={forecasts} />);
+    const { getByText } = screen;
 
     const date = dateString(forecasts[0].dateTime);
     const temp = calcMean(forecasts, "temp");

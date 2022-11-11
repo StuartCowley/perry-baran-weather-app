@@ -9,46 +9,46 @@ describe("ForecastTrihourlySummary", () => {
     temp: 34,
     weather: "broken clouds",
   };
-
   const { time, icon, temp, weather } = validProps;
 
-  test("snapshot", () => {
-    const { asFragment } = render(
-      <ForecastTrihourlySummary
-        time={time}
-        icon={icon}
-        temp={temp}
-        weather={weather}
-      />
-    );
+  describe("all data present", () => {
+    let screen;
 
-    expect(asFragment()).toMatchSnapshot();
+    beforeEach(() => {
+      screen = render(
+        <ForecastTrihourlySummary
+          time={time}
+          icon={icon}
+          temp={temp}
+          weather={weather}
+        />
+      );
+    });
+
+    test("snapshot", () => {
+      const { asFragment } = screen;
+
+      expect(asFragment()).toMatchSnapshot();
+    });
+
+    test("correctly renders props", () => {
+      const { getByText, getByTestId } = screen;
+
+      const description = weather.split(" ");
+
+      expect(getByText(time)).toBeInstanceOf(HTMLParagraphElement);
+      expect(getByTestId("forecast-icon")).toContainHTML("i");
+      expect(getByText(new RegExp(description[0]))).toBeInstanceOf(
+        HTMLParagraphElement
+      );
+      expect(getByText(new RegExp(description[1]))).toBeInstanceOf(
+        HTMLParagraphElement
+      );
+      expect(getByText(new RegExp(temp))).toBeInstanceOf(HTMLParagraphElement);
+    });
   });
 
-  test("correctly renders props", () => {
-    const { getByText, getByTestId } = render(
-      <ForecastTrihourlySummary
-        time={time}
-        icon={icon}
-        temp={temp}
-        weather={weather}
-      />
-    );
-
-    const description = weather.split(" ");
-
-    expect(getByText(time)).toBeInstanceOf(HTMLParagraphElement);
-    expect(getByTestId("forecast-icon")).toContainHTML("i");
-    expect(getByText(new RegExp(description[0]))).toBeInstanceOf(
-      HTMLParagraphElement
-    );
-    expect(getByText(new RegExp(description[1]))).toBeInstanceOf(
-      HTMLParagraphElement
-    );
-    expect(getByText(new RegExp(temp))).toBeInstanceOf(HTMLParagraphElement);
-  });
-
-  describe("No Data", () => {
+  describe("missing data", () => {
     test("returns No Data if icon is undefined", () => {
       const { getByText } = render(
         <ForecastTrihourlySummary time={time} temp={temp} weather={weather} />
