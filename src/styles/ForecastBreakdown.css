@@ -1,22 +1,10 @@
 .forecast-breakdown {
-  text-align: center;
-  flex: 1 1 auto;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+  flex: 1 1 auto;
+  text-align: center;
   padding: 20px;
-}
-
-.forecast-breakdown h4, .forecast-breakdown h4 + p {
-  display: inline;
-}
-
-.forecast-breakdown > div {
-  width: 100%;
-}
-
-.forecast-breakdown span {
-  font-weight: 600;
 }
 
 .forecast-breakdown__left {
@@ -25,26 +13,25 @@
   align-items: flex-start;
 }
 
-.forecast-breakdown__icon {
-  font-size: min(10rem, 15vw);
+.forecast-breakdown__left h4, .forecast-breakdown__left h4 + p {
+  display: inline;
 }
 
-.forecast-breakdown__weather {
-  font-size: min(1.5rem, 2.5vw);
-  position: relative;
-  top: 10px;
+.forecast-breakdown__left > div > * {
+  font-size: min(1.3rem, 3vw);
 }
 
 .forecast-breakdown__temp {
-  font-size: min(6rem, 15vw);
-  font-weight: 100;
+  font-size: min(7rem, 15vw);
 }
 
-.forecast-breakdown__temp > span {
-  font-weight: 100;
+.forecast-breakdown__right i {
+  font-size: min(13rem, 20vw);
 }
 
-.forecast-breakdown__left > p > {
-  font-weight: 100;
-  font-size: min(2rem, 3vw);
+.forecast-breakdown__right p {
+  font-size: min(2rem, 2.5vw);
+  font-weight: bold;
+  color: white;
+  text-shadow: var(--shadow-black);
 }

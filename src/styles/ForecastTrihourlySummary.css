@@ -9,7 +9,6 @@
   border-left: 4px solid var(--white-blue);
   padding-bottom: 10px;
   padding-top: 5px;
-  text-shadow: 1px 1px rgb(158, 158, 158);
 }
 
 .forecast-trihourly-summary:first-child {

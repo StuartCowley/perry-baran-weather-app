@@ -20,35 +20,35 @@ function ForecastBreakdown({
   return (
     <div className="forecast-breakdown">
       <div className="forecast-breakdown__right">
-        <div className="forecast-breakdown__icon" data-testid="forecast-icon">
+        <div data-testid="forecast-icon">
           <WeatherIcon name="owm" iconId={icon} />
         </div>
-        <p className="forecast-breakdown__weather">{weather}</p>
+        <p>{weather}</p>
       </div>
       <div className="forecast-breakdown__left">
         <p className="forecast-breakdown__temp">
           {temp}
-          {tempUnits}
+          <sup>{tempUnits}</sup>
         </p>
-        <div className="forecast-breakdown__min-temp">
+        <div>
           <h4>Min: </h4>
           <p>
             {minTemp}
             {tempUnits}
           </p>
         </div>
-        <div className="forecast-breakdown__max-temp">
+        <div>
           <h4>Max: </h4>
           <p>
             {maxTemp}
             {tempUnits}
           </p>
         </div>
-        <div className="forecast-breakdown__humidity">
+        <div>
           <h4>Humidity: </h4>
           <p>{humidity}%</p>
         </div>
-        <div className="forecast-breakdown__wind-speed">
+        <div>
           <h4>Wind Speed: </h4>
           <p>
             {windSpeed}

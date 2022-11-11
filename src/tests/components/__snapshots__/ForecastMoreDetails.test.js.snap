@@ -15,7 +15,6 @@ exports[`ForecastMoreDetails snapshot 1`] = `
         class="forecast-breakdown__right"
       >
         <div
-          class="forecast-breakdown__icon"
           data-testid="forecast-icon"
         >
           <i
@@ -23,9 +22,7 @@ exports[`ForecastMoreDetails snapshot 1`] = `
             name="owm"
           />
         </div>
-        <p
-          class="forecast-breakdown__weather"
-        >
+        <p>
           light rain
         </p>
       </div>
@@ -35,11 +32,12 @@ exports[`ForecastMoreDetails snapshot 1`] = `
         <p
           class="forecast-breakdown__temp"
         >
-          30.0K
+          30.0
+          <sup>
+            K
+          </sup>
         </p>
-        <div
-          class="forecast-breakdown__min-temp"
-        >
+        <div>
           <h4>
             Min: 
           </h4>
@@ -47,9 +45,7 @@ exports[`ForecastMoreDetails snapshot 1`] = `
             27.0K
           </p>
         </div>
-        <div
-          class="forecast-breakdown__max-temp"
-        >
+        <div>
           <h4>
             Max: 
           </h4>
@@ -57,9 +53,7 @@ exports[`ForecastMoreDetails snapshot 1`] = `
             32.0K
           </p>
         </div>
-        <div
-          class="forecast-breakdown__humidity"
-        >
+        <div>
           <h4>
             Humidity: 
           </h4>
@@ -67,9 +61,7 @@ exports[`ForecastMoreDetails snapshot 1`] = `
             NaN%
           </p>
         </div>
-        <div
-          class="forecast-breakdown__wind-speed"
-        >
+        <div>
           <h4>
             Wind Speed: 
           </h4>
