@@ -9,14 +9,10 @@ exports[`ForecastTrihourlySummaries snapshot 1`] = `
       class="forecast-trihourly-summary"
       data-testid="forecast-trihourly-summary"
     >
-      <p
-        class="forecast-trihourly-summary__time"
-      >
+      <p>
         00:00
       </p>
-      <p
-        class="forecast-trihourly-summary__no-data"
-      >
+      <p>
         No 
         <br />
         Data
@@ -26,14 +22,10 @@ exports[`ForecastTrihourlySummaries snapshot 1`] = `
       class="forecast-trihourly-summary"
       data-testid="forecast-trihourly-summary"
     >
-      <p
-        class="forecast-trihourly-summary__time"
-      >
+      <p>
         03:00
       </p>
-      <p
-        class="forecast-trihourly-summary__no-data"
-      >
+      <p>
         No 
         <br />
         Data
@@ -43,14 +35,10 @@ exports[`ForecastTrihourlySummaries snapshot 1`] = `
       class="forecast-trihourly-summary"
       data-testid="forecast-trihourly-summary"
     >
-      <p
-        class="forecast-trihourly-summary__time"
-      >
+      <p>
         06:00
       </p>
-      <p
-        class="forecast-trihourly-summary__no-data"
-      >
+      <p>
         No 
         <br />
         Data
@@ -60,14 +48,10 @@ exports[`ForecastTrihourlySummaries snapshot 1`] = `
       class="forecast-trihourly-summary"
       data-testid="forecast-trihourly-summary"
     >
-      <p
-        class="forecast-trihourly-summary__time"
-      >
+      <p>
         09:00
       </p>
-      <p
-        class="forecast-trihourly-summary__no-data"
-      >
+      <p>
         No 
         <br />
         Data
@@ -77,14 +61,10 @@ exports[`ForecastTrihourlySummaries snapshot 1`] = `
       class="forecast-trihourly-summary"
       data-testid="forecast-trihourly-summary"
     >
-      <p
-        class="forecast-trihourly-summary__time"
-      >
+      <p>
         12:00
       </p>
-      <p
-        class="forecast-trihourly-summary__no-data"
-      >
+      <p>
         No 
         <br />
         Data
@@ -94,9 +74,7 @@ exports[`ForecastTrihourlySummaries snapshot 1`] = `
       class="forecast-trihourly-summary"
       data-testid="forecast-trihourly-summary"
     >
-      <p
-        class="forecast-trihourly-summary__time"
-      >
+      <p>
         15:00
       </p>
       <div
@@ -108,18 +86,12 @@ exports[`ForecastTrihourlySummaries snapshot 1`] = `
           name="owm"
         />
       </div>
-      <div
-        class="forecast-trihourly-summary__description"
-      >
-        <p>
-          really 
-          <br />
-          cold
-        </p>
-      </div>
-      <p
-        class="forecast-trihourly-summary__temp"
-      >
+      <p>
+        really 
+        <br />
+        cold
+      </p>
+      <p>
         12.0K
       </p>
     </div>
@@ -127,9 +99,7 @@ exports[`ForecastTrihourlySummaries snapshot 1`] = `
       class="forecast-trihourly-summary"
       data-testid="forecast-trihourly-summary"
     >
-      <p
-        class="forecast-trihourly-summary__time"
-      >
+      <p>
         18:00
       </p>
       <div
@@ -141,18 +111,12 @@ exports[`ForecastTrihourlySummaries snapshot 1`] = `
           name="owm"
         />
       </div>
-      <div
-        class="forecast-trihourly-summary__description"
-      >
-        <p>
-          less 
-          <br />
-          cold
-        </p>
-      </div>
-      <p
-        class="forecast-trihourly-summary__temp"
-      >
+      <p>
+        less 
+        <br />
+        cold
+      </p>
+      <p>
         22.0K
       </p>
     </div>
@@ -160,14 +124,10 @@ exports[`ForecastTrihourlySummaries snapshot 1`] = `
       class="forecast-trihourly-summary"
       data-testid="forecast-trihourly-summary"
     >
-      <p
-        class="forecast-trihourly-summary__time"
-      >
+      <p>
         21:00
       </p>
-      <p
-        class="forecast-trihourly-summary__no-data"
-      >
+      <p>
         No 
         <br />
         Data

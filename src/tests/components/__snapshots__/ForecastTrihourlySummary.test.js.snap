@@ -6,9 +6,7 @@ exports[`ForecastTrihourlySummary snapshot 1`] = `
     class="forecast-trihourly-summary"
     data-testid="forecast-trihourly-summary"
   >
-    <p
-      class="forecast-trihourly-summary__time"
-    >
+    <p>
       15:00
     </p>
     <div
@@ -20,18 +18,12 @@ exports[`ForecastTrihourlySummary snapshot 1`] = `
         name="owm"
       />
     </div>
-    <div
-      class="forecast-trihourly-summary__description"
-    >
-      <p>
-        broken 
-        <br />
-        clouds
-      </p>
-    </div>
-    <p
-      class="forecast-trihourly-summary__temp"
-    >
+    <p>
+      broken 
+      <br />
+      clouds
+    </p>
+    <p>
       34.0K
     </p>
   </div>

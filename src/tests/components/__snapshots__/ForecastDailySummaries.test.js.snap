@@ -24,9 +24,7 @@ exports[`ForecastDailySummaries snapshot 1`] = `
         />
          
       </div>
-      <p
-        class="forecast-daily-summary__description"
-      >
+      <p>
         unique1 
         <br />
         weather1
@@ -60,9 +58,7 @@ exports[`ForecastDailySummaries snapshot 1`] = `
         />
          
       </div>
-      <p
-        class="forecast-daily-summary__description"
-      >
+      <p>
         unique3 
         <br />
         weather3
@@ -96,9 +92,7 @@ exports[`ForecastDailySummaries snapshot 1`] = `
         />
          
       </div>
-      <p
-        class="forecast-daily-summary__description"
-      >
+      <p>
         unique5 
         <br />
         weather5

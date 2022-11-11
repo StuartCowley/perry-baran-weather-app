@@ -5,7 +5,7 @@ import "../styles/ForecastTrihourlySummaries.css";
 import ForecastTrihourlySummary from "./ForecastTrihourlySummary";
 
 function ForecastTriHourlySummaries({ forecasts }) {
-  const addMissingForecasts = (trihourlyForecasts) => {
+  const formatForecasts = (trihourlyForecasts) => {
     const FORECAST_INTERVAL = 3;
     const FORECASTS_PER_DAY = 24 / FORECAST_INTERVAL;
     const forecastsArray = [];
@@ -19,14 +19,8 @@ function ForecastTriHourlySummaries({ forecasts }) {
       );
 
       if (trihourlyForecast) {
-        const { dateTime, icon, weather, temp } = trihourlyForecast;
-        forecastsArray.push({
-          time,
-          dateTime,
-          weather,
-          icon,
-          temp,
-        });
+        trihourlyForecast.time = time;
+        forecastsArray.push(trihourlyForecast);
       } else {
         forecastsArray.push({
           time,
@@ -41,7 +35,7 @@ function ForecastTriHourlySummaries({ forecasts }) {
     return forecastsArray;
   };
 
-  const trihourlyForecast = addMissingForecasts(forecasts);
+  const trihourlyForecast = formatForecasts(forecasts);
 
   return (
     <div className="forecast-trihourly-summaries">

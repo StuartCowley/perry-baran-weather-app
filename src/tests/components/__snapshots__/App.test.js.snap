@@ -120,9 +120,7 @@ exports[`App snapshot 1`] = `
           />
            
         </div>
-        <p
-          class="forecast-daily-summary__description"
-        >
+        <p>
           scattered 
           <br />
           clouds
@@ -156,9 +154,7 @@ exports[`App snapshot 1`] = `
           />
            
         </div>
-        <p
-          class="forecast-daily-summary__description"
-        >
+        <p>
           scattered 
           <br />
           clouds
@@ -192,9 +188,7 @@ exports[`App snapshot 1`] = `
           />
            
         </div>
-        <p
-          class="forecast-daily-summary__description"
-        >
+        <p>
           scattered 
           <br />
           clouds
@@ -228,9 +222,7 @@ exports[`App snapshot 1`] = `
           />
            
         </div>
-        <p
-          class="forecast-daily-summary__description"
-        >
+        <p>
           scattered 
           <br />
           clouds
@@ -264,9 +256,7 @@ exports[`App snapshot 1`] = `
           />
            
         </div>
-        <p
-          class="forecast-daily-summary__description"
-        >
+        <p>
           broken 
           <br />
           clouds
@@ -300,9 +290,7 @@ exports[`App snapshot 1`] = `
           />
            
         </div>
-        <p
-          class="forecast-daily-summary__description"
-        >
+        <p>
           moderate 
           <br />
           rain
@@ -394,14 +382,10 @@ exports[`App snapshot 1`] = `
           class="forecast-trihourly-summary"
           data-testid="forecast-trihourly-summary"
         >
-          <p
-            class="forecast-trihourly-summary__time"
-          >
+          <p>
             00:00
           </p>
-          <p
-            class="forecast-trihourly-summary__no-data"
-          >
+          <p>
             No 
             <br />
             Data
@@ -411,14 +395,10 @@ exports[`App snapshot 1`] = `
           class="forecast-trihourly-summary"
           data-testid="forecast-trihourly-summary"
         >
-          <p
-            class="forecast-trihourly-summary__time"
-          >
+          <p>
             03:00
           </p>
-          <p
-            class="forecast-trihourly-summary__no-data"
-          >
+          <p>
             No 
             <br />
             Data
@@ -428,14 +408,10 @@ exports[`App snapshot 1`] = `
           class="forecast-trihourly-summary"
           data-testid="forecast-trihourly-summary"
         >
-          <p
-            class="forecast-trihourly-summary__time"
-          >
+          <p>
             06:00
           </p>
-          <p
-            class="forecast-trihourly-summary__no-data"
-          >
+          <p>
             No 
             <br />
             Data
@@ -445,14 +421,10 @@ exports[`App snapshot 1`] = `
           class="forecast-trihourly-summary"
           data-testid="forecast-trihourly-summary"
         >
-          <p
-            class="forecast-trihourly-summary__time"
-          >
+          <p>
             09:00
           </p>
-          <p
-            class="forecast-trihourly-summary__no-data"
-          >
+          <p>
             No 
             <br />
             Data
@@ -462,14 +434,10 @@ exports[`App snapshot 1`] = `
           class="forecast-trihourly-summary"
           data-testid="forecast-trihourly-summary"
         >
-          <p
-            class="forecast-trihourly-summary__time"
-          >
+          <p>
             12:00
           </p>
-          <p
-            class="forecast-trihourly-summary__no-data"
-          >
+          <p>
             No 
             <br />
             Data
@@ -479,9 +447,7 @@ exports[`App snapshot 1`] = `
           class="forecast-trihourly-summary"
           data-testid="forecast-trihourly-summary"
         >
-          <p
-            class="forecast-trihourly-summary__time"
-          >
+          <p>
             15:00
           </p>
           <div
@@ -493,18 +459,12 @@ exports[`App snapshot 1`] = `
               name="owm"
             />
           </div>
-          <div
-            class="forecast-trihourly-summary__description"
-          >
-            <p>
-              scattered 
-              <br />
-              clouds
-            </p>
-          </div>
-          <p
-            class="forecast-trihourly-summary__temp"
-          >
+          <p>
+            scattered 
+            <br />
+            clouds
+          </p>
+          <p>
             12.3K
           </p>
         </div>
@@ -512,9 +472,7 @@ exports[`App snapshot 1`] = `
           class="forecast-trihourly-summary"
           data-testid="forecast-trihourly-summary"
         >
-          <p
-            class="forecast-trihourly-summary__time"
-          >
+          <p>
             18:00
           </p>
           <div
@@ -526,18 +484,12 @@ exports[`App snapshot 1`] = `
               name="owm"
             />
           </div>
-          <div
-            class="forecast-trihourly-summary__description"
-          >
-            <p>
-              light 
-              <br />
-              rain
-            </p>
-          </div>
-          <p
-            class="forecast-trihourly-summary__temp"
-          >
+          <p>
+            light 
+            <br />
+            rain
+          </p>
+          <p>
             10.4K
           </p>
         </div>
@@ -545,9 +497,7 @@ exports[`App snapshot 1`] = `
           class="forecast-trihourly-summary"
           data-testid="forecast-trihourly-summary"
         >
-          <p
-            class="forecast-trihourly-summary__time"
-          >
+          <p>
             21:00
           </p>
           <div
@@ -559,18 +509,12 @@ exports[`App snapshot 1`] = `
               name="owm"
             />
           </div>
-          <div
-            class="forecast-trihourly-summary__description"
-          >
-            <p>
-              scattered 
-              <br />
-              clouds
-            </p>
-          </div>
-          <p
-            class="forecast-trihourly-summary__temp"
-          >
+          <p>
+            scattered 
+            <br />
+            clouds
+          </p>
+          <p>
             8.1K
           </p>
         </div>

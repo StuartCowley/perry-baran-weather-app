@@ -21,9 +21,7 @@ exports[`ForecastDailySummary snapshot 1`] = `
       />
        
     </div>
-    <p
-      class="forecast-daily-summary__description"
-    >
+    <p>
       broken 
       <br />
       clouds

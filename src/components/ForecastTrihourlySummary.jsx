@@ -15,9 +15,9 @@ function ForecastTrihourlySummary({ time, weather, icon, temp }) {
       className="forecast-trihourly-summary"
       data-testid="forecast-trihourly-summary"
     >
-      <p className="forecast-trihourly-summary__time">{time}</p>
+      <p>{time}</p>
       {!icon || !weather || !temp ? (
-        <p className="forecast-trihourly-summary__no-data">
+        <p>
           No <br />
           Data
         </p>
@@ -29,13 +29,11 @@ function ForecastTrihourlySummary({ time, weather, icon, temp }) {
           >
             <WeatherIcon name="owm" iconId={icon} />
           </div>
-          <div className="forecast-trihourly-summary__description">
-            <p>
-              {description[0]} <br />
-              {description[1]}
-            </p>
-          </div>
-          <p className="forecast-trihourly-summary__temp">
+          <p>
+            {description[0]} <br />
+            {description[1]}
+          </p>
+          <p>
             {temp.toFixed(1)}
             {tempUnits}
           </p>

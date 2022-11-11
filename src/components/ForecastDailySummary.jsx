@@ -32,7 +32,7 @@ function ForecastDailySummary({
       <div className="forecast-daily-summary__icon" data-testid="forecast-icon">
         <WeatherIcon name="owm" iconId={icon} />{" "}
       </div>
-      <p className="forecast-daily-summary__description">
+      <p>
         {description[0]} <br />
         {description[1]}
       </p>
