@@ -32,33 +32,33 @@ exports[`ForecastBreakdown snapshot 1`] = `
         </sup>
       </p>
       <div>
-        <h4>
+        <h3>
           Min: 
-        </h4>
+        </h3>
         <p>
           18K
         </p>
       </div>
       <div>
-        <h4>
+        <h3>
           Max: 
-        </h4>
+        </h3>
         <p>
           22K
         </p>
       </div>
       <div>
-        <h4>
+        <h3>
           Humidity: 
-        </h4>
+        </h3>
         <p>
           30%
         </p>
       </div>
       <div>
-        <h4>
+        <h3>
           Wind Speed: 
-        </h4>
+        </h3>
         <p>
           40m/s
         </p>

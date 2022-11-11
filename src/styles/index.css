@@ -20,7 +20,6 @@
 
 body {
   background-image: linear-gradient(var(--light-blue), var(--white-blue));
-  min-height: 100vh;
 }
 
 i {

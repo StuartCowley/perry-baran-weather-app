@@ -36,15 +36,15 @@ exports[`App snapshot 1`] = `
           class="options-menu-form hidden"
           name="options menu form"
         >
-          <h3>
+          <h2>
             Options
-          </h3>
+          </h2>
           <div
             class="options-menu-form__units"
           >
-            <h4>
+            <h3>
               Units:
-            </h4>
+            </h3>
             <label
               class="options-menu-form__label"
               for="standardRadio"
@@ -52,7 +52,6 @@ exports[`App snapshot 1`] = `
               Scientific
               <input
                 checked=""
-                class="options-menu-form__radio"
                 id="standardRadio"
                 name="units"
                 type="radio"
@@ -65,7 +64,6 @@ exports[`App snapshot 1`] = `
             >
               Metric
               <input
-                class="options-menu-form__radio"
                 id="metricRadio"
                 name="units"
                 type="radio"
@@ -78,7 +76,6 @@ exports[`App snapshot 1`] = `
             >
               Imperial
               <input
-                class="options-menu-form__radio"
                 id="imperialRadio"
                 name="units"
                 type="radio"
@@ -309,9 +306,9 @@ exports[`App snapshot 1`] = `
     <div
       class="forecast-details"
     >
-      <h3>
+      <h2>
         Thu Nov 03 2022
-      </h3>
+      </h2>
       <div
         class="forecast-breakdown"
       >
@@ -342,33 +339,33 @@ exports[`App snapshot 1`] = `
             </sup>
           </p>
           <div>
-            <h4>
+            <h3>
               Min: 
-            </h4>
+            </h3>
             <p>
               8.1K
             </p>
           </div>
           <div>
-            <h4>
+            <h3>
               Max: 
-            </h4>
+            </h3>
             <p>
               12.3K
             </p>
           </div>
           <div>
-            <h4>
+            <h3>
               Humidity: 
-            </h4>
+            </h3>
             <p>
               70.7%
             </p>
           </div>
           <div>
-            <h4>
+            <h3>
               Wind Speed: 
-            </h4>
+            </h3>
             <p>
               1.1m/s
             </p>

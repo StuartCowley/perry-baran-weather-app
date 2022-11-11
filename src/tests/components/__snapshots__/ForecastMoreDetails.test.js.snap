@@ -5,9 +5,9 @@ exports[`ForecastMoreDetails snapshot 1`] = `
   <div
     class="forecast-details"
   >
-    <h3>
+    <h2>
       Thu Nov 03 2022
-    </h3>
+    </h2>
     <div
       class="forecast-breakdown"
     >
@@ -38,33 +38,33 @@ exports[`ForecastMoreDetails snapshot 1`] = `
           </sup>
         </p>
         <div>
-          <h4>
+          <h3>
             Min: 
-          </h4>
+          </h3>
           <p>
             27.0K
           </p>
         </div>
         <div>
-          <h4>
+          <h3>
             Max: 
-          </h4>
+          </h3>
           <p>
             32.0K
           </p>
         </div>
         <div>
-          <h4>
+          <h3>
             Humidity: 
-          </h4>
+          </h3>
           <p>
             NaN%
           </p>
         </div>
         <div>
-          <h4>
+          <h3>
             Wind Speed: 
-          </h4>
+          </h3>
           <p>
             95.0m/s
           </p>

@@ -1,16 +1,3 @@
-
-.options-menu {
-  width: 200px;  
-  height: 100%;
-  margin-left: 20px;
-  text-align: center;
-  font-weight: 300;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .options-menu-button {
   all: unset;
   cursor: pointer;
@@ -29,25 +16,25 @@
 }
 
 .options-menu-form {
-  padding: 10px;
-  background-color: var(--medium-blue);
-  position: relative;
-  top: 0;
-  transition-duration: 500ms;
-  border-bottom-left-radius: 5px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  top: 0;
   border-bottom: var(--top-bar-border);
-  border-left: 3px solid var(--dark-blue);
+  border-left: var(--top-bar-border);
+  border-bottom-left-radius: 5px;  
+  padding: 10px;
+  background-color: var(--medium-blue);
+  transition-duration: 500ms;
 }
 
 .hidden {
   top: -200px;
 }
 
-.options-menu-form h3 {
-  font-weight: 500;
+.options-menu-form h2 {
   font-size: 1.6rem;
+  font-weight: 400;
   text-decoration: underline;
 }
 
@@ -57,45 +44,47 @@
   margin: 10px 0;
 }
 
-.options-menu-form__units h4 {
+.options-menu-form__units h3 {
   font-size: 1.2rem;
   margin-right: 5px;
 }
 
-.options-menu-form__radio {
-  display: none;
-}
-
-.options-menu-form__label:has(.options-menu-form__radio:checked) {
-  background-color: var(--light-blue);
-  color: var(--almost-black);
-}
-
 .options-menu-form__label {
+  width: 75px;
+  padding: 5px 0;
   border: 1px solid var(--almost-white);
-  cursor: pointer;
-  padding: 5px;
   color: var(--almost-white);
-  background-color: var(--dark-blue);
+  text-align: center;
+  cursor: pointer;
   transition-duration: 200ms;
 }
 
+.options-menu-form__label input {
+  display: none;
+}
+
+.options-menu-form__label:has(input:checked) {
+  background-color: var(--dark-blue);
+}
+
 .options-menu-form__label:hover {
+  background-color: var(--dark-blue);
   box-shadow: 0 0 10px var(--almost-white);
 }
 
 .options-menu-form__apply {
   all: unset;
-  background-color: var(--light-blue);
+  align-self: flex-end;
   padding: 5px 10px;
   border: 1px solid white;
-  color: white;
   border-radius: 3px;
-  align-self: flex-end;
+  color: white;
   cursor: pointer;
+  transition-duration: 200ms;
 }
 
 .options-menu-form__apply:hover {
+  background-color: var(--dark-blue);
   box-shadow: 0 0 10px var(--almost-white);
 }
 

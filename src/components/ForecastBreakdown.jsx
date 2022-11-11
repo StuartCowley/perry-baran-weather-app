@@ -31,25 +31,25 @@ function ForecastBreakdown({
           <sup>{tempUnits}</sup>
         </p>
         <div>
-          <h4>Min: </h4>
+          <h3>Min: </h3>
           <p>
             {minTemp}
             {tempUnits}
           </p>
         </div>
         <div>
-          <h4>Max: </h4>
+          <h3>Max: </h3>
           <p>
             {maxTemp}
             {tempUnits}
           </p>
         </div>
         <div>
-          <h4>Humidity: </h4>
+          <h3>Humidity: </h3>
           <p>{humidity}%</p>
         </div>
         <div>
-          <h4>Wind Speed: </h4>
+          <h3>Wind Speed: </h3>
           <p>
             {windSpeed}
             {speedUnits}

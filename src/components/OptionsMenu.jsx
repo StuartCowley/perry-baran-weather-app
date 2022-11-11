@@ -1,45 +1,26 @@
-import React, { useState, useReducer } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "../styles/OptionsMenu.css";
 import useUnitContext from "../hooks/useUnitContext";
 import menu from "../images/menu.png";
 
-const reducer = (state, { type, key, value }) => {
-  switch (type) {
-    case "update":
-      return {
-        ...state,
-        [key]: value,
-      };
-    default:
-      return state;
-  }
-};
-
 function OptionsMenu({ handleSearch }) {
   const { units, setUnits } = useUnitContext();
   const [visisble, setVisible] = useState(false);
-  const [state, dispatch] = useReducer(reducer, {
-    units,
-  });
-
-  const updateState = (e) => {
-    const { name, value } = e.target;
-    dispatch({
-      type: "update",
-      key: name,
-      value,
-    });
-  };
+  const [selectedUnits, setSelectedUnits] = useState(units);
 
   const handleHamburger = () => {
     setVisible((prev) => !prev);
   };
 
+  const changeHandler = (e) => {
+    setSelectedUnits(e.target.value);
+  };
+
   const handleApply = (e) => {
     e.preventDefault();
-    setUnits(state.units);
-    handleSearch(undefined, state.units);
+    setUnits(selectedUnits);
+    handleSearch(undefined, selectedUnits);
     setVisible(false);
   };
 
@@ -57,43 +38,40 @@ function OptionsMenu({ handleSearch }) {
           className={`options-menu-form ${!visisble && "hidden"}`}
           name="options menu form"
         >
-          <h3>Options</h3>
+          <h2>Options</h2>
           <div className="options-menu-form__units">
-            <h4>Units:</h4>
+            <h3>Units:</h3>
             <label htmlFor="standardRadio" className="options-menu-form__label">
               Scientific
               <input
-                className="options-menu-form__radio"
                 id="standardRadio"
                 type="radio"
                 value="standard"
                 name="units"
-                checked={state.units === "standard"}
-                onChange={updateState}
+                checked={selectedUnits === "standard"}
+                onChange={changeHandler}
               />
             </label>
             <label htmlFor="metricRadio" className="options-menu-form__label">
               Metric
               <input
-                className="options-menu-form__radio"
                 id="metricRadio"
                 type="radio"
                 value="metric"
                 name="units"
-                checked={state.units === "metric"}
-                onChange={updateState}
+                checked={selectedUnits === "metric"}
+                onChange={changeHandler}
               />
             </label>
             <label htmlFor="imperialRadio" className="options-menu-form__label">
               Imperial
               <input
-                className="options-menu-form__radio"
                 id="imperialRadio"
                 type="radio"
                 value="imperial"
                 name="units"
-                checked={state.units === "imperial"}
-                onChange={updateState}
+                checked={selectedUnits === "imperial"}
+                onChange={changeHandler}
               />
             </label>
           </div>
