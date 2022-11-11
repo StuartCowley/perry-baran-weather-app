@@ -4,6 +4,7 @@
   justify-content: space-between;
   flex: 1 1 auto;
   text-align: center;
+  min-height: 350px;
   padding: 20px;
 }
 
@@ -26,7 +27,7 @@
 }
 
 .forecast-breakdown__right i {
-  font-size: min(13rem, 20vw);
+  font-size: min(13rem, 18vw);
 }
 
 .forecast-breakdown__right p {
@@ -34,4 +35,6 @@
   font-weight: bold;
   color: white;
   text-shadow: var(--text-shadow-black);
+  position: relative;
+  top: min(40px, 4vw);
 }
