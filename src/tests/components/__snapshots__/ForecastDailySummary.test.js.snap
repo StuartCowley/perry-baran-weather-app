@@ -27,7 +27,7 @@ exports[`ForecastDailySummary snapshot 1`] = `
       clouds
     </p>
     <p>
-      20K
+      20°C
     </p>
     <button
       class="forecast-daily-summary__more-details"

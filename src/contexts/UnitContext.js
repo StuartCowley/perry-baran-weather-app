@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import useLocalStorage from "../hooks/useLocalStorage";
 
 const UnitContext = createContext({
-  units: "standard",
+  units: "metric",
   setUnits: () => {},
 });
 

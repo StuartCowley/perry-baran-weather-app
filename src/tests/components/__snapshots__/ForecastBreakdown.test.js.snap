@@ -28,7 +28,7 @@ exports[`ForecastBreakdown snapshot 1`] = `
       >
         20
         <sup>
-          K
+          °C
         </sup>
       </p>
       <div>
@@ -36,7 +36,7 @@ exports[`ForecastBreakdown snapshot 1`] = `
           Min: 
         </h3>
         <p>
-          18K
+          18°C
         </p>
       </div>
       <div>
@@ -44,7 +44,7 @@ exports[`ForecastBreakdown snapshot 1`] = `
           Max: 
         </h3>
         <p>
-          22K
+          22°C
         </p>
       </div>
       <div>

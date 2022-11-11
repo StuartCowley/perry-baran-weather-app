@@ -34,7 +34,7 @@ exports[`ForecastMoreDetails snapshot 1`] = `
         >
           30.0
           <sup>
-            K
+            °C
           </sup>
         </p>
         <div>
@@ -42,7 +42,7 @@ exports[`ForecastMoreDetails snapshot 1`] = `
             Min: 
           </h3>
           <p>
-            27.0K
+            27.0°C
           </p>
         </div>
         <div>
@@ -50,7 +50,7 @@ exports[`ForecastMoreDetails snapshot 1`] = `
             Max: 
           </h3>
           <p>
-            32.0K
+            32.0°C
           </p>
         </div>
         <div>
@@ -148,7 +148,7 @@ exports[`ForecastMoreDetails snapshot 1`] = `
           clouds
         </p>
         <p>
-          35.0K
+          35.0°C
         </p>
       </div>
       <div
@@ -173,7 +173,7 @@ exports[`ForecastMoreDetails snapshot 1`] = `
           rain
         </p>
         <p>
-          25.0K
+          25.0°C
         </p>
       </div>
       <div

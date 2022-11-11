@@ -30,7 +30,7 @@ exports[`ForecastDailySummaries snapshot 1`] = `
         weather1
       </p>
       <p>
-        10.5K
+        10.5°C
       </p>
       <button
         class="forecast-daily-summary__more-details"
@@ -64,7 +64,7 @@ exports[`ForecastDailySummaries snapshot 1`] = `
         weather3
       </p>
       <p>
-        12.5K
+        12.5°C
       </p>
       <button
         class="forecast-daily-summary__more-details"
@@ -98,7 +98,7 @@ exports[`ForecastDailySummaries snapshot 1`] = `
         weather5
       </p>
       <p>
-        14.5K
+        14.5°C
       </p>
       <button
         class="forecast-daily-summary__more-details"

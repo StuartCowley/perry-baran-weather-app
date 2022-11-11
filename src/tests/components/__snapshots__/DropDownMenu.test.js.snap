@@ -34,7 +34,6 @@ exports[`DropDownMenu snapshot 1`] = `
         >
           Scientific
           <input
-            checked=""
             id="standardRadio"
             name="units"
             type="radio"
@@ -47,6 +46,7 @@ exports[`DropDownMenu snapshot 1`] = `
         >
           Metric
           <input
+            checked=""
             id="metricRadio"
             name="units"
             type="radio"
