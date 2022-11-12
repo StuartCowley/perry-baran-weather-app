@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import PropTypes from "prop-types";
 import "../styles/SearchForm.css";
 
-function SearchForm({ handleSearch }) {
+function SearchForm({ handleSearch, placeholder }) {
   const searchRef = useRef(null);
 
   const handleSubmit = (e) => {
@@ -15,7 +15,12 @@ function SearchForm({ handleSearch }) {
 
   return (
     <div className="search-form">
-      <input type="text" ref={searchRef} onKeyDown={handleKeyDown} />
+      <input
+        type="text"
+        ref={searchRef}
+        onKeyDown={handleKeyDown}
+        placeholder={placeholder}
+      />
       <button type="submit" onClick={handleSubmit}>
         Search
       </button>
@@ -23,8 +28,13 @@ function SearchForm({ handleSearch }) {
   );
 }
 
+SearchForm.defaultProps = {
+  placeholder: "",
+};
+
 SearchForm.propTypes = {
   handleSearch: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
 };
 
 export default SearchForm;

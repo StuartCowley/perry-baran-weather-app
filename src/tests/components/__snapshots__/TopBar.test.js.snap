@@ -9,6 +9,7 @@ exports[`TopBar snapshot 1`] = `
       class="search-form"
     >
       <input
+        placeholder=""
         type="text"
       />
       <button

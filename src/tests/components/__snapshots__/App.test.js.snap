@@ -12,6 +12,7 @@ exports[`App snapshot 1`] = `
         class="search-form"
       >
         <input
+          placeholder="London, GB"
           type="text"
         />
         <button

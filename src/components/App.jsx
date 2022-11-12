@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div className="weather-app">
-      <TopBar handleSearch={handleCitySearch} />
+      <TopBar handleSearch={handleCitySearch} location={location} />
       <LocationDetails location={location} errMessage={errMessage} />
       {!errMessage && (
         <>
