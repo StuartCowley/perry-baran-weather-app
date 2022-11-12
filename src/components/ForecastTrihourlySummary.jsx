@@ -8,7 +8,7 @@ import useUnitContext from "../hooks/useUnitContext";
 function ForecastTrihourlySummary({ time, weather, icon, temp }) {
   const { units } = useUnitContext();
   const { tempUnits } = getUnits(units);
-  const description = weather ? weather.split(" ") : [weather];
+  const weatherDescription = weather ? weather.split(" ") : [weather];
 
   return (
     <div
@@ -30,8 +30,8 @@ function ForecastTrihourlySummary({ time, weather, icon, temp }) {
             <WeatherIcon name="owm" iconId={icon} />
           </div>
           <p>
-            {description[0]} <br />
-            {description[1]}
+            {weatherDescription[0]} <br />
+            {weatherDescription[1]}
           </p>
           <p>
             {temp.toFixed(1)}

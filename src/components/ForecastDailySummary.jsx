@@ -16,7 +16,7 @@ function ForecastDailySummary({
 }) {
   const { units } = useUnitContext();
   const { tempUnits } = getUnits(units);
-  const description = weather ? weather.split(" ") : [weather];
+  const weatherDescription = weather ? weather.split(" ") : [weather];
   const date = dateString(dateTime);
   const dayOfTheWeek = date.slice(0, 3);
   const monthAndDay = date.slice(3, 10);
@@ -31,11 +31,11 @@ function ForecastDailySummary({
         {monthAndDay}
       </p>
       <div className="forecast-daily-summary__icon" data-testid="forecast-icon">
-        <WeatherIcon name="owm" iconId={icon} />{" "}
+        <WeatherIcon name="owm" iconId={icon} />
       </div>
       <p>
-        {description[0]} <br />
-        {description[1]}
+        {weatherDescription[0]} <br />
+        {weatherDescription[1]}
       </p>
       <p>
         {temp}

@@ -22,7 +22,6 @@ exports[`ForecastDailySummaries snapshot 1`] = `
           class="wi wi-day-storm-showers"
           name="owm"
         />
-         
       </div>
       <p>
         unique1 
@@ -56,7 +55,6 @@ exports[`ForecastDailySummaries snapshot 1`] = `
           class="wi wi-day-sunny"
           name="owm"
         />
-         
       </div>
       <p>
         unique3 
@@ -90,7 +88,6 @@ exports[`ForecastDailySummaries snapshot 1`] = `
           class="wi wi-day-snow"
           name="owm"
         />
-         
       </div>
       <p>
         unique5 

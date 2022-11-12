@@ -48,34 +48,34 @@ const getForecast = async (
       };
     };
 
-    const seperateForecastByDay = (data) => {
-      const forecasts = [];
-      let daysForecasts = [];
+    const groupAndSimplifyForecast = (data) => {
+      const groupedForecast = [];
+      let daysForecast = [];
 
       data.forEach((forecast) => {
         const simplifiedForecast = simplifyForecast(forecast);
 
-        if (daysForecasts.length === 0) {
-          daysForecasts.push(simplifiedForecast);
+        if (daysForecast.length === 0) {
+          daysForecast.push(simplifiedForecast);
         } else {
           const prevForecastDay =
-            daysForecasts[daysForecasts.length - 1].dateTimeTxt.split(" ")[0];
+            daysForecast[daysForecast.length - 1].dateTimeTxt.split(" ")[0];
           const forecastDay = simplifiedForecast.dateTimeTxt.split(" ")[0];
 
           if (forecastDay === prevForecastDay) {
-            daysForecasts.push(simplifiedForecast);
+            daysForecast.push(simplifiedForecast);
           } else {
-            forecasts.push(daysForecasts);
-            daysForecasts = [simplifiedForecast];
+            groupedForecast.push(daysForecast);
+            daysForecast = [simplifiedForecast];
           }
         }
       });
-      forecasts.push(daysForecasts);
+      groupedForecast.push(daysForecast);
 
-      return forecasts;
+      return groupedForecast;
     };
 
-    const forecasts = seperateForecastByDay(list);
+    const forecasts = groupAndSimplifyForecast(list);
 
     setLocation(`${name}, ${country}`);
     setForecasts(forecasts);
