@@ -34,7 +34,6 @@ describe("ForecastDailySummary", () => {
 
   test("correctly renders props", () => {
     const { getByText, getByTestId } = screen;
-
     const date = dateString(dateTime);
     const dayOfTheWeek = date.slice(0, 3);
     const monthAndDay = date.slice(3, 10);
@@ -58,7 +57,6 @@ describe("ForecastDailySummary", () => {
 
   test("button", () => {
     const { getByText } = screen;
-
     const button = getByText(/more details/i);
 
     expect(button).toBeInstanceOf(HTMLButtonElement);

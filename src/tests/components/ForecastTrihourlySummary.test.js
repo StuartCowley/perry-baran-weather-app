@@ -33,7 +33,6 @@ describe("ForecastTrihourlySummary", () => {
 
     test("correctly renders props", () => {
       const { getByText, getByTestId } = screen;
-
       const description = weather.split(" ");
 
       expect(getByText(time)).toBeInstanceOf(HTMLParagraphElement);

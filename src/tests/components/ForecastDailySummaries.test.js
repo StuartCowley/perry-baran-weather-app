@@ -52,9 +52,7 @@ describe("ForecastDailySummaries", () => {
     ],
     handleForecastSelect: () => {},
   };
-
   const { forecasts, handleForecastSelect } = validProps;
-
   let screen;
 
   beforeEach(() => {

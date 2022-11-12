@@ -28,12 +28,12 @@ describe("OptionsMenu", () => {
 
   test("all fields correctly rendered", () => {
     const { getByText, getAllByRole, getByRole } = screen;
-
     const radios = getAllByRole("radio");
     const standard = findRadio(radios, "standard");
     const metric = findRadio(radios, "metric");
     const imperial = findRadio(radios, "imperial");
     const apply = getByRole("button");
+
     expect(getByText(/options/i)).toBeInstanceOf(HTMLHeadingElement);
     expect(getByText(/units:/i)).toBeInstanceOf(HTMLHeadingElement);
     expect(radios).toHaveLength(3);
@@ -49,7 +49,6 @@ describe("OptionsMenu", () => {
 
   test("selecting units", () => {
     const { getByRole, getAllByRole } = screen;
-
     const [standard, metric, imperial] = getAllByRole("radio");
     const apply = getByRole("button");
 
@@ -59,14 +58,12 @@ describe("OptionsMenu", () => {
     expect(imperial).not.toBeChecked();
     fireEvent.click(apply);
     expect(handleSearch).toBeCalledWith(undefined, standard.value);
-
     fireEvent.click(metric);
     expect(standard).not.toBeChecked();
     expect(metric).toBeChecked();
     expect(imperial).not.toBeChecked();
     fireEvent.click(apply);
     expect(handleSearch).toBeCalledWith(undefined, metric.value);
-
     fireEvent.click(imperial);
     expect(standard).not.toBeChecked();
     expect(metric).not.toBeChecked();
@@ -77,8 +74,8 @@ describe("OptionsMenu", () => {
 
   test("apply button calls setVisible", () => {
     const { getByRole } = screen;
-
     const apply = getByRole("button");
+
     expect(setVisible).toBeCalledTimes(0);
     fireEvent.click(apply);
     expect(setVisible).toBeCalledWith(false);

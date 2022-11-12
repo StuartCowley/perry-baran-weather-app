@@ -41,9 +41,9 @@ describe("ForecastTrihourlySummaries", () => {
 
   test("ForecastTrihourlySummary is called correct number of times, for every 3 hours for 1 day", () => {
     const { getAllByTestId, getByText } = screen;
-
     const FORECAST_INTERVAL = 3;
     const FORECASTS_PER_DAY = 24 / FORECAST_INTERVAL;
+
     expect(getAllByTestId("forecast-trihourly-summary")).toHaveLength(
       FORECASTS_PER_DAY
     );

@@ -43,7 +43,6 @@ describe("ForecastMoreDetails", () => {
 
   test("data is properly manipulated", () => {
     const { getByText } = screen;
-
     const date = dateString(forecasts[0].dateTime);
     const temp = calcMean(forecasts, "temp");
     const minTemp = calcMin(forecasts, "minTemp");

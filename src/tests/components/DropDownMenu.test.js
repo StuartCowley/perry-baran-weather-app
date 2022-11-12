@@ -18,16 +18,16 @@ describe("DropDownMenu", () => {
 
   test("image", () => {
     const { getByAltText } = screen;
-
     const hamburgerImage = getByAltText("hamburger menu");
+
     expect(hamburgerImage).toHaveAttribute("src", "menu.png");
   });
 
   test("button", () => {
     const { getAllByRole, getByTestId } = screen;
-
     const [hamburgerButton] = getAllByRole("button");
     const dropDownMenu = getByTestId("drop-down-menu");
+
     expect(hamburgerButton).toHaveAttribute("type", "button");
     expect(dropDownMenu).toHaveClass("drop-down-menu__hidden");
     fireEvent.click(hamburgerButton);
