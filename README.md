@@ -84,6 +84,7 @@ Runs eslint on all files to format code.
 $ npm run predeploy
 ```
 helps to bundle the react app.
+This command is run automatically when running deploy.
 
 ```
 $ npm run deploy
