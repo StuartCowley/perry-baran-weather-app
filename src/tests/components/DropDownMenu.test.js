@@ -24,13 +24,14 @@ describe("DropDownMenu", () => {
   });
 
   test("button", () => {
-    const { getAllByRole, getByTestId } = screen;
+    const { getAllByRole, queryByTestId } = screen;
     const [hamburgerButton] = getAllByRole("button");
-    const dropDownMenu = getByTestId("drop-down-menu");
+    let dropDownMenu = queryByTestId("drop-down-menu");
 
     expect(hamburgerButton).toHaveAttribute("type", "button");
-    expect(dropDownMenu).toHaveClass("drop-down-menu__hidden");
+    expect(dropDownMenu).not.toBeInTheDocument();
     fireEvent.click(hamburgerButton);
-    expect(dropDownMenu).not.toHaveClass("drop-down-menu__hidden");
+    dropDownMenu = queryByTestId("drop-down-menu");
+    expect(dropDownMenu).toBeInTheDocument();
   });
 });

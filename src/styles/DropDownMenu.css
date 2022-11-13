@@ -18,9 +18,32 @@
 .drop-down-menu > * {
   position: relative;
   top: 0;
-  transition-duration: 500ms;
+}
+
+.drop-down-menu__visible > * {
+  animation-name: enter;
+  animation-duration: 500ms;
 }
 
 .drop-down-menu__hidden > * {
-  top: -200px;
+  animation-name: exit;
+  animation-duration: 500ms;
+}
+
+@keyframes enter {
+  from {
+    top: -200px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes exit {
+  from {
+    top: 0;
+  }
+  to {
+    top: -200px;
+  }
 }
