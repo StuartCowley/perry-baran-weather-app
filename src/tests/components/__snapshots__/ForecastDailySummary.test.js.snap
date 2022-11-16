@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastDailySummary snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="forecast-daily-summary"
+    data-testid="forecast-daily-summary"
+  >
+    <p>
+      Thu 
+      <br />
+       Jan 01
+    </p>
+    <div
+      class="forecast-daily-summary__icon"
+      data-testid="forecast-icon"
+    >
+      <i
+        class="wi wi-day-sunny"
+        name="owm"
+      />
+    </div>
+    <p>
+      broken 
+      <br />
+      clouds
+    </p>
+    <p>
+      20°C
+    </p>
+    <button
+      class="forecast-daily-summary__more-details"
+      type="button"
+    >
+      More Details
+    </button>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopBar snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="top-bar"
+  >
+    <div
+      class="search-form"
+    >
+      <input
+        placeholder=""
+        type="text"
+      />
+      <button
+        type="submit"
+      >
+        Search
+      </button>
+    </div>
+    <button
+      class="drop-down-menu-button"
+      type="button"
+    >
+      <img
+        alt="hamburger menu"
+        src="menu.png"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;

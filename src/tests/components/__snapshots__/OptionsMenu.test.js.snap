@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OptionsMenu snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="options-menu-form"
+    name="options menu form"
+  >
+    <h2>
+      Options
+    </h2>
+    <div
+      class="options-menu-form__units"
+    >
+      <h3>
+        Units:
+      </h3>
+      <label
+        class="options-menu-form__label"
+        for="standardRadio"
+      >
+        Scientific
+        <input
+          id="standardRadio"
+          name="units"
+          type="radio"
+          value="standard"
+        />
+      </label>
+      <label
+        class="options-menu-form__label"
+        for="metricRadio"
+      >
+        Metric
+        <input
+          checked=""
+          id="metricRadio"
+          name="units"
+          type="radio"
+          value="metric"
+        />
+      </label>
+      <label
+        class="options-menu-form__label"
+        for="imperialRadio"
+      >
+        Imperial
+        <input
+          id="imperialRadio"
+          name="units"
+          type="radio"
+          value="imperial"
+        />
+      </label>
+    </div>
+    <button
+      class="options-menu-form__apply"
+      type="submit"
+    >
+      Apply
+    </button>
+  </form>
+</DocumentFragment>
+`;

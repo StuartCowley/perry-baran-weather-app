@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0.5);
+  font-family: Anonymous-Pro, Arial, Helvetica, sans-serif;
+  color: var(--almost-black);
+}
+
+:root {
+  --almost-white: rgb(236, 236, 236);
+  --white-blue: rgb(196, 232, 250);
+  --light-blue: rgb(76, 167, 216);
+  --medium-blue: rgb(82, 143, 175);
+  --dark-blue: rgb(65, 113, 140);
+  --almost-black: rgb(33, 33, 33);
+  --text-shadow-black: 2px 2px 2px var(--almost-black);
+  --box-shadow-white: 0 0 10px var(--almost-white);
+  --border-dark-blue: 2px solid var(--dark-blue);
+}
+
+body {
+  background-image: linear-gradient(var(--light-blue), var(--white-blue));
+}
+
+i {
+  color: var(--almost-white);
+  text-shadow: var(--text-shadow-black);
+}
+
+sup {
+  color: inherit;
+  text-shadow: inherit;
+  font-size: 50%;
+  font-weight: 100;
+}

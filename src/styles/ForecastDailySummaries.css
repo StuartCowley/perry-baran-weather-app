@@ -1,0 +1,4 @@
+.forecast-daily-summaries {
+  display: flex;
+  justify-content: space-around;
+}

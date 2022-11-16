@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastMoreDetails snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="forecast-details"
+  >
+    <h2>
+      Thu Nov 03 2022
+    </h2>
+    <div
+      class="forecast-breakdown"
+    >
+      <div
+        class="forecast-breakdown__right"
+      >
+        <div
+          data-testid="forecast-icon"
+        >
+          <i
+            class="wi wi-day-storm-showers"
+            name="owm"
+          />
+        </div>
+        <p>
+          light rain
+        </p>
+      </div>
+      <div
+        class="forecast-breakdown__left"
+      >
+        <p
+          class="forecast-breakdown__temp"
+        >
+          30.0
+          <sup>
+            °C
+          </sup>
+        </p>
+        <div>
+          <h3>
+            Min: 
+          </h3>
+          <p>
+            27.0°C
+          </p>
+        </div>
+        <div>
+          <h3>
+            Max: 
+          </h3>
+          <p>
+            32.0°C
+          </p>
+        </div>
+        <div>
+          <h3>
+            Humidity: 
+          </h3>
+          <p>
+            NaN%
+          </p>
+        </div>
+        <div>
+          <h3>
+            Wind Speed: 
+          </h3>
+          <p>
+            95.0m/s
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="forecast-trihourly-summaries"
+    >
+      <div
+        class="forecast-trihourly-summary"
+        data-testid="forecast-trihourly-summary"
+      >
+        <p>
+          00:00
+        </p>
+        <p>
+          No 
+          <br />
+          Data
+        </p>
+      </div>
+      <div
+        class="forecast-trihourly-summary"
+        data-testid="forecast-trihourly-summary"
+      >
+        <p>
+          03:00
+        </p>
+        <p>
+          No 
+          <br />
+          Data
+        </p>
+      </div>
+      <div
+        class="forecast-trihourly-summary"
+        data-testid="forecast-trihourly-summary"
+      >
+        <p>
+          06:00
+        </p>
+        <p>
+          No 
+          <br />
+          Data
+        </p>
+      </div>
+      <div
+        class="forecast-trihourly-summary"
+        data-testid="forecast-trihourly-summary"
+      >
+        <p>
+          09:00
+        </p>
+        <p>
+          No 
+          <br />
+          Data
+        </p>
+      </div>
+      <div
+        class="forecast-trihourly-summary"
+        data-testid="forecast-trihourly-summary"
+      >
+        <p>
+          12:00
+        </p>
+        <div
+          class="forecast-trihourly-summary__icon"
+          data-testid="forecast-icon"
+        >
+          <i
+            class="wi wi-day-rain"
+            name="owm"
+          />
+        </div>
+        <p>
+          broken 
+          <br />
+          clouds
+        </p>
+        <p>
+          35.0°C
+        </p>
+      </div>
+      <div
+        class="forecast-trihourly-summary"
+        data-testid="forecast-trihourly-summary"
+      >
+        <p>
+          15:00
+        </p>
+        <div
+          class="forecast-trihourly-summary__icon"
+          data-testid="forecast-icon"
+        >
+          <i
+            class="wi wi-day-storm-showers"
+            name="owm"
+          />
+        </div>
+        <p>
+          light 
+          <br />
+          rain
+        </p>
+        <p>
+          25.0°C
+        </p>
+      </div>
+      <div
+        class="forecast-trihourly-summary"
+        data-testid="forecast-trihourly-summary"
+      >
+        <p>
+          18:00
+        </p>
+        <p>
+          No 
+          <br />
+          Data
+        </p>
+      </div>
+      <div
+        class="forecast-trihourly-summary"
+        data-testid="forecast-trihourly-summary"
+      >
+        <p>
+          21:00
+        </p>
+        <p>
+          No 
+          <br />
+          Data
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastTrihourlySummaries snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="forecast-trihourly-summaries"
+  >
+    <div
+      class="forecast-trihourly-summary"
+      data-testid="forecast-trihourly-summary"
+    >
+      <p>
+        00:00
+      </p>
+      <p>
+        No 
+        <br />
+        Data
+      </p>
+    </div>
+    <div
+      class="forecast-trihourly-summary"
+      data-testid="forecast-trihourly-summary"
+    >
+      <p>
+        03:00
+      </p>
+      <p>
+        No 
+        <br />
+        Data
+      </p>
+    </div>
+    <div
+      class="forecast-trihourly-summary"
+      data-testid="forecast-trihourly-summary"
+    >
+      <p>
+        06:00
+      </p>
+      <p>
+        No 
+        <br />
+        Data
+      </p>
+    </div>
+    <div
+      class="forecast-trihourly-summary"
+      data-testid="forecast-trihourly-summary"
+    >
+      <p>
+        09:00
+      </p>
+      <p>
+        No 
+        <br />
+        Data
+      </p>
+    </div>
+    <div
+      class="forecast-trihourly-summary"
+      data-testid="forecast-trihourly-summary"
+    >
+      <p>
+        12:00
+      </p>
+      <p>
+        No 
+        <br />
+        Data
+      </p>
+    </div>
+    <div
+      class="forecast-trihourly-summary"
+      data-testid="forecast-trihourly-summary"
+    >
+      <p>
+        15:00
+      </p>
+      <div
+        class="forecast-trihourly-summary__icon"
+        data-testid="forecast-icon"
+      >
+        <i
+          class="wi wi-day-storm-showers"
+          name="owm"
+        />
+      </div>
+      <p>
+        really 
+        <br />
+        cold
+      </p>
+      <p>
+        12.0°C
+      </p>
+    </div>
+    <div
+      class="forecast-trihourly-summary"
+      data-testid="forecast-trihourly-summary"
+    >
+      <p>
+        18:00
+      </p>
+      <div
+        class="forecast-trihourly-summary__icon"
+        data-testid="forecast-icon"
+      >
+        <i
+          class="wi wi-day-rain"
+          name="owm"
+        />
+      </div>
+      <p>
+        less 
+        <br />
+        cold
+      </p>
+      <p>
+        22.0°C
+      </p>
+    </div>
+    <div
+      class="forecast-trihourly-summary"
+      data-testid="forecast-trihourly-summary"
+    >
+      <p>
+        21:00
+      </p>
+      <p>
+        No 
+        <br />
+        Data
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

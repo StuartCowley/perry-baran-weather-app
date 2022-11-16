@@ -1,0 +1,49 @@
+.drop-down-menu-button {
+  all: unset;
+  cursor: pointer;
+}
+
+.drop-down-menu-button > img {
+  aspect-ratio: 1;
+  width: 40px;
+}
+
+.drop-down-menu {
+  position: absolute;
+  top: var(--top-bar-height);
+  right: 0;
+  overflow: hidden;
+}
+
+.drop-down-menu > * {
+  position: relative;
+  top: 0;
+}
+
+.drop-down-menu__visible > * {
+  animation-name: enter;
+  animation-duration: 500ms;
+}
+
+.drop-down-menu__hidden > * {
+  animation-name: exit;
+  animation-duration: 500ms;
+}
+
+@keyframes enter {
+  from {
+    top: -200px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes exit {
+  from {
+    top: 0;
+  }
+  to {
+    top: -200px;
+  }
+}

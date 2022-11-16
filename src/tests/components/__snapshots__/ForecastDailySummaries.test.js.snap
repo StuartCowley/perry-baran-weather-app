@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastDailySummaries snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="forecast-daily-summaries"
+  >
+    <div
+      class="forecast-daily-summary"
+      data-testid="forecast-daily-summary"
+    >
+      <p>
+        Thu 
+        <br />
+         Nov 03
+      </p>
+      <div
+        class="forecast-daily-summary__icon"
+        data-testid="forecast-icon"
+      >
+        <i
+          class="wi wi-day-storm-showers"
+          name="owm"
+        />
+      </div>
+      <p>
+        unique1 
+        <br />
+        weather1
+      </p>
+      <p>
+        10.5°C
+      </p>
+      <button
+        class="forecast-daily-summary__more-details"
+        type="button"
+      >
+        More Details
+      </button>
+    </div>
+    <div
+      class="forecast-daily-summary"
+      data-testid="forecast-daily-summary"
+    >
+      <p>
+        Tue 
+        <br />
+         Nov 08
+      </p>
+      <div
+        class="forecast-daily-summary__icon"
+        data-testid="forecast-icon"
+      >
+        <i
+          class="wi wi-day-sunny"
+          name="owm"
+        />
+      </div>
+      <p>
+        unique3 
+        <br />
+        weather3
+      </p>
+      <p>
+        12.5°C
+      </p>
+      <button
+        class="forecast-daily-summary__more-details"
+        type="button"
+      >
+        More Details
+      </button>
+    </div>
+    <div
+      class="forecast-daily-summary"
+      data-testid="forecast-daily-summary"
+    >
+      <p>
+        Sun 
+        <br />
+         Feb 26
+      </p>
+      <div
+        class="forecast-daily-summary__icon"
+        data-testid="forecast-icon"
+      >
+        <i
+          class="wi wi-day-snow"
+          name="owm"
+        />
+      </div>
+      <p>
+        unique5 
+        <br />
+        weather5
+      </p>
+      <p>
+        14.5°C
+      </p>
+      <button
+        class="forecast-daily-summary__more-details"
+        type="button"
+      >
+        More Details
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

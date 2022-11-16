@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="weather-app"
+  >
+    <div
+      class="top-bar"
+    >
+      <div
+        class="search-form"
+      >
+        <input
+          placeholder="London, GB"
+          type="text"
+        />
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </div>
+      <button
+        class="drop-down-menu-button"
+        type="button"
+      >
+        <img
+          alt="hamburger menu"
+          src="menu.png"
+        />
+      </button>
+    </div>
+    <h1>
+      London, GB
+    </h1>
+    <div
+      class="forecast-daily-summaries"
+    />
+  </div>
+</DocumentFragment>
+`;
